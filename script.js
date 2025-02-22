@@ -17,9 +17,25 @@ window.onscroll= () => {
 
 
 const typed = new Typed('.multiple-text', {
-    strings: ['Anywhere in Karachi', 'No.1 in Karachi', 'Fast and Secure Delivery'],
+    strings: [ 'Anywhere in Karachi', 
+        'Fast and Secure Delivery',
+        'Best Quality Pipes', 
+        'Affordable Prices', 
+        "Karachi's Most Trusted Pipes Supplier",
+        '24/7 Customer Support', 
+        'No.1 in Karachi', 
+        'Same-Day Delivery Guaranteed',
+        'Wide Range of Products', 
+        'Trusted by Thousands', 
+        'Easy Online Ordering',
+        'Premium Quality, Affordable Rates',
+        'Durable and Reliable Pipes',
+        'Certified and Tested Products',
+        'Trusted by Homeowners and Builders', 
+        'Quick Installation Services',
+        'Eco-Friendly Pipes and Fittings',],
     typeSpeed: 60,
     backSpeed: 60,
-    backDelay: 1000,
+    backDelay: 1050,
     loop: true,
 });
