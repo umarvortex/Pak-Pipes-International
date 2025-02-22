@@ -24,6 +24,7 @@ html {
 }
 
 body {
+    display: block;
     background: var(--bg-color);
     color: var(--text-color);
 }
@@ -205,15 +206,15 @@ span {
 
 .heading {
     text-align: center;
-    font-size:  6.5rem;
+    font-size:  5.5rem;
 }
 
 
 .services-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, auto));
-    align-items: normal;
-    gap: 2.3rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    align-items: center;
+    gap: 20px;
     margin-top: 4.1rem;
     
 }
@@ -221,10 +222,10 @@ span {
 
 .row {
     background: var(--bg-color);
-    border-radius: 27px;
+    border-radius: 15px;
     border: 1px solid transparent;
     box-shadow: 0 0 5px var(--main-color);
-    padding: 18px;
+    padding: 10px;
     transition: all 0.5s ease;
 }
 
@@ -232,21 +233,21 @@ span {
 .row img {
     height: auto;
     width: 100%;
-    border-radius: 27px;
-    margin-bottom: 1.3rem;
+    border-radius: 15px;
+    margin-bottom: 1.1rem;
 }
 
 
 .row h4 {
-    font-size: 25px;
-    font-weight: 700;
-    margin-bottom:  10px;
-    line-height: 1.4;
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    line-height: 1.5;
 }
 
 .row:hover {
     border: 1px solid var(--main-color);
-    transform: translateY(-5px) scale(1.04);
+    transform: translatey(-5px) scale(1.04);
     cursor: pointer;
 }
 
@@ -298,9 +299,9 @@ span {
 
 .promise-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+  grid-template-columns: repeat(auto-fit, minmax(200px, auto));
   align-items: center;
-  gap: 2.3rem;
+  gap: 3.3rem;
   margin-top: 4.2rem;
 }
 
@@ -308,37 +309,37 @@ span {
     padding: 30px 30px 50px 30px;
     height: 40rem;
     background: var(--bg-color);
-    border-radius: 28px;
+    border-radius: 20px;
     border: 1px solid transparent;
-    box-shadow: 0 0 5px var(--main-color);
+    box-shadow: 0 0 10px var(--main-color);
     transition: all 0.5s ease;
     cursor: pointer;
 }
 
 .box h3 {
-    font-size: 35px;
+    font-size: 30px;
     font-weight: 600;
     margin-bottom: 10px;
 }
 
 .box h2 {
-    font-size: 43px;
+    font-size: 30px;
     font-weight: 700;
     margin-bottom: 20px;
 }
 
 .box ul li {
     list-style: disc;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     padding-bottom: 1.2rem;
 }
 
 .box a {
     display: inline-block;
-    font-size: 22px;
-    line-height: 1.2rem;
+    font-size: 20px;
+    line-height: 1rem;
     font-weight: 700;
-    padding: 7px 0;
+    padding: 7px ;
     color: var(--text-color);
     border-bottom:  2px solid #5d6c83;
     transition: all 0.5s ease;
@@ -346,7 +347,7 @@ span {
 
 .box i {
     vertical-align: middle;
-    font-size: 25px;
+    font-size: 20px;
     color: var(--main-color);
     margin-left: 5px;
 }
@@ -366,6 +367,10 @@ span {
 
 /* Review Section Code*/
 
+.review .heading {
+    text-align: center;
+    font-size:  5.5rem;
+}
 
 
 
@@ -377,6 +382,7 @@ span {
 .review-bx {
     background-size: cover;
     display: flex;
+    flex-direction: repeat(auto-fit, minmax(200px, 1fr));
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -395,16 +401,19 @@ span {
 
 .wrapper {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+   
 }
 
 .review-item {
-    min-height: 450px;
-    min-width: 300px;
+    min-height: 80px;
+    min-width: 30px;
     background: var(--snd-bg-color);
     border: 3px solid rgba(238, 238, 238, 0.3);
-    border-radius: 2rem;
+    border-radius: 20px;
     margin: 0 2rem;
     padding: 30px 40px;
     cursor: pointer;
@@ -424,7 +433,7 @@ span {
 }
 
 .review-item h2 {
-    font-size: 2.8rem;
+    font-size: 2.9rem;
 }
 
 
@@ -484,7 +493,7 @@ span {
 .footer .copyright {
     margin-top: 20px;
     text-align: center;
-    font-size: 16px;
+    font-size: 15px;
     color:var(--text-color) ;
 }
 
@@ -543,10 +552,10 @@ span {
         padding: 2rem 3%;
     }
     section {
-        padding: 10rem 3%;
+        padding: 5rem 3%;
     }
     .services {
-        padding: 7rem;
+        padding: 4rem;
     }
     .about-content h2 {
         margin-top: 2rem;
@@ -618,37 +627,13 @@ span {
 
 @media (max-width:450px) {
     html {
-        font-size: 50%;
+        font-size: 40%;
     }
     img {
         max-width: 100%;
+        grid-template-columns:  repeat(1,1fr);
         height: auto;
     }
-}
-
-
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-
-
-/* Default styles */
-body {
-    font-size: 16px;
-    margin: 0;
-    padding: 0;
-}
-
-.container {
-    width: 80%;
-    margin: 0 auto;
-}
-
-/* Mobile devices (up to 450px) */
-@media only screen and (max-width: 450px) {
     body {
         font-size: 14px;
     }
@@ -656,35 +641,12 @@ body {
         width: 100%;
         padding: 10px;
     }
-    img {
-        max-width: 100%;
-        height: auto;
-    }
 }
 
-/* Tablets (up to 768px) */
-@media only screen and (max-width: 768px) {
-    .container {
-        width: 90%;
-    }
-}
 
-/* Small laptops/desktops (up to 1024px) */
-@media only screen and (max-width: 1024px) {
-    .container {
-        width: 85%;
-    }
-    img {
-        max-width: 100%;
-        height: auto;
-    }
-}
 
-/* Larger screens (1025px and above) */
-@media only screen and (min-width: 1025px) {
-    .container {
-        width: 1200px; /* Fixed width for larger screens */
-    }
-}
+
+
+
 
 
