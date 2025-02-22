@@ -17,7 +17,7 @@ window.onscroll= () => {
 
 
 const typed = new Typed('.multiple-text', {
-    strings: ['Anywhere in Karachi', 'No.1 in Karachi', 'Fast and Secure Dilivery'],
+    strings: ['Anywhere in Karachi', 'No.1 in Karachi', 'Fast and Secure Delivery'],
     typeSpeed: 60,
     backSpeed: 60,
     backDelay: 1000,
