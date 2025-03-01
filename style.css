@@ -496,14 +496,16 @@ span {
  .footer-content {
     position: absolute; /* Footer ke andar rakhne ke liye */
     right: 20px; /* Right side par set */
-    bottom: 20px; /* Footer ke andar neeche right corner mein */
+    width: 42px;
+    height: 42px;
+    margin: 0 10px;
+    padding-bottom: 20px; /* Footer ke andar neeche right corner mein */
     background: var(--main-color); /* Button ka color */
     color: white; /* Arrow ka color */
     border: none;
     padding: 10px 15px;
     border-radius: 50%;
     cursor: pointer;
-    font-size: 20px;
     transition: background 0.3s;
   }
 
