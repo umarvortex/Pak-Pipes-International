@@ -493,11 +493,11 @@ span {
     box-shadow:  0 0 25px var(--main-color);
 }
 
- .goToTop {
+ .footer-content {
     position: absolute; /* Footer ke andar rakhne ke liye */
     right: 20px; /* Right side par set */
     bottom: 20px; /* Footer ke andar neeche right corner mein */
-    background: #333; /* Button ka color */
+    background: var(--main-color); /* Button ka color */
     color: white; /* Arrow ka color */
     border: none;
     padding: 10px 15px;
