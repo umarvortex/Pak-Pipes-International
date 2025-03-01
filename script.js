@@ -11,8 +11,9 @@ window.onscroll= () => {
     navbar.classList.remove('active');
 }
 
-
-
+function topFunction() {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  }
 
 
 
@@ -36,3 +37,9 @@ const typed = new Typed('.multiple-text', {
     backDelay: 1050,
     loop: true,
 });
+
+
+
+
+
+
