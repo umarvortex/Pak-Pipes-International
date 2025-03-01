@@ -154,6 +154,12 @@ span {
     width: 45vw;
 }
 
+  .whatsapp-icon {
+     width: 22px;
+     height: 22px;
+     margin-right: 8px;
+     vertical-align: middle;
+  }
 
 .home-img::before {
     content: 'PIPES';
