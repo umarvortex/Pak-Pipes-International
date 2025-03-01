@@ -493,20 +493,20 @@ span {
     box-shadow:  0 0 25px var(--main-color);
 }
 
-.gotopbtn {
-    position: fixed;
-    width: 50px;
-    height: 50px;
-    background: var(--main-color);
-    bottom: 40px;
-    right: 50px;
-
-    text-decoration: none;
+.gotopbtn  {
+    font-size: 25px;
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    display: inline-block;
     text-align: center;
-    line-height: 50px;
-    color: white;
-    font-size: 22px;
+    border-radius: 50%;
+    margin: 0 10px;
+    transition: 0.3s ease-in-out;
 }
+
 
 .footer .copyright {
     margin-top: 20px;
