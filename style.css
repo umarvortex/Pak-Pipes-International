@@ -493,6 +493,21 @@ span {
     box-shadow:  0 0 25px var(--main-color);
 }
 
+.gotopbtn {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background: var(--main-color);
+    bottom: 40px;
+    right: 50px;
+
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    font-size: 22px;
+}
+
 .footer .copyright {
     margin-top: 20px;
     text-align: center;
