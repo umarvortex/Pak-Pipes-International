@@ -288,8 +288,13 @@ span {
     line-height: 1.2;
 }
 
+.about-content a {
+    font-size: 2.0rem;
+    gap: 2rem;
+} 
+
 .about-content p {
-    font-size: 1.3rem;
+    font-size: 1.8rem;
     margin: 2rem 0 2rem;
 } 
 
