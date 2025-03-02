@@ -499,13 +499,13 @@ span {
     padding-bottom: 50px;
     margin: 0 10px;
     right: 32px;
-    width: 33px;
-    height: 33px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 30px;
+    font-size: 17px;
     color: #1f1f1f;
     text-decoration: none;
     opacity: 0; /* Default mai hidden */
