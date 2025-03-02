@@ -181,10 +181,10 @@ span {
     background: var(--main-color);
     border-radius: 1rem;
     box-shadow: none;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     color: var(--bg-color);
     letter-spacing: 0.1rem;
-    font-weight: 600;
+    font-weight: 700;
     transition: 0.5s ease;
 }
 
@@ -288,13 +288,10 @@ span {
     line-height: 1.2;
 }
 
-.about-content a {
-    font-size: 2.0rem;
-    gap: 2rem;
-} 
+
 
 .about-content p {
-    font-size: 1.8rem;
+    font-size: 2.0rem;
     margin: 2rem 0 2rem;
 } 
 
