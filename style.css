@@ -283,11 +283,6 @@ span {
     padding: 0 3rem;
 }
 
-.about-content a {
-     display: flex; /* Side by Side */
-  align-items: center; /* Vertical Center */
-  gap: 10px;
-}
 .about-content h2 {
     text-align: left;
     line-height: 1.2;
