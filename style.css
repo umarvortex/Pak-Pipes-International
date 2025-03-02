@@ -512,7 +512,7 @@ span {
     transition: all .4s;
 }
 .to-top.active {
-    bottom: 50px;
+    bottom: 32px;
     pointer-events: auto;
     opacity: 1;
 }
