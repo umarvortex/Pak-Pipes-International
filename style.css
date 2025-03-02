@@ -496,7 +496,7 @@ span {
 .to-top {
     background: white;
     position: fixed;
-    padding-bottom: 30px;
+    padding-bottom: 50px;
     margin: 0 10px;
     right: 32px;
     width: 33px;
@@ -508,16 +508,16 @@ span {
     font-size: 30px;
     color: #1f1f1f;
     text-decoration: none;
-    opacity: 1;
-    pointer-events: auto;
+    opacity: 0; /* Default mai hidden */
+    pointer-events: none;
     transition: all .4s;
 }
-
 .to-top.active {
     bottom: 50px;
     pointer-events: auto;
     opacity: 1;
 }
+
 
 
 
