@@ -261,6 +261,19 @@ span {
     gap: 1rem;
 }
 
+.location-icon {
+  font-size: 40px; /* Size */
+  color: #007bff; /* Blue Color */
+  animation: spin 2s infinite linear; /* Animation */
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+
 .about-img img {
     width: 45vw;
     border: 2px solid var(--text-color);
