@@ -279,6 +279,11 @@ span {
     font-size:  4.5rem;
 }
 
+.about-content btn {
+    padding: 10px 20px;
+    gap: 15px;
+} 
+
 .about-content {
     padding: 0 3rem;
 }
