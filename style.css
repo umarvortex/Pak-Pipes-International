@@ -176,7 +176,7 @@ span {
 }
 .btn i {
     
-  margin-right: 12px !important; /* !important se wo kisi bhi doosri CSS ko override karega */
+  margin-right: 30px !important; /* !important se wo kisi bhi doosri CSS ko override karega */
   font-size: 20px;
   display: inline-flex; 
   align-items: center; 
@@ -189,6 +189,7 @@ span {
     gap: 15px;
     padding: 1rem 2.8rem;
     margin-bottom: 18px;
+    margin-right: 30px;
     background: var(--main-color);
     border-radius: 1rem;
     box-shadow: none;
