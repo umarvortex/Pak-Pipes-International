@@ -177,9 +177,10 @@ span {
  
 
 .btn {
-    display: inline-flex; 
+    display: flex; 
+    justify-content: center; 
     align-items: center; 
-    justify-content: center;
+    text-align: center;
     gap: 12px;
     padding: 1rem 2.8rem;
     margin-bottom: 20px;
@@ -196,6 +197,7 @@ span {
 
 .btn:hover {
     color: var(--text-color);
+    letter-spacing: 0.2rem; 
     box-shadow: 0 0 1.6rem var(--main-color);
 }
 
