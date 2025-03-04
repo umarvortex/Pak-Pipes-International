@@ -174,9 +174,9 @@ span {
     margin-bottom: 2rem;
     margin-top: 2rem;
 }
-.btn {
+.btn i {
     
-  margin-right: 10px !important; /* !important se wo kisi bhi doosri CSS ko override karega */
+  margin-right: 12px !important; /* !important se wo kisi bhi doosri CSS ko override karega */
   font-size: 20px;
   display: inline-flex; 
   align-items: center; 
@@ -186,6 +186,7 @@ span {
 
 .btn {
     display: inline-block;
+    gap: 15px;
     padding: 1rem 2.8rem;
     margin-bottom: 18px;
     background: var(--main-color);
