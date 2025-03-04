@@ -179,16 +179,16 @@ span {
 .btn {
     display: inline-block;
     gap: 12px;
-    padding: 1rem 2.3rem;
+    padding: 1rem 2.8rem;
     margin-bottom: 20px;
     margin-right: 20px;
     background: var(--main-color);
     border-radius: 1rem;
     box-shadow: none;
-    font-size: 1.9rem;
+    font-size: 1.7rem;
     color: var(--bg-color);
     letter-spacing: 0.1rem;
-    font-weight: 700;
+    font-weight: 600;
     transition: 0.5s ease;
 }
 
