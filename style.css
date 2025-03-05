@@ -152,6 +152,20 @@ span {
 
 .home-img img {
     width: 45vw;
+    border-radius: 20px; /* Thoda Round Style */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Shadow Effect */
+    transition: all 0.8s ease-in-out; /* Smooth Transition */
+    filter: brightness(95%) contrast(110%); /* Thoda Dark Aur Sharp */
+}
+
+.home-img img:hover {
+    transform: scale(1.05) rotate(3deg); /* Zoom + Thoda Tilt Rotate Effect */
+    filter: brightness(105%) contrast(120%) saturate(130%); /* Glow Hover Effect */
+}
+
+
+.home-img img {
+    width: 45vw;
 }
 
 
