@@ -160,23 +160,26 @@ span {
 }
 
 .home-img img:hover {
-    transform: scale(1.05) rotate(2deg); /* Zoom + Thoda Tilt Rotate Effect */
-    filter: brightness(105%) contrast(120%) saturate(130%); /* Glow Hover Effect */
+    transform: scale(1.1) rotate(5deg);
+    filter: brightness(110%) contrast(130%) saturate(130%);
+    box-shadow: 0 0 40px rgba(0, 255, 255, 0.8); /* Ultimate Neon Glow */
 }
 
 .home-img img {
    animation: pulse 3s infinite alternate;
 }
 
-@keyframes zoom {
+
+@keyframes pulse {
     0% {
         transform: scale(1);
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
     }
     100% {
         transform: scale(1.05);
+        box-shadow: 0 0 40px rgba(0, 255, 255, 0.8);
     }
 }
-
 
 
 .home-img img {
