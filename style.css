@@ -164,7 +164,7 @@ span {
 }
 
 .home-img img {
-    animation: zoom 10s infinite alternate;
+    animation: zoom 6s infinite alternate;
 }
 
 @keyframes zoom {
