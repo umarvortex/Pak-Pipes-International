@@ -270,7 +270,7 @@ span {
 
 .row img {
     height: auto;
-    width: 100%;
+    width: 25vw;
     border-radius: px;
     margin-bottom: 1.1rem;
     aspect-ratio: 3/3;
