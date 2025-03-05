@@ -163,6 +163,20 @@ span {
     filter: brightness(105%) contrast(120%) saturate(130%); /* Glow Hover Effect */
 }
 
+.home-img img {
+    animation: zoom 10s infinite alternate;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.05);
+    }
+}
+
+
 
 .home-img img {
     width: 45vw;
