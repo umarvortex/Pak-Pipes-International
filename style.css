@@ -156,6 +156,7 @@ span {
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.8); /* Shadow Effect */
     transition: all 0.4s ease-in-out; /* Smooth Transition */
     filter: brightness(100%) contrast(130%); /* Thoda Dark Aur Sharp */
+    animation: pulse 3s infinite alternate;
 }
 
 .home-img img:hover {
@@ -164,7 +165,7 @@ span {
 }
 
 .home-img img {
-    animation: zoom 3s infinite alternate;
+   animation: pulse 3s infinite alternate;
 }
 
 @keyframes zoom {
