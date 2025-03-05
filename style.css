@@ -170,8 +170,8 @@ span {
 }
 
 .home-content p {
-    font-size: 2.0rem;
-    gap: 1rem;
+    font-size: 2.3rem;
+    line-height: 1.8; 
     margin-bottom: 3rem;
     margin-top: 3rem;
 }
