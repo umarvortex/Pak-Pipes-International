@@ -151,22 +151,18 @@ span {
 }
 
 .home-img img {
-    width: 35vw;
+    width: 45vw;
     height: auto; 
     object-fit: cover;
     border-radius: 25px; /* Thoda Round Style */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Shadow Effect */
     transition: all 0.4s ease-in-out; /* Smooth Transition */
     filter: brightness(100%) contrast(130%); /* Thoda Dark Aur Sharp */
-    margin-left: -50px;
-    animation: pulse 5s infinite alternate;
-    
+    animation: pulse 5s infinite alternate;  
 }
 
 .home-img img:hover {
     transform: scale(1.1) rotate(5deg);
     filter: brightness(110%) contrast(130%) saturate(130%);
-    box-shadow: 0 0 20px rgba(0, 200, 200, 0.4); /* Ultimate Neon Glow */
 }
 
 .home-img img {
@@ -177,11 +173,11 @@ span {
 @keyframes pulse {
     0% {
         transform: scale(1);
-        box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+      
     }
     100% {
         transform: scale(1.05);
-        box-shadow: 0 0 30px rgba(0, 255, 255, 0.8);
+        
     }
 }
 
