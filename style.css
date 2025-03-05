@@ -152,19 +152,19 @@ span {
 
 .home-img img {
     width: 45vw;
-    border-radius: 25px; /* Thoda Round Style */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Shadow Effect */
-    transition: all 0.9s ease-in-out; /* Smooth Transition */
+    border-radius: 30px; /* Thoda Round Style */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8); /* Shadow Effect */
+    transition: all 0.4s ease-in-out; /* Smooth Transition */
     filter: brightness(100%) contrast(130%); /* Thoda Dark Aur Sharp */
 }
 
 .home-img img:hover {
-    transform: scale(1.05) zoom(3deg); /* Zoom + Thoda Tilt Rotate Effect */
+    transform: scale(1.05) rotate(2deg); /* Zoom + Thoda Tilt Rotate Effect */
     filter: brightness(105%) contrast(120%) saturate(130%); /* Glow Hover Effect */
 }
 
 .home-img img {
-    animation: zoom 6s infinite alternate;
+    animation: zoom 3s infinite alternate;
 }
 
 @keyframes zoom {
