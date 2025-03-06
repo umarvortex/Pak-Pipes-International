@@ -500,6 +500,60 @@ span {
 /*Contact Section Code*/
 
 
+.contact-form {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+  background: #0c0c0c; /* Tumhari website ka colour */
+  border: 1px solid #29b7ed; /* Blue Border */
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(41, 183, 237, 0.8);
+  text-align: center;
+}
+
+.contact-form h2 {
+  color: #29b7ed;
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #29b7ed;
+  border-radius: 8px;
+  background: transparent;
+  color: #fff;
+  outline: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #29b7ed;
+}
+
+.contact-form textarea {
+  height: 150px;
+  resize: none;
+}
+
+.contact-form .btn {
+  padding: 12px 20px;
+  border: none;
+  background: #29b7ed;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.contact-form .btn:hover {
+  background: transparent;
+  border: 1px solid #29b7ed;
+}
 
 
 
