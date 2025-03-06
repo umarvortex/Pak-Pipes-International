@@ -152,8 +152,8 @@ span {
 }
 
 .home-img img {
-    width: 45vw;
-    border-radius: 25px; /* Thoda Round Style */
+    width: 40vw;
+    border-radius: 20px; /* Thoda Round Style */
     transition: all 0.4s ease-in-out; /* Smooth Transition */
     filter: brightness(100%) contrast(130%); /* Thoda Dark Aur Sharp */
     animation: pulse 5s infinite alternate;  
@@ -164,9 +164,6 @@ span {
     filter: brightness(110%) contrast(130%) saturate(130%);
 }
 
-.home-img img {
-   animation: pulse 5s infinite alternate;
-}
 
 
 @keyframes pulse {
