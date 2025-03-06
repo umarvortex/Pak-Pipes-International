@@ -145,6 +145,11 @@ span {
     color: var(--main-color);
 }
 
+.home-content p {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
 .home-content h1 {
     font-size: 5.6rem;
     font-weight: 700;
