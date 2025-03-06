@@ -497,6 +497,60 @@ span {
 }
 
 
+/*Contact Section Code*/
+
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  background: #3aafa9; /* Sky blue + Green mix */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.container h1 {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #3aafa9;
+  border-radius: 5px;
+  outline: none;
+}
+
+.form-group button {
+  background: #17252a; /* Dark green */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.form-group button:hover {
+  background: #2b7a78;
+}
+
+.form-group a {
+  color: #def2f1;
+}
+
+
+
 /*Footer Section Code*/
 
 
