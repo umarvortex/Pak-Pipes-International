@@ -118,6 +118,48 @@ span {
 }
 
 
+.home-img {
+  width: auto; 
+  height: auto;
+  border-radius: 20px; /* Same border radius */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7); /* Frame shadow effect */
+  transition: transform 0.4s ease-in-out; /* Hover effect */
+  overflow: hidden;
+}
+
+.home-img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 20px; /* Border radius for images */
+  animation: slideshow 15s infinite; /* 5s for each image, infinite loop */
+  opacity: 0; 
+  position: absolute; 
+}
+
+.home-img:hover {
+  transform: scale(1.05); /* Zoom effect */
+}
+
+.home-img img:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.home-img img:nth-child(2) {
+  animation-delay: 5s;
+}
+
+.home-img:nth-child(3) {
+  animation-delay: 10s;
+}
+
+@keyframes slideshow {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  30% { opacity: 1; }
+  40% { opacity: 0; }
+  100% { opacity: 0; }
+}
 
 
 
