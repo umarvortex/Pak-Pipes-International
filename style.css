@@ -508,7 +508,7 @@ span {
   border: 1px solid var(--main-color); /* Blue Border */
   border-radius: 10px;
   box-shadow: 15px var(--main-color);
-  text-align: right;
+  text-align: left;
 }
 
 .contact-form h1 {
