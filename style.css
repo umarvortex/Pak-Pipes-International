@@ -18,6 +18,7 @@
     --main-color: #45ffca;
 }
 
+
 html {
     font-size: 62.5%;
     overflow-x: hidden;
@@ -657,6 +658,14 @@ span {
     width: 50px;
 }
 
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.chat-icon {
+  animation: bounce 1.5s infinite;
+}
 
 
 
