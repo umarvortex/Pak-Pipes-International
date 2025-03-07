@@ -71,54 +71,6 @@
       
     </header>
 
-<!-- chat bot codes only -->
-
-
-<script>
-  function toggleChat() {
-    const chatContainer = document.getElementById("chat-container");
-    chatContainer.classList.toggle("active");
-  }
-
-  function sendMessage() {
-    const userInput = document.getElementById("user-input");
-    const chatBody = document.getElementById("chat-body");
-    const message = userInput.value.trim();
-    if (message) {
-      const userMessage = `<div class='user-message'>${message}</div>`;
-      chatBody.innerHTML += userMessage;
-      userInput.value = "";
-      chatBody.scrollTop = chatBody.scrollHeight;
-
-      setTimeout(() => {
-        let botReply = "";
-        
-        if (message.toLowerCase().includes("hi") || message.toLowerCase().includes("hello")) {
-          botReply = "Hello! How can I assist you today?";
-        }
-        else if (message.toLowerCase().includes("poly pipes")) {
-          botReply = "Yes, we have different varieties of Poly Pipes. What type of pipe are you looking for?";
-        }
-        else if (message.toLowerCase().includes("price")) {
-          botReply = "Can you please tell me which product price you need?";
-        }
-        else if (message.toLowerCase().includes("thanks") || message.toLowerCase().includes("thank you")) {
-          botReply = "You're welcome! 😊";
-        }
-        else {
-          botReply = "Sorry, I didn't understand. Please type your query again.";
-        }
-
-        const botMessage = `<div class='bot-message'>${botReply}</div>`;
-        chatBody.innerHTML += botMessage;
-        chatBody.scrollTop = chatBody.scrollHeight;
-      }, 1000);
-    }
-  }
-</script>
-
-
-<!-- chat bot codes only -->
  
 
     <section class="home" id="home">
@@ -167,6 +119,157 @@
 </style>
 
 
+         
+<!-- chat bot codes only -->
+
+<div id="chatbot" class="chat-bot">
+  <img src="images/chat-icon.png" alt="Chat Icon" id="chat-icon" class="chat-icon" onclick="toggleChat()">
+  <div id="chat-container" class="chat-container">
+    <div id="chat-header" class="chat-header">
+      Pak Pipes International Karachi
+      <button onclick="toggleChat()" class="close-btn">✖</button>
+    </div>
+    <div id="chat-body" class="chat-body">
+      <div class="bot-message">Welcome to Pak Pipes International Karachi. How can I help you today?</div>
+    </div>
+    <div class="chat-footer">
+      <input type="text" id="user-input" class="user-input" placeholder="Type your message...">
+      <button onclick="sendMessage()" class="send-btn">Send</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  function toggleChat() {
+    const chatContainer = document.getElementById("chat-container");
+    chatContainer.classList.toggle("active");
+  }
+
+  function sendMessage() {
+    const userInput = document.getElementById("user-input");
+    const chatBody = document.getElementById("chat-body");
+    const message = userInput.value.trim();
+    if (message) {
+      const userMessage = `<div class='user-message'>${message}</div>`;
+      chatBody.innerHTML += userMessage;
+      userInput.value = "";
+      chatBody.scrollTop = chatBody.scrollHeight;
+      setTimeout(() => {
+        const botMessage = `<div class='bot-message'>Thank you for your message!</div>`;
+        chatBody.innerHTML += botMessage;
+        chatBody.scrollTop = chatBody.scrollHeight;
+      }, 1000);
+    }
+  }
+</script>
+
+<style>
+  .chat-bot {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .chat-icon {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+  }
+
+  .chat-icon:hover {
+    transform: scale(1.1);
+  }
+
+  .chat-container {
+    width: 320px;
+    height: 400px;
+    background: #333;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    display: none;
+    flex-direction: column;
+  }
+
+  .chat-container.active {
+    display: flex;
+  }
+
+  .chat-header {
+    background: #111;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .chat-body {
+    padding: 10px;
+    height: 280px;
+    overflow-y: auto;
+    background: #222;
+    color: #fff;
+  }
+
+  .bot-message, .user-message {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 80%;
+    word-wrap: break-word;
+  }
+
+  .bot-message {
+    background: #444;
+    align-self: flex-start;
+  }
+
+  .user-message {
+    background: #007bff;
+    color: #fff;
+    align-self: flex-end;
+    text-align: right;
+  }
+
+  .chat-footer {
+    padding: 10px;
+    background: #111;
+    display: flex;
+    gap: 10px;
+  }
+
+  .user-input {
+    flex-grow: 1;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+  }
+
+  .send-btn {
+    padding: 8px 15px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .send-btn:hover {
+    background: #0056b3;
+  }
+</style>
+
+
+         
+
+<!-- chat bot codes only -->
 
 
                         
