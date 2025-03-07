@@ -614,6 +614,7 @@ span {
     height: 50px; /* Same width aur height se perfect gol circle banega */
     border-radius: 50%; /* Yeh line circle banane ke liye hai */
     display: flex;
+    text-align: center;
     align-items: center; /* Center mai lane ke liye */
     justify-content: center; /* Center mai lane ke liye */
     font-size: 20px; /* Icon ka size */
