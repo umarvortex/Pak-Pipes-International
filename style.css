@@ -36,10 +36,10 @@ section {
 }
 
 hr {
-  border: 2px solid var(--main-color); /* Line Color */
+  border: 0.5px solid var(--main-color); /* Line Color */
   width: 100%; /* Line Full Width */
   margin: 20px 0; /* Upar Aur Neeche Space */
-  opacity: 0.8; /* Thoda Transparent */
+  opacity: 0.4; /* Thoda Transparent */
 }
 
 
