@@ -578,7 +578,7 @@ span {
 }
 
 .footer .social {
-    text-align: left;
+    text-align: center;
     padding-bottom: 20px;
     color: var(--main-color);
 
