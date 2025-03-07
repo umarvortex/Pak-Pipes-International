@@ -586,7 +586,7 @@ span {
 }
 
 .footer .social {
-    text-align: right;
+    text-align: left;
     padding-bottom: 20px;
     color: var(--main-color);
 
@@ -650,7 +650,7 @@ span {
 .footer .copyright {
     margin-top: 20px;
     text-align: center;
-    font-size: 14px;
+    font-size: 9px;
     color:var(--text-color) ;
 }
 
