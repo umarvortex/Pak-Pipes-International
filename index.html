@@ -74,6 +74,48 @@
 <!-- chat bot codes only -->
 
 
+<script>
+  function toggleChat() {
+    const chatContainer = document.getElementById("chat-container");
+    chatContainer.classList.toggle("active");
+  }
+
+  function sendMessage() {
+    const userInput = document.getElementById("user-input");
+    const chatBody = document.getElementById("chat-body");
+    const message = userInput.value.trim();
+    if (message) {
+      const userMessage = `<div class='user-message'>${message}</div>`;
+      chatBody.innerHTML += userMessage;
+      userInput.value = "";
+      chatBody.scrollTop = chatBody.scrollHeight;
+
+      setTimeout(() => {
+        let botReply = "";
+        
+        if (message.toLowerCase().includes("hi") || message.toLowerCase().includes("hello")) {
+          botReply = "Hello! How can I assist you today?";
+        }
+        else if (message.toLowerCase().includes("poly pipes")) {
+          botReply = "Yes, we have different varieties of Poly Pipes. What type of pipe are you looking for?";
+        }
+        else if (message.toLowerCase().includes("price")) {
+          botReply = "Can you please tell me which product price you need?";
+        }
+        else if (message.toLowerCase().includes("thanks") || message.toLowerCase().includes("thank you")) {
+          botReply = "You're welcome! 😊";
+        }
+        else {
+          botReply = "Sorry, I didn't understand. Please type your query again.";
+        }
+
+        const botMessage = `<div class='bot-message'>${botReply}</div>`;
+        chatBody.innerHTML += botMessage;
+        chatBody.scrollTop = chatBody.scrollHeight;
+      }, 1000);
+    }
+  }
+</script>
 
 
 <!-- chat bot codes only -->
