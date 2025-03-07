@@ -35,6 +35,12 @@ section {
     padding: 10rem 8% 2rem;
 }
 
+hr {
+  border: 2px solid var(--main-color); /* Line Color */
+  width: 100%; /* Line Full Width */
+  margin: 20px 0; /* Upar Aur Neeche Space */
+  opacity: 0.8; /* Thoda Transparent */
+}
 
 
 
