@@ -71,7 +71,13 @@
       
     </header>
 
-     
+<!-- chat bot codes only -->
+
+
+
+
+<!-- chat bot codes only -->
+ 
 
     <section class="home" id="home">
         <div class="home-content">
@@ -121,97 +127,7 @@
 
 
 
-<!-- Step 1: Add this code to your index.html or main HTML file where you want to show the AI Chat Bot -->
-
-<!-- Chat Bot Button -->
-<div id="chat-bot" onclick="toggleChat()">
-  <img src="chat-icon.png" alt="Chat Bot" style="width: 60px; height: 60px; cursor: pointer;">
-</div>
-
-<!-- Chat Box -->
-<div id="chat-box" style="display: none; position: fixed; bottom: 80px; right: 20px; width: 300px; height: 400px; background: #111; color: white; border-radius: 10px; box-shadow: 0 0 15px rgba(0, 0, 0, 0.7); padding: 10px;">
-  <div style="text-align: right;">
-    <button onclick="toggleChat()" style="background: #ff0000; border: none; color: white; cursor: pointer;">Close</button>
-  </div>
-  <div id="chat-messages" style="height: 80%; overflow-y: scroll; padding: 10px;">
-    <p>Welcome to Pak Pipes International! How can I help you?</p>
-  </div>
-  <input type="text" id="user-input" placeholder="Type your message..." style="width: 100%; padding: 10px; border: none; border-radius: 5px;" onkeydown="if(event.key==='Enter') sendMessage()">
-</div>
-
-<script>
-function toggleChat() {
-  const chatBox = document.getElementById('chat-box');
-  chatBox.style.display = chatBox.style.display === 'none' ? 'block' : 'none';
-}
-
-function sendMessage() {
-  const userInput = document.getElementById('user-input');
-  const message = userInput.value.trim();
-  if (message) {
-    const chatMessages = document.getElementById('chat-messages');
-    const userMessage = `<div style='text-align: right;'><p>${message}</p></div>`;
-    chatMessages.innerHTML += userMessage;
-    userInput.value = '';
-    chatMessages.scrollTop = chatMessages.scrollHeight;
-    setTimeout(() => {
-      chatMessages.innerHTML += `<div><p>AI: Thank you for your message. We will contact you soon!</p></div>`;
-      chatMessages.scrollTop = chatMessages.scrollHeight;
-    }, 1000);
-  }
-}
-</script>
-
-<!-- Step 2: Place the chat-icon.png in your images folder -->
-
-
-         
-
-
-
-
-
-
-         
-
-         
-   <div class="whatsapp-float">
-  <a href="https://wa.me/+923455370104" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-  </a>
-</div>
-
-<style>
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 1000;
-  animation: bounce 1.5s infinite;
-}
-@keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-.whatsapp-float img {
-  width: 45px;
-  border-radius: 50%;
-  box-shadow: 0 0 15px #25D366;
-}
-</style>
-
-
-
-
-
-
-
-
-
-
-         
-
-                         
+                        
  </div>
 
  <div class="home-img">
