@@ -319,6 +319,50 @@
   </form>
 </div>
 
+ <div id="loading" style="display:none; text-align:center; margin-top:20px;">Sending Message...⏳</div>
+<div id="successMessage" style="display:none; text-align:center; margin-top:20px; color:green;">Thank you! Your message has been sent successfully. ✅</div>
+
+<script>
+  function showLoading() {
+    document.getElementById("loading").style.display = "block";
+    setTimeout(() => {
+      document.getElementById("loading").style.display = "none";
+      document.getElementById("successMessage").style.display = "block";
+    }, 3000);
+    return true;
+  }
+</script>
+
+<style>
+  #contactForm input, #contactForm textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: 0.3s;
+  }
+  #contactForm input:focus, #contactForm textarea:focus {
+    border-color: #00aaff;
+    box-shadow: 0 0 8px rgba(0, 170, 255, 0.7);
+  }
+  button {
+    background-color: #00aaff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  button:hover {
+    background-color: #0077cc;
+  }
+</style>
+
+
+
 </section>
  
     <!--Footer Section Code -->
