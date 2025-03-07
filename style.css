@@ -515,18 +515,18 @@ span {
   color: #white;
   margin-bottom: 15px;
   margin-top: 15px;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   text-align: left;  
-  letter-spacing: 1px;
+  letter-spacing: 0.8px;
 }
 
 .contact-form p {
   color: #white;
   margin-bottom: 15px;
   margin-top: 15px;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   text-align: left;  
-  letter-spacing: 1px;
+  letter-spacing: 0.8px;
 }
 
 .contact-form input,
