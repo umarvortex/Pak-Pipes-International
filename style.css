@@ -531,7 +531,7 @@ span {
 
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
-  color: var(--main-color);
+ color: var(--text-color);
 }
 
 .contact-form textarea {
