@@ -507,7 +507,7 @@ span {
   background: #0c0c0c; /* Tumhari website ka colour */
   border: 1px solid var(--main-color); /* Blue Border */
   border-radius: 10px;
-  box-shadow: 0 0 15px var(--main-color) (41, 183, 237, 0.8);
+  box-shadow: 0 0 15px var(--main-color);
   text-align: center;
 }
 
