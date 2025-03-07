@@ -309,9 +309,11 @@
     <!--Contact Section Code -->
 <section>
  
- <div class="contact-form">
-  <h2>Contact Us</h2>
-  <form action="https://formsubmit.co/asliyatkidunya@gmail.com" method="POST">
+<div class="contact-form">
+  <h2>Looking for Something else? Contact Us</h2>
+  <form id="contactForm" action="https://formsubmit.co/asliyatkidunya@gmail.com" method="POST" onsubmit="return showLoading()">
+    <input type="hidden" name="_subject" value="New Message from Website">
+    <input type="hidden" name="_captcha" value="false">
     <input type="text" name="name" placeholder="Your Name" required />
     <input type="email" name="email" placeholder="Your Email" required />
     <textarea name="message" placeholder="Your Message" required></textarea>
@@ -319,7 +321,7 @@
   </form>
 </div>
 
- <div id="loading" style="display:none; text-align:center; margin-top:20px;">Sending Message...⏳</div>
+<div id="loading" style="display:none; text-align:center; margin-top:20px;">Sending Message...⏳</div>
 <div id="successMessage" style="display:none; text-align:center; margin-top:20px; color:green;">Thank you! Your message has been sent successfully. ✅</div>
 
 <script>
@@ -329,6 +331,11 @@
       document.getElementById("loading").style.display = "none";
       document.getElementById("successMessage").style.display = "block";
     }, 3000);
+
+    setTimeout(() => {
+      document.getElementById("successMessage").style.display = "none";
+      document.getElementById("contactForm").reset();
+    }, 6000);
     return true;
   }
 </script>
@@ -360,6 +367,7 @@
     background-color: #0077cc;
   }
 </style>
+
 
 
 
