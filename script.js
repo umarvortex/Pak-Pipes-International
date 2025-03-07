@@ -46,6 +46,11 @@ const typed = new Typed('.multiple-text', {
 
 
 
+function botTyping() {
+  return `<div class='bot-message typing'>Typing...</div>`;
+}
+
+
 
 
 
