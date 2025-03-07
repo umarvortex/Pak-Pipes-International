@@ -511,16 +511,12 @@ span {
   text-align: center;
 }
 
-.contact-form h2 {
-  color: #white;
-  margin-bottom: 20px;
-  font-size: 15px;
-}
-
 .contact-form p {
-  color: var(--main-color);
+  color: #white;
+  font-style: bold;
   margin-bottom: 20px;
-  font-size: 10px;
+  margin-top: 20px;
+  font-size: 20px;
 }
 
 .contact-form input,
