@@ -126,65 +126,127 @@
   <img src="https://i.postimg.cc/YCqfpxRR/file-FEDc3n-Yxc-Yv-Sm-GYh-Njq-PTw.webp" alt="Chat Icon" id="chat-icon" class="chat-icon" onclick="toggleChat()">
   <div id="chat-container" class="chat-container">
     <div id="chat-header" class="chat-header">
-      Pak Pipes Assistant 
+      PPI Assistant 
       <button onclick="toggleChat()" class="close-btn">✖</button>
     </div>
     <div id="chat-body" class="chat-body">
       <div class="bot-message">Welcome to Pak Pipes International Karachi. How can I help you today?</div>
     </div>
     <div class="chat-footer">
-      <input type="text" id="user-input" class="user-input" placeholder="Type your message...">
+      <input type="text" id="user-input" class="user-input" placeholder="Type your message..." oninput="showSmartReplies()">
       <button onclick="sendMessage()" class="send-btn">Send</button>
     </div>
+    <div id="smart-replies" class="smart-replies"></div>
   </div>
 </div>
 
 <script>
   function toggleChat() {
-    const chatContainer = document.getElementById("chat-container");
-    chatContainer.classList.toggle("active");
+    document.getElementById("chat-container").classList.toggle("active");
   }
 
- function sendMessage() {
-  const userInput = document.getElementById("user-input");
-  const chatBody = document.getElementById("chat-body");
-  const message = userInput.value.trim();
-  if (message) {
-    const userMessage = `<div class='user-message'>${message}</div>`;
-    chatBody.innerHTML += userMessage;
-    userInput.value = "";
-    chatBody.scrollTop = chatBody.scrollHeight;
+  function sendMessage() {
+    const userInput = document.getElementById("user-input");
+    const chatBody = document.getElementById("chat-body");
+    const message = userInput.value.trim();
+    
+    if (message) {
+      chatBody.innerHTML += `<div class='user-message'>${message}</div>`;
+      userInput.value = "";
+      chatBody.scrollTop = chatBody.scrollHeight;
+      generateBotReply(message.toLowerCase());
+    }
+  }
 
+  function generateBotReply(message) {
     let botReply = "";
-    if (message.toLowerCase().includes("hi") || message.toLowerCase().includes("hello")) {
+    
+    if (message.includes("hi") || message.includes("hello")) {
       botReply = "Hello! What can I help with?";
-    } else if (message.toLowerCase().includes("pipes")) {
-      botReply = "We have Poly Pipes, PVC Pipes, and other varieties.";
-    } else if (message.toLowerCase().includes("price")) {
+    } else if (message.includes("pipes")) {
+      botReply = "We have Poly Pipes, PVC Pipes, and other varieties. Do you need details?";
+    } else if (message.includes("price")) {
       botReply = "Please tell me which type of pipes price you want to know.";
-    } else if (message.toLowerCase().includes("who is your developer")) {
-      botReply = "I am chat bot assistant developed by Umar Vortex to help Pak Pipes Costomers  .";
-    } else if (message.toLowerCase().includes("delivery")) {
-      botReply = "We provide delivery services all over Pakistan.";
-    } else if (message.toLowerCase().includes("location")) {
-      botReply = "Our company is based in Karachi.";
-    } else if (message.toLowerCase().includes("thanks") || message.toLowerCase().includes("thank you")) {
+    } else if (message.includes("who is your developer")) {
+      botReply = "I am a chatbot assistant developed by Umar Vortex to help Pak Pipes customers.";
+    } else if (message.includes("delivery")) {
+      botReply = "We provide delivery services all over Karachi. Would you like to place an order?";
+    } else if (message.includes("location")) {
+      botReply = "Our shop is based in Karachi Grey noor tower.";
+    } else if (message.includes("joke") || message.includes("funny")) {
+      botReply = getRandomJoke();
+    } else if (message.includes("thanks") || message.includes("thank you")) {
       botReply = "You're welcome! 😊";
     } else {
-      botReply = "Sorry, I don't have any information about this question.";
+      botReply = "I'm not sure about that. Can you rephrase your question?";
     }
 
     setTimeout(() => {
-      const botMessage = `<div class='bot-message'>${botReply}</div>`;
-      chatBody.innerHTML += botMessage;
-      chatBody.scrollTop = chatBody.scrollHeight;
+      document.getElementById("chat-body").innerHTML += `<div class='bot-message'>${botReply}</div>`;
+      document.getElementById("chat-body").scrollTop = document.getElementById("chat-body").scrollHeight;
     }, 1000);
   }
-}
 
+  function getRandomJoke() {
+    const jokes = [
+      "Why don’t skeletons fight each other? They don’t have the guts!",
+      "Why did the scarecrow win an award? Because he was outstanding in his field!",
+      "Why don’t scientists trust atoms? Because they make up everything!"
+    ];
+    return jokes[Math.floor(Math.random() * jokes.length)];
+  }
+
+  function showSmartReplies() {
+    const userInput = document.getElementById("user-input").value.toLowerCase();
+    const smartReplies = document.getElementById("smart-replies");
+    
+    let suggestions = [];
+    if (userInput.includes("hi") || userInput.includes("hello")) {
+      suggestions = ["Hello!", "Hi there!", "How can I assist?"];
+    } else if (userInput.includes("pipes")) {
+      suggestions = ["What types of pipes do you have?", "Tell me about Poly Pipes."];
+    } else if (userInput.includes("price")) {
+      suggestions = ["PVC Pipe Price?", "Garden Pipe Price?", "Pona Flex Pipe Price?", "What’s the rate of Poly Pipes?"];
+    } else if (userInput.includes("joke")) {
+      suggestions = ["Tell me a joke!", "Make me laugh!", "Any funny stories?"];
+    }
+
+    if (suggestions.length > 0) {
+      smartReplies.innerHTML = suggestions.map(reply => `<button onclick="quickReply('${reply}')">${reply}</button>`).join("");
+      smartReplies.style.display = "block";
+    } else {
+      smartReplies.style.display = "none";
+    }
+  }
+
+  function quickReply(text) {
+    document.getElementById("user-input").value = text;
+    sendMessage();
+  }
 </script>
 
+
+    
 <style>
+
+ .smart-replies {
+    display: none;
+    margin-top: 5px;
+  }
+  .smart-replies button {
+    margin: 5px;
+    padding: 5px 10px;
+    border: none;
+    background-color: #ddd;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .smart-replies button:hover {
+    background-color: #bbb;
+  }
+
+
+ 
   .chat-bot {
     max-width: 45px
     height: auto;
