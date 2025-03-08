@@ -259,6 +259,23 @@
     box-shadow: 0 0 12px rgba(255, 255, 255, 1);
   }
 }
+
+ @media (max-width: 600px) {
+    .chat-container {
+        width: 90%;
+        left: 5%;
+        right: 5%;
+    }
+}
+
+ @media (max-width: 450px) {
+    .chat-container {
+        width: 90%;
+        left: 5%;
+        right: 5%;
+    }
+}
+
  
   .chat-icon:hover {
     transform: scale(1.1);
@@ -276,6 +293,10 @@
     opacity: 0; /* Initially hidden */
     transform: scale(0.9); /* Slightly smaller */
     transition: opacity 0.3s ease, transform 0.3s ease;
+    position: fixed;
+    bottom: 80px;  /* Isko adjust kar sakte ho */
+    right: 20px;   /* Screen ke andar rakne ke liye */
+    z-index: 1000;
 }
 
 .chat-container.active {
