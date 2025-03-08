@@ -126,7 +126,7 @@
   <img src="https://i.postimg.cc/YCqfpxRR/file-FEDc3n-Yxc-Yv-Sm-GYh-Njq-PTw.webp" alt="Chat Icon" id="chat-icon" class="chat-icon" onclick="toggleChat()">
   <div id="chat-container" class="chat-container">
     <div id="chat-header" class="chat-header">
-      Pak Pipes International Karachi
+      Pak Pipes Assistant 
       <button onclick="toggleChat()" class="close-btn">✖</button>
     </div>
     <div id="chat-body" class="chat-body">
@@ -145,22 +145,43 @@
     chatContainer.classList.toggle("active");
   }
 
-  function sendMessage() {
-    const userInput = document.getElementById("user-input");
-    const chatBody = document.getElementById("chat-body");
-    const message = userInput.value.trim();
-    if (message) {
-      const userMessage = `<div class='user-message'>${message}</div>`;
-      chatBody.innerHTML += userMessage;
-      userInput.value = "";
-      chatBody.scrollTop = chatBody.scrollHeight;
-      setTimeout(() => {
-        const botMessage = `<div class='bot-message'>Thank you for your message!</div>`;
-        chatBody.innerHTML += botMessage;
-        chatBody.scrollTop = chatBody.scrollHeight;
-      }, 1000);
+ function sendMessage() {
+  const userInput = document.getElementById("user-input");
+  const chatBody = document.getElementById("chat-body");
+  const message = userInput.value.trim();
+  if (message) {
+    const userMessage = `<div class='user-message'>${message}</div>`;
+    chatBody.innerHTML += userMessage;
+    userInput.value = "";
+    chatBody.scrollTop = chatBody.scrollHeight;
+
+    let botReply = "";
+    if (message.toLowerCase().includes("hi") || message.toLowerCase().includes("hello")) {
+      botReply = "Hello! What can I help with?";
+    } else if (message.toLowerCase().includes("pipes")) {
+      botReply = "We have Poly Pipes, PVC Pipes, and other varieties.";
+    } else if (message.toLowerCase().includes("price")) {
+      botReply = "Please tell me which type of pipes price you want to know.";
+    } else if (message.toLowerCase().includes("who is your developer")) {
+      botReply = "I am chat bot assistant developed by Umar Vortex to help Pak Pipes Costomers  .";
+    } else if (message.toLowerCase().includes("delivery")) {
+      botReply = "We provide delivery services all over Pakistan.";
+    } else if (message.toLowerCase().includes("location")) {
+      botReply = "Our company is based in Karachi.";
+    } else if (message.toLowerCase().includes("thanks") || message.toLowerCase().includes("thank you")) {
+      botReply = "You're welcome! 😊";
+    } else {
+      botReply = "Sorry, I didn't understand. Please type your query again.";
     }
+
+    setTimeout(() => {
+      const botMessage = `<div class='bot-message'>${botReply}</div>`;
+      chatBody.innerHTML += botMessage;
+      chatBody.scrollTop = chatBody.scrollHeight;
+    }, 1000);
   }
+}
+
 </script>
 
 <style>
@@ -175,9 +196,9 @@
   }
 
   .chat-icon {
-    width: 60px; 
-    height: 60px;
-   max-width: 60px;
+    width: 55px; 
+    height: 55px;
+   max-width: 50px;
     cursor: pointer;
     border-radius: 50%;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
@@ -189,21 +210,7 @@
    z-index: 999;
   }
 
-  .chat-bot {
-    animation: bounce 2s infinite;
-  }
-
-  @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-      transform: translateY(0);
-    }
-    40% {
-      transform: translateY(-10px);
-    }
-    60% {
-      transform: translateY(-5px);
-    }
-  }
+  
  
   .chat-icon:hover {
     transform: scale(1.1);
