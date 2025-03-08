@@ -175,16 +175,21 @@
   }
 
   .chat-icon {
-    width: 60px;
-    max-width: 60px; 
-    height: auto;
+    width: 60px; 
+    height: 60px;
+   max-width: 60px;
     cursor: pointer;
     border-radius: 50%;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease;
+   object-fit: contain; /* Image ko andar fit karne ke liye */
+   position: fixed; 
+   bottom: 20px;
+   right: 20px;
+   z-index: 999;
   }
 
-  .bounce {
+  .chat-bot {
     animation: bounce 2s infinite;
   }
 
