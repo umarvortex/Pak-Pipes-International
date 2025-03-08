@@ -608,7 +608,7 @@ span {
 
 .to-top {
     background: white;
-    position: fixed;
+    
     right: 32px;
     bottom: -50px; /* Pehle hidden */
     width: 50px; /* Bara aur perfect gol size */
