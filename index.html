@@ -133,10 +133,9 @@
       <div class="bot-message">Welcome to Pak Pipes International Karachi. How can I help you today?</div>
     </div>
     <div class="chat-footer">
-      <input type="text" id="user-input" class="user-input" placeholder="Type your message..." oninput="showSmartReplies()">
+      <input type="text" id="user-input" class="user-input" placeholder="Type your message...">
       <button onclick="sendMessage()" class="send-btn">Send</button>
     </div>
-    <div id="smart-replies" class="smart-replies"></div>
   </div>
 </div>
 
@@ -162,16 +161,18 @@
     let botReply = "";
     
   if (message.includes("hi") || message.includes("hello")) {
-    botReply = "Hello! What can I help with?" "Hey There How can I assist you?" ;
+    botReply = "Hello! What can I help with?" + "Hey There How can I assist you?" ;
 } else if (message.includes("pipes")) {
     botReply = "We have Poly pipe, HDPE pipe, Garden pipe, Braided hose, Wire hose, Fire pipe, Gas pipe, Pressure pipe, and Section pipe";
 } else if (message.includes("yellow") || message.includes("black") || message.includes(" poly black") || message.includes("black poly") || message.includes("poly yellow") || message.includes("yellow poly")) {
-    botReply = "Yes we have would you like to place an order?.";
+   botReply = "Yes, we have it. Would you like to place an order?";
 } else if (message.includes("price") || message.includes("cost")) {
     botReply = "For pricing details, please visit our website or contact us.";
 } else if (message.includes("owner")) {
     botReply = "There is no single owner, but Muhammad Tahir Naqash started this Pak Pipes business with a friend about 2 years ago.";
-} else if (message.includes("yes") || message.includes("yeah") || message.includes("sure") || message.includes("yeah sure") || message.includes("yes sure") || message.includes("han")) {
+} else if (message.includes("yes") || message.includes("yeah") || message.includes("sure") || 
+           message.includes("yeah sure") || message.includes("yes sure") || message.includes("han") || 
+           message.includes("ok") || message.includes("okay")) {
     botReply = "Great, contact us on WhatsApp to place your order.";
 } else if (message.includes("contact") || message.includes("phone") || message.includes("whatsapp")) {
     botReply = "You can contact us at +923192017909 or email us at umarvortex@gmail.com.";
@@ -190,9 +191,9 @@
 } else if (message.includes("discount") || message.includes("offer")) {
     botReply = "We occasionally offer discounts on bulk purchases. Contact us for the latest deals.";
 } else if (message.includes("warranty") || message.includes("guarantee")) {
-    botReply = "Yes, we provide a warranty on select products. Please contact with us for details.";
+  botReply = "Yes, we provide a warranty on select products. Please contact us for details.";
 } else if (message.includes("how long will delivery take") || message.includes("delivery time")) {
-    botReply = "Delivery within Karachi takes 24 hours or less than 24 hour.";
+    botReply = "Delivery within Karachi takes 24 hours or even less.";
 } else if (message.includes("working hours") || message.includes("timings")) {
     botReply = "Our working hours are 11 AM to 6 PM, Saturday to Thursday and 3PM to 6PM Friday .";
 } else {
@@ -208,10 +209,12 @@
 
   function getRandomJoke() {
     const jokes = [
-      "",
       "Why did the scarecrow win an award? Because he was outstanding in his field!",
-      "Why don’t scientists trust atoms? Because they make up everything!"
+      "Why don’t scientists trust atoms? Because they make up everything!",
+      "What do you call fake spaghetti? An impasta!"
+     "Why don’t skeletons fight each other? They don’t have the guts!",
     ];
+
     return jokes[Math.floor(Math.random() * jokes.length)];
   }
 
@@ -265,16 +268,19 @@
   .chat-container {
     width: 285px;
     height: 400px;
-    background: #333;
-    border-radius: 15px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    background: white;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
     overflow: hidden;
     display: none;
     flex-direction: column;
   }
 
   .chat-container.active {
-    display: flex;
+    display: block;
   }
 
   .chat-header {
