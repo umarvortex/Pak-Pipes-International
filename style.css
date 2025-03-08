@@ -608,7 +608,7 @@ span {
 
 .to-top {
     background: white;
-    
+    position: fixed;
     right: 32px;
     bottom: -50px; /* Pehle hidden */
     width: 50px; /* Bara aur perfect gol size */
@@ -630,6 +630,9 @@ span {
     bottom: 50px; /* Active hone ke baad upar aayega */
     opacity: 1;
     pointer-events: auto;
+    display: flex;
+    align-items: center; /* Center mai lane ke liye */
+    justify-content: center
 }
 
 .to-top:hover {
