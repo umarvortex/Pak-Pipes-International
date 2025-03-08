@@ -162,23 +162,25 @@
     let botReply = "";
     
     if (message.includes("hi") || message.includes("hello")) {
-      botReply = "Hello! What can I help with?";
+      botReply = "Hello! What can I help with? ";
     } else if (message.includes("pipes")) {
-      botReply = "We have Poly Pipes, PVC Pipes, and other varieties. Do you need details?";
-    } else if (message.includes("price")) {
-      botReply = "Please tell me which type of pipes price you want to know.";
-    } else if (message.includes("who is your developer")) {
+      botReply = "We have Poly pipe, HDPE pipe, Garden pipe, Braided hose, wire hose, Fire pipe, Gas pipe, Pressure pipe, Section pipe,";
+    } else if (message.includes("price") || message.includes("cost")) {
+        botReply = "For pricing details, please visit our website or contact us.";
+     } else if (message.includes("contact") || message.includes("phone")) {
+        botReply = "You can contact us at +923192017909 or email us at umarvortex@gmail.com.";
+    } else if (message.includes("who is your developer")  || message.includes("who made you")) {
       botReply = "I am a chatbot assistant developed by Umar Vortex to help Pak Pipes customers.";
     } else if (message.includes("delivery")) {
       botReply = "We provide delivery services all over Karachi. Would you like to place an order?";
-    } else if (message.includes("location")) {
-      botReply = "Our shop is based in Karachi Grey noor tower.";
+    } else if (message.includes("location")  || message.includes("address")) {
+      botReply = "Our location is KDA Schm 33 Grey noor towers Karachi Pakistan.";
     } else if (message.includes("joke") || message.includes("funny")) {
       botReply = getRandomJoke();
     } else if (message.includes("thanks") || message.includes("thank you")) {
       botReply = "You're welcome! 😊";
     } else {
-      botReply = "I'm not sure about that. Can you rephrase your question?";
+      botReply = "I'm not sure about that. Ask a different question?";
     }
 
     setTimeout(() => {
@@ -189,7 +191,7 @@
 
   function getRandomJoke() {
     const jokes = [
-      "Why don’t skeletons fight each other? They don’t have the guts!",
+      "",
       "Why did the scarecrow win an award? Because he was outstanding in his field!",
       "Why don’t scientists trust atoms? Because they make up everything!"
     ];
