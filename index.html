@@ -171,7 +171,7 @@
     } else if (message.toLowerCase().includes("thanks") || message.toLowerCase().includes("thank you")) {
       botReply = "You're welcome! 😊";
     } else {
-      botReply = "Sorry, I didn't understand. Please type your query again.";
+      botReply = "Sorry, I don't have any information about this question.";
     }
 
     setTimeout(() => {
@@ -186,14 +186,12 @@
 
 <style>
   .chat-bot {
-    max-width: 50px
+    max-width: 47px
+    height: auto;
     position: fixed;
     bottom: 20px;
     right: 20px;
     z-index: 9999;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
   }
 
   .chat-icon {
@@ -233,7 +231,7 @@
     background: #111;
     color: #fff;
     padding: 10px;
-    text-align: left;
+    text-align: right;
     font-weight: bold;
   }
 
