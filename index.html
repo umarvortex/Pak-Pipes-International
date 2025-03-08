@@ -161,27 +161,44 @@
   function generateBotReply(message) {
     let botReply = "";
     
-    if (message.includes("hi") || message.includes("hello")) {
-      botReply = "Hello! What can I help with? ";
-    } else if (message.includes("pipes")) {
-      botReply = "We have Poly pipe, HDPE pipe, Garden pipe, Braided hose, wire hose, Fire pipe, Gas pipe, Pressure pipe, Section pipe,";
-    } else if (message.includes("price") || message.includes("cost")) {
-        botReply = "For pricing details, please visit our website or contact us.";
-     } else if (message.includes("contact") || message.includes("phone")) {
-        botReply = "You can contact us at +923192017909 or email us at umarvortex@gmail.com.";
-    } else if (message.includes("who is your developer")  || message.includes("who made you")) {
-      botReply = "I am a chatbot assistant developed by Umar Vortex to help Pak Pipes customers.";
-    } else if (message.includes("delivery")) {
-      botReply = "We provide delivery services all over Karachi. Would you like to place an order?";
-    } else if (message.includes("location")  || message.includes("address")) {
-      botReply = "Our location is KDA Schm 33 Grey noor towers Karachi Pakistan.";
-    } else if (message.includes("joke") || message.includes("funny")) {
-      botReply = getRandomJoke();
-    } else if (message.includes("thanks") || message.includes("thank you")) {
-      botReply = "You're welcome! 😊";
-    } else {
-      botReply = "I'm not sure about that. Ask a different question?";
-    }
+  if (message.includes("hi") || message.includes("hello")) {
+    botReply = "Hello! What can I help with?" "Hey There How can I assist you?" ;
+} else if (message.includes("pipes")) {
+    botReply = "We have Poly pipe, HDPE pipe, Garden pipe, Braided hose, Wire hose, Fire pipe, Gas pipe, Pressure pipe, and Section pipe";
+} else if (message.includes("yellow") || message.includes("black") || message.includes(" poly black") || message.includes("black poly") || message.includes("poly yellow") || message.includes("yellow poly")) {
+    botReply = "Yes we have would you like to place an order?.";
+} else if (message.includes("price") || message.includes("cost")) {
+    botReply = "For pricing details, please visit our website or contact us.";
+} else if (message.includes("owner")) {
+    botReply = "There is no single owner, but Muhammad Tahir Naqash started this Pak Pipes business with a friend about 2 years ago.";
+} else if (message.includes("yes") || message.includes("yeah") || message.includes("sure") || message.includes("yeah sure") || message.includes("yes sure") || message.includes("han")) {
+    botReply = "Great, contact us on WhatsApp to place your order.";
+} else if (message.includes("contact") || message.includes("phone") || message.includes("whatsapp")) {
+    botReply = "You can contact us at +923192017909 or email us at umarvortex@gmail.com.";
+} else if (message.includes("developer") || message.includes("developed") || message.includes("who made you")) {
+    botReply = "I am a chatbot assistant developed by Umar Vortex to help Pak Pipes customers.";
+} else if (message.includes("delivery")) {
+    botReply = "We provide delivery services all over Karachi. Would you like to place an order?";
+} else if (message.includes("location") || message.includes("address")) {
+    botReply = "Our location is KDA Schm 33 Grey Noor Towers Karachi Pakistan.";
+} else if (message.includes("joke") || message.includes("funny")) {
+    botReply = getRandomJoke();
+} else if (message.includes("thanks") || message.includes("thank you")) {
+    botReply = "You're welcome! 😊";
+} else if (message.includes("payment") || message.includes("pay")) {
+    botReply = "We accept bank transfers, cash on delivery (COD), and online payments. Let us know how you’d like to pay.";
+} else if (message.includes("discount") || message.includes("offer")) {
+    botReply = "We occasionally offer discounts on bulk purchases. Contact us for the latest deals.";
+} else if (message.includes("warranty") || message.includes("guarantee")) {
+    botReply = "Yes, we provide a warranty on select products. Please contact with us for details.";
+} else if (message.includes("how long will delivery take") || message.includes("delivery time")) {
+    botReply = "Delivery within Karachi takes 24 hours or less than 24 hour.";
+} else if (message.includes("working hours") || message.includes("timings")) {
+    botReply = "Our working hours are 11 AM to 6 PM, Saturday to Thursday and 3PM to 6PM Friday .";
+} else {
+    botReply = "I'm not sure about that. Ask a different question?";
+}
+
 
     setTimeout(() => {
       document.getElementById("chat-body").innerHTML += `<div class='bot-message'>${botReply}</div>`;
@@ -220,8 +237,8 @@
   }
 
   .chat-icon {
-    width: 50px; 
-    height: 50px;
+    width: 45px; 
+    height: 45px;
     cursor: pointer;
     border-radius: 50%;
     transition: transform 0.3s ease;
@@ -237,7 +254,7 @@
     box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
   }
   100% {
-    box-shadow: 0 0 15px rgba(255, 255, 255, 1);
+    box-shadow: 0 0 12px rgba(255, 255, 255, 1);
   }
 }
  
@@ -246,7 +263,7 @@
   }
 
   .chat-container {
-    width: 283px;
+    width: 285px;
     height: 400px;
     background: #333;
     border-radius: 15px;
