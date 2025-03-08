@@ -196,28 +196,7 @@
     return jokes[Math.floor(Math.random() * jokes.length)];
   }
 
-  function showSmartReplies() {
-    const userInput = document.getElementById("user-input").value.toLowerCase();
-    const smartReplies = document.getElementById("smart-replies");
-    
-    let suggestions = [];
-    if (userInput.includes("hi") || userInput.includes("hello")) {
-      suggestions = ["Hello!", "Hi there!", "How can I assist?"];
-    } else if (userInput.includes("pipes")) {
-      suggestions = ["What types of pipes do you have?", "Tell me about Poly Pipes."];
-    } else if (userInput.includes("price")) {
-      suggestions = ["PVC Pipe Price?", "Garden Pipe Price?", "Pona Flex Pipe Price?", "What’s the rate of Poly Pipes?"];
-    } else if (userInput.includes("joke")) {
-      suggestions = ["Tell me a joke!", "Make me laugh!", "Any funny stories?"];
-    }
-
-    if (suggestions.length > 0) {
-      smartReplies.innerHTML = suggestions.map(reply => `<button onclick="quickReply('${reply}')">${reply}</button>`).join("");
-      smartReplies.style.display = "block";
-    } else {
-      smartReplies.style.display = "none";
-    }
-  }
+ 
 
   function quickReply(text) {
     document.getElementById("user-input").value = text;
@@ -283,7 +262,7 @@
   }
 
   .chat-container {
-    width: 270px;
+    width: 280px;
     height: 400px;
     background: #333;
     border-radius: 15px;
