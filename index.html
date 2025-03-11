@@ -161,6 +161,16 @@
             border: none;
             outline: none;
         }
+
+     .user-message {
+    background: #4CAF50;
+    color: white;
+    text-align: right;
+}
+.bot-message {
+    background: #ddd;
+    color: black;
+     }
         #chatbot-send {
             padding: 10px;
             background: #333;
@@ -188,6 +198,7 @@
     <!-- Chatbot Container -->
     <div id="chatbot-container">
         <div id="chatbot-header">Pak Pipes Chatbot</div>
+        <button id="close-chatbot">X</button>
         <div id="chatbot-messages"></div>
         <div id="chatbot-input-container">
             <input type="text" id="chatbot-input" placeholder="Ask me anything...">
@@ -248,7 +259,10 @@
 
             chatbotInput.value = "";
         }
-
+        // Close Chatbot Function
+closeChatbot.addEventListener("click", () => {
+    chatbotContainer.style.display = "none";
+});
         chatbotSend.addEventListener("click", sendMessage);
         chatbotInput.addEventListener("keypress", (e) => {
             if (e.key === "Enter") sendMessage();
