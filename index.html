@@ -124,153 +124,12 @@
 
 
 
-    <style>
+   
+    
         
-        #chatbot-container {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 300px;
-            height: 400px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-            display: none;
-            flex-direction: column;
-            font-family: Arial, sans-serif;
-            overflow: hidden;
-        }
-        #chatbot-header {
-            background: #333;
-            color: white;
-            padding: 10px;
-            text-align: center;
-        }
-        #chatbot-messages {
-            flex-grow: 1;
-            padding: 10px;
-            overflow-y: auto;
-        }
-        #chatbot-input-container {
-            display: flex;
-            border-top: 1px solid #ccc;
-        }
-        #chatbot-input {
-            flex-grow: 1;
-            padding: 10px;
-            border: none;
-            outline: none;
-        }
+  
 
-     .user-message {
-    background: #4CAF50;
-    color: white;
-    text-align: right;
-}
-.bot-message {
-    background: #ddd;
-    color: black;
-     }
-        #chatbot-send {
-            padding: 10px;
-            background: #333;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-        #chatbot-button {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            padding: 10px 15px;
-            background: #333;
-            color: white;
-            border: none;
-            cursor: pointer;
-            border-radius: 50px;
-        }
-    </style>
-
-
-    <!-- Chatbot Button -->
-    <button id="chatbot-button">Chat</button>
-
-    <!-- Chatbot Container -->
-    <div id="chatbot-container">
-        <div id="chatbot-header">Pak Pipes Chatbot</div>
-        <button id="close-chatbot">X</button>
-        <div id="chatbot-messages"></div>
-        <div id="chatbot-input-container">
-            <input type="text" id="chatbot-input" placeholder="Ask me anything...">
-            <button id="chatbot-send">Send</button>
-        </div>
-    </div>
-
-    <script>
-        // Chatbot Configuration
-        const chatbotButton = document.getElementById("chatbot-button");
-        const chatbotContainer = document.getElementById("chatbot-container");
-        const chatbotMessages = document.getElementById("chatbot-messages");
-        const chatbotInput = document.getElementById("chatbot-input");
-        const chatbotSend = document.getElementById("chatbot-send");
-
-        // Your Website Details
-        const websiteDetails = `
-            Pak Pipes International Karachi is a leading supplier of high-quality pipes. 
-            We provide durable and affordable pipes for industrial and domestic use.
-            Visit our website for more: [https://umarvortex.github.io/Pak-Pipes-International-Karachi/]
-        `;
-
-        // Custom Q&A Section
-        const customQA = {
-            "hello": "Hello! How can I assist you?",
-            "what is your name": "I am Pak Pipes Chatbot, your assistant.",
-            "what products do you sell": "We sell high-quality pipes for various industries.",
-            "where are you located": "We are based in Karachi, Pakistan.",
-            "contact details": "You can contact us via email at info@pakpipes.com or call us at +92-XXX-XXXXXXX."
-        };
-
-        // Open/Close Chatbot
-        chatbotButton.addEventListener("click", () => {
-            chatbotContainer.style.display = chatbotContainer.style.display === "none" ? "flex" : "none";
-        });
-
-        // Handle User Messages
-        function sendMessage() {
-            const userInput = chatbotInput.value.toLowerCase().trim();
-            if (userInput === "") return;
-
-            // Display User Message
-            chatbotMessages.innerHTML += `<div><strong>You:</strong> ${userInput}</div>`;
-
-            // Bot Response
-            let response = customQA[userInput] || "I am not sure about that. Please check our website for more details.";
-
-            // Add Company Details if Requested
-            if (userInput.includes("company details") || userInput.includes("about your company")) {
-                response = websiteDetails;
-            }
-
-            // Display Bot Response
-            setTimeout(() => {
-                chatbotMessages.innerHTML += `<div><strong>Bot:</strong> ${response}</div>`;
-                chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
-            }, 500);
-
-            chatbotInput.value = "";
-        }
-        // Close Chatbot Function
-closeChatbot.addEventListener("click", () => {
-    chatbotContainer.style.display = "none";
-});
-        chatbotSend.addEventListener("click", sendMessage);
-        chatbotInput.addEventListener("keypress", (e) => {
-            if (e.key === "Enter") sendMessage();
-        });
-    </script>
-
-
-
+<!-- chat bot codes only -->
 
          
 
@@ -440,7 +299,7 @@ closeChatbot.addEventListener("click", () => {
                         <i class="bx bxs-star" id="Star"></i>     
                     </div>
                     
-                    <p>Best quality pipes in Karachi fast and secure dilivery</p>
+                    <p>Best quality pipes in Karachi fast and secure delivery</p>
 
                 </div>
 
