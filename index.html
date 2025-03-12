@@ -212,7 +212,7 @@
         .welcome-message {
             text-align: center;
             margin-top: 20px;
-            color: #ddd;
+            color: #363636;
         }
 
         .welcome-logo {
@@ -278,7 +278,7 @@
     <!-- Chatbot Container -->
     <div class="chatbot-container" id="chatbotContainer">
         <div class="chatbot-header">
-            <h3>PPI Assistant</h3>
+            <h3>Vortex</h3>
             <div>
                 <button id="refreshChatbot"> <i class="fa-sharp-duotone fa-solid fa-rotate"></i> </button>
                 <button id="closeChatbot"><i class="fa-solid fa-xmark"></i></button>
@@ -288,11 +288,11 @@
             <!-- Welcome Message -->
             <div class="welcome-message" id="welcomeMessage">
                 <img src="https://i.postimg.cc/c4MdHSpM/IMG-20250312-153058.jpg" alt="Logo" class="welcome-logo">
-                <p><strong>I am PPI Assistant.</strong><br>How can I assist you?</p>
+                <p><strong>Hi, I'm Vortex.</strong><br>How can I assist you?</p>
             </div>
         </div>
         <div class="chatbot-input">
-            <input type="text" id="userInput" placeholder="Type your message...">
+            <input type="text" id="userInput" placeholder="Massage Vortex...">
             <button id="sendButton">Send</button>
         </div>
     </div>
@@ -348,6 +348,11 @@
 
         document.getElementById("closeChatbot").addEventListener("click", () => {
             document.getElementById("chatbotContainer").style.display = "none";
+        });
+
+      // Event listener for refresh button
+        document.getElementById('refreshChatbot').addEventListener('click', function() {
+            document.getElementById('chatbotBody').innerHTML = '';
         });
 
         document.getElementById("sendButton").addEventListener("click", sendMessage);
