@@ -154,7 +154,7 @@
   height: 30px;
 }
 
-.chatbot-container {
+.chatbot-contaiiner {
   position: fixed;
   bottom: 80px;
   right: 20px;
@@ -164,7 +164,7 @@
   border: 1px solid #ccc;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  display: flex;
+  display: none;
 }
 
 .chatbot-container.active {
@@ -266,7 +266,7 @@
   <button id="chatbot-button" class="chatbot-button">
   <img src="chatbot-icon.png" alt="Chatbot Icon">
 </button>
-<div id="chatbot-container" class="chatbot-container">
+<div id="chatbot-contaiiner" class="chatbot-contaiiner">
   
 </div>
          
@@ -289,7 +289,7 @@
     // Business Information
 
     document.getElementById('chatbot-button').addEventListener('click', function() {
-  const chatbotContainer = document.getElementById('chatbot-container');
+  const chatbotContainer = document.getElementById('chatbot-contaiiner');
   chatbotContainer.classList.toggle('active');
 });
 
