@@ -32,6 +32,7 @@
      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
      <link rel="stylesheet" href="style.css">
      <title>Pak Pipes</title>
 </head>   
@@ -133,189 +134,227 @@
 
 
     <style>
-        /* Chatbot Floating Icon */
-        #chatbot-icon {
+
+        /* Chatbot Icon */
+        .chatbot-icon {
             position: fixed;
             bottom: 20px;
             right: 20px;
             width: 60px;
             height: 60px;
-            background-color: #007bff;
             border-radius: 50%;
+            background-color: #d200ff; 
+            cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            cursor: pointer;
-            transition: transform 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             z-index: 9999;
         }
-        #chatbot-icon:hover {
-            transform: scale(1.1);
-        }
-        #chatbot-icon img {
-            width: 35px;
-            height: 35px;
+
+        .chatbot-icon img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
         }
 
         /* Chatbot Container */
-        #chatbot-container {
+        .chatbot-container {
             position: fixed;
             bottom: 90px;
             right: 20px;
-            width: 280px;
-            background: white;
+            width: 320px;
+            height: 450px;
+            background-color: #fff;
             border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             display: none;
             flex-direction: column;
-            overflow: hidden;
             z-index: 9999;
         }
 
-        /* Chatbot Header */
-        #chatbot-header {
-            background-color: #007bff;
-            color: white;
+        .chatbot-header {
+            background-color: #d200ff;
+            color: #fff;
             padding: 10px;
-            text-align: center;
-            font-size: 18px;
-            font-weight: bold;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        /* Chatbot Messages */
-        #chatbot-messages {
-            padding: 15px;
-            height: 300px;
+        .chatbot-header h3 {
+            margin: 0;
+        }
+
+        .chatbot-header button {
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        /* Chatbot Body */
+        .chatbot-body {
+            flex: 1;
+            padding: 10px;
             overflow-y: auto;
-            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
-        /* User & Bot Messages */
+        /* Welcome Message (DeepSeek style) */
+        .welcome-message {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .welcome-logo {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 10px;
+        }
+
+        /* Messages */
         .message {
-            padding: 8px 12px;
-            border-radius: 5px;
-            margin: 5px 0;
             max-width: 80%;
+            padding: 8px 12px;
+            border-radius: 8px;
+            margin: 5px 0;
+            font-size: 14px;
+            word-wrap: break-word;
         }
+
         .user-message {
-            background: #007bff;
-            color: white;
+            background-color: #d200ff;
+            color: #fff;
             align-self: flex-end;
-            text-align: right;
         }
+
         .bot-message {
-            background: #007bff;
+            background-color: #ddd;
+            color: #000;
             align-self: flex-start;
         }
 
-        /* Input Field */
-        #chatbot-input {
+        /* Input Section */
+        .chatbot-input {
             display: flex;
             padding: 10px;
+            background-color: #fff;
             border-top: 1px solid #ddd;
         }
-        #user-input {
+
+        .chatbot-input input {
             flex: 1;
             padding: 8px;
-            border: 1px solid #ddd;
+            border: 1px solid #d200ff;
             border-radius: 5px;
-            outline: none;
+            margin-right: 10px;
         }
-        #send-button {
-            background: #007bff;
-            color: white;
-            border: none;
+
+        .chatbot-input button {
             padding: 8px 12px;
-            margin-left: 5px;
-            cursor: pointer;
+            background-color: #d200ff;
+            color: #fff;
+            border: none;
             border-radius: 5px;
-        }
-        #send-button:hover {
-            background: #0056b3;
+            cursor: pointer;
         }
     </style>
-</head>
-<body>
+
 
     <!-- Chatbot Icon -->
-    <div id="chatbot-icon">
-        <img src="https://cdn-icons-png.flaticon.com/512/2332/2332112.png" alt="Chatbot">
+    <div class="chatbot-icon" id="chatbotIcon">
+        <img src="https://i.postimg.cc/c4MdHSpM/IMG-20250312-153058.jpg" alt="Chatbot Icon">
     </div>
 
     <!-- Chatbot Container -->
-    <div id="chatbot-container">
-        <div id="chatbot-header">Pak Pipes Chatbot</div>
-        <div id="chatbot-messages"></div>
-        <div id="chatbot-input">
-            <input type="text" id="user-input" placeholder="Ask a question..." autocomplete="off">
-            <button id="send-button">Send</button>
+    <div class="chatbot-container" id="chatbotContainer">
+        <div class="chatbot-header">
+            <h3>PPI Assistant</h3>
+            <div>
+                <button id="closeChatbot"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+        </div>
+        <div class="chatbot-body" id="chatbotBody">
+            <!-- Welcome Message -->
+            <div class="welcome-message" id="welcomeMessage">
+                <img src="https://i.postimg.cc/c4MdHSpM/IMG-20250312-153058.jpg" alt="Logo" class="welcome-logo">
+                <p><strong>I am PPI Assistant.</strong><br>How can I assist you?</p>
+            </div>
+        </div>
+        <div class="chatbot-input">
+            <input type="text" id="userInput" placeholder="Type your message...">
+            <button id="sendButton">Send</button>
         </div>
     </div>
 
     <script>
-        const chatbotIcon = document.getElementById("chatbot-icon");
-        const chatbotContainer = document.getElementById("chatbot-container");
-        const userInput = document.getElementById("user-input");
-        const sendButton = document.getElementById("send-button");
-        const chatbotMessages = document.getElementById("chatbot-messages");
-
-        // Toggle chatbot visibility
-        chatbotIcon.addEventListener("click", () => {
-            chatbotContainer.style.display = chatbotContainer.style.display === "none" || chatbotContainer.style.display === "" ? "flex" : "none";
-        });
-
-        // Predefined responses
-        const responses = {
-            "hello": "Hello! How can I assist you today?",
-            "hi": "Hi there! How can I help?",
-            "services": "We provide high-quality pipes and fittings. What exactly are you looking for?",
-            "timing": "Our working hours are from 9 AM to 6 PM, Monday to Saturday.",
-            "location": "We are located in Karachi, Pakistan.",
-            "contact": "You can contact us at +92-XXX-XXXXXXX.",
-            "bye": "Goodbye! Have a great day!",
-        };
-
-        // Handle user message
-        function handleUserMessage() {
-            let userText = userInput.value.toLowerCase().trim();
+        function sendMessage() {
+            const userText = userInput.value.trim();
             if (userText === "") return;
 
-            // Add user message
-            addMessage(userText, "user-message");
+            // Hide Welcome Message on first message
+            document.getElementById("welcomeMessage").style.display = "none";
 
-            // Get bot response
-            let botResponse = responses[userText] || "I'm not sure about that. Please ask something else.";
+            // User Message
+            const userMessage = document.createElement("div");
+            userMessage.classList.add("message", "user-message");
+            userMessage.textContent = userText;
+            chatbotBody.appendChild(userMessage);
 
-            // Add bot message
-            setTimeout(() => addMessage(botResponse, "bot-message"), 500);
+            // Bot Response
+            setTimeout(() => {
+                const botMessage = document.createElement("div");
+                botMessage.classList.add("message", "bot-message");
+                botMessage.textContent = getBotResponse(userText);
+                chatbotBody.appendChild(botMessage);
 
-            // Clear input field
+                chatbotBody.scrollTop = chatbotBody.scrollHeight;
+            }, 500);
+
+            // Clear Input
             userInput.value = "";
+            chatbotBody.scrollTop = chatbotBody.scrollHeight;
         }
 
-        // Function to add message to chat
-        function addMessage(text, className) {
-            let messageDiv = document.createElement("div");
-            messageDiv.classList.add("message", className);
-            messageDiv.innerText = text;
-            chatbotMessages.appendChild(messageDiv);
-            chatbotMessages.scrollTop = chatbotMessages.scrollHeight; // Auto scroll to latest message
-        }
+        function getBotResponse(userText) {
+            userText = userText.toLowerCase();
 
-        // Send message on button click
-        sendButton.addEventListener("click", handleUserMessage);
-
-        // Send message on Enter key press
-        userInput.addEventListener("keypress", function(event) {
-            if (event.key === "Enter") {
-                handleUserMessage();
+            if (userText.includes("hi") || userText.includes("hello") || userText.includes("assalam")) {
+                return "Hello! How can I assist you today with our pipe solutions?";
             }
+            if (userText.includes("timing") || userText.includes("hours")) {
+                return "Our business hours are 11 AM - 6 PM (Mon-Sat).";
+            }
+            if (userText.includes("contact") || userText.includes("email")) {
+                return "You can contact us at umarvortex@gmail.com.";
+            }
+            return "I'm not sure about that. Would you like to know about our services?";
+        }
+
+        // Show/Hide Chatbot
+        document.getElementById("chatbotIcon").addEventListener("click", () => {
+            document.getElementById("chatbotContainer").style.display = "flex";
         });
 
-        // Welcome message
-        setTimeout(() => addMessage("Welcome! Ask me anything about Pak Pipes International Karachi.", "bot-message"), 1000);
+        document.getElementById("closeChatbot").addEventListener("click", () => {
+            document.getElementById("chatbotContainer").style.display = "none";
+        });
+
+        document.getElementById("sendButton").addEventListener("click", sendMessage);
+
+        document.getElementById("userInput").addEventListener("keypress", (event) => {
+            if (event.key === "Enter") sendMessage();
+        });
     </script>
+
+
 
 
   
