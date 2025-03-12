@@ -134,11 +134,48 @@
 
   <style>
 
+     .chatbot-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #007bff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.chatbot-button img {
+  width: 30px;
+  height: 30px;
+}
+
+.chatbot-container {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 300px;
+  height: 400px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+
+.chatbot-container.active {
+  display: block;
+}
+
+   
     /* Chatbot Container */
     .chatbot-container {
-      width: 400px;
-      background-color: #ffffff;
+      width: 300px;
+      background-color: #white;
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       overflow: hidden;
@@ -231,8 +268,17 @@
     .chatbot-input button:hover {
       background-color: #005bb5;
     }
+
+   
   </style>
 
+  <button id="chatbot-button" class="chatbot-button">
+  <img src="chatbot-icon.png" alt="Chatbot Icon">
+</button>
+<div id="chatbot-container" class="chatbot-container">
+  <!-- Chatbot content goes here -->
+</div>
+         
   <div class="chatbot-container">
     <div class="chatbot-header">
       <div class="chatbot-icon">🤖</div>
@@ -250,6 +296,20 @@
 
   <script>
     // Business Information
+
+    document.getElementById('chatbot-button').addEventListener('click', function() {
+  const chatbotContainer = document.getElementById('chatbot-container');
+  chatbotContainer.classList.toggle('active');
+});
+
+document.addEventListener('click', function(event) {
+  const chatbotContainer = document.getElementById('chatbot-container');
+  const chatbotButton = document.getElementById('chatbot-button');
+  if (event.target !== chatbotContainer && event.target !== chatbotButton && !chatbotContainer.contains(event.target)) {
+    chatbotContainer.classList.remove('active');
+  }
+});
+   
     const businessInfo = {
       name: "My Business",
       services: ["Service 1", "Service 2", "Service 3"],
