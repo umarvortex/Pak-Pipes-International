@@ -163,7 +163,7 @@
             position: fixed;
             bottom: 90px;
             right: 20px;
-            width: 320px;
+            width: 290px;
             height: 450px;
             background-color: #fff;
             border-radius: 10px;
@@ -297,7 +297,7 @@
             <!-- Welcome Message -->
             <div class="welcome-message" id="welcomeMessage">
                 <img src="https://i.postimg.cc/c4MdHSpM/IMG-20250312-153058.jpg" alt="Logo" class="welcome-logo">
-                <p><strong>Hi, I'm Vortex.</strong><br>How can I assist you?</p>
+                <p><strong>Hi, I'm Vortex.</strong><br>How can I help you?</p>
             </div>
         </div>
         <div class="chatbot-input">
@@ -338,7 +338,7 @@
         function getBotResponse(userText) {
             userText = userText.toLowerCase();
 
-            if (userText.includes("hi") || userText.includes("hello") || userText.includes("assalam")) {
+            if (userText.includes("hi") || userText.includes("hello") || userText.includes("salam")) {
                 return "Hello! How can I assist you today with our pipe solutions?";
             }
             if (userText.includes("timing") || userText.includes("hours")) {
