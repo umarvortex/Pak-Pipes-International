@@ -2,7 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+    text-decoration: none;
+    list-style: none;
     border: none;
     outline: none;
     scroll-behavior: smooth;
@@ -582,8 +583,8 @@ span {
 .to-top {
     background: white;
     position: fixed;
-    right: 50px;
-    bottom: -50px; /* Pehle hidden */
+    right: 120px;
+    bottom: -45px; /* Pehle hidden */
     width: 50px; /* Bara aur perfect gol size */
     height: 50px; /* Same width aur height se perfect gol circle banega */
     border-radius: 50%; /* Yeh line circle banane ke liye hai */
