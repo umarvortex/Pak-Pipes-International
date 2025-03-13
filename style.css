@@ -583,17 +583,17 @@ span {
 .to-top {
     background: white;
     position: fixed;
-    right: 120px;
-    bottom: -45px; /* Pehle hidden */
-    width: 50px; /* Bara aur perfect gol size */
-    height: 50px; /* Same width aur height se perfect gol circle banega */
+    right: 135px;
+    bottom: -50px; /* Pehle hidden */
+    width: 46px; /* Bara aur perfect gol size */
+    height: 46px; /* Same width aur height se perfect gol circle banega */
     border-radius: 50%; /* Yeh line circle banane ke liye hai */
     display: flex;
     text-align: center;
     align-items: center; /* Center mai lane ke liye */
     justify-content: center; /* Center mai lane ke liye */
     font-size: 20px; /* Icon ka size */
-    color: #1f1f1f;
+    color: silver;
     text-decoration: none;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Thoda sa shadow effect professional look ke liye 🔥 */
     opacity: 0; /* Pehle hidden */
@@ -601,7 +601,7 @@ span {
     transition: all .4s;
 }
 .to-top.active {
-    bottom: 50px; /* Active hone ke baad upar aayega */
+    bottom: 40px; /* Active hone ke baad upar aayega */
     opacity: 1;
     pointer-events: auto;
     display: flex;
