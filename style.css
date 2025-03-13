@@ -2,8 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
+    
     border: none;
     outline: none;
     scroll-behavior: smooth;
@@ -583,7 +582,7 @@ span {
 .to-top {
     background: white;
     position: fixed;
-    right: 32px;
+    right: 50px;
     bottom: -50px; /* Pehle hidden */
     width: 50px; /* Bara aur perfect gol size */
     height: 50px; /* Same width aur height se perfect gol circle banega */
@@ -626,14 +625,8 @@ span {
 }
 
 
-::-webkit-scrollbar {
-    width: 15px;
-}
 
-::-webkit-scrollbar-thumb{
-    background: var(--main-color);
-    width: 50px;
-}
+
 
 
 
