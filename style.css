@@ -585,7 +585,7 @@ span {
 .to-top {
     background: #484e52;
     position: fixed;
-    right: 65px;
+    right: 100px;
     bottom: -50px; /* Pehle hidden */
     width: 46px; /* Bara aur perfect gol size */
     height: 46px; /* Same width aur height se perfect gol circle banega */
@@ -603,7 +603,7 @@ span {
     transition: all .4s;
 }
 .to-top.active {
-    bottom: 28px; /* Active hone ke baad upar aayega */
+    bottom: 30px; /* Active hone ke baad upar aayega */
     opacity: 1;
     pointer-events: auto;
     display: flex;
