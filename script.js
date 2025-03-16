@@ -22,7 +22,7 @@ const typed = new Typed('.multiple-text', {
         'Affordable Prices', 
         "Karachi's Most Trusted Pipes Supplier",
         '24/7 Customer Support', 
-        'No`1 in Karachi', 
+        'No. 1 in Karachi', 
         'Wide Range of Products',  
         'Easy Online Ordering',
         'Premium Quality, Affordable Rates',
@@ -31,7 +31,7 @@ const typed = new Typed('.multiple-text', {
         'Trusted by Homeowners and Builders', 
         'Eco-Friendly Pipes',],
     typeSpeed: 60,
-    backSpeed: 60,
+    backSpeed: 30,
     backDelay: 1050,
     loop: true,
 });
