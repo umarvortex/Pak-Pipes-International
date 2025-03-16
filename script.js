@@ -47,7 +47,7 @@ const typed = new Typed('.multiple-text', {
 
 
 
-<script>
+
     document.addEventListener("DOMContentLoaded", function() {
         const toTopButton = document.querySelector(".to-top");
 
@@ -79,7 +79,7 @@ const typed = new Typed('.multiple-text', {
         // Reset hide timer on scroll
         window.addEventListener("scroll", resetHideTimer);
     });
-</script>
+
 
 
 
