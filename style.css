@@ -667,8 +667,8 @@ span {
     }
     .navbar a {
         display: block;
-        padding: 17px;
-        font-size: 22px;
+        padding: 10px;
+        font-size: 14px;
     }
     .navbar.active {
         right: 0;
