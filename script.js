@@ -11,15 +11,7 @@ window.onscroll= () => {
     navbar.classList.remove('active');
 }
 
-const toTop = document.querySelector(".to-top");
 
-window.addEventListener("scroll", () => {
-   if (window.pageYOffset > 100) {
-     toTop.classList.add("active");
-  }  else {
-     toTop.classList.remove("active");
-  }
-})
 
 
 
@@ -51,7 +43,7 @@ const typed = new Typed('.multiple-text', {
     document.addEventListener("DOMContentLoaded", function() {
         const toTopButton = document.querySelector(".to-top");
 
-        // Show the button when scrolling down 100px from the top
+        // Show the button when scrolling down 60px from the top
         window.addEventListener("scroll", () => {
             if (window.scrollY > 100) {
                 toTopButton.classList.add("active");
