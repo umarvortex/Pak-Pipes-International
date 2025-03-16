@@ -585,8 +585,8 @@ span {
 .to-top {
     background: #484e52;
     position: fixed;
-    right: 100px;
-    bottom: -50px; /* Pehle hidden */
+    right: 60px;
+    bottom: -60px; /* Pehle hidden */
     width: 46px; /* Bara aur perfect gol size */
     height: 46px; /* Same width aur height se perfect gol circle banega */
     border-radius: 50%; /* Yeh line circle banane ke liye hai */
