@@ -47,7 +47,39 @@ const typed = new Typed('.multiple-text', {
 
 
 
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const toTopButton = document.querySelector(".to-top");
 
+        // Show the button when scrolling down 100px from the top
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 100) {
+                toTopButton.classList.add("active");
+                resetHideTimer();
+            } else {
+                toTopButton.classList.remove("active");
+            }
+        });
+
+        // Scroll to the top when the button is clicked
+        toTopButton.addEventListener("click", (event) => {
+            event.preventDefault();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+
+        // Hide the button after 4 seconds of inactivity
+        let hideTimeout;
+        function resetHideTimer() {
+            clearTimeout(hideTimeout);
+            hideTimeout = setTimeout(() => {
+                toTopButton.classList.remove("active");
+            }, 4000);
+        }
+
+        // Reset hide timer on scroll
+        window.addEventListener("scroll", resetHideTimer);
+    });
+</script>
 
 
 
