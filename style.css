@@ -731,6 +731,12 @@ span {
     .services h2 {
         margin-bottom: 3rem;
     }
+
+.navbar a {
+        display: block;
+        padding: 10px;
+        font-size: 14px;
+    }
 }
 
 @media (max-width:617px) {
@@ -748,7 +754,14 @@ span {
         max-width: 100%;
         height: 100%;
     }
+
+.navbar a {
+        display: block;
+        padding: 10px;
+        font-size: 14px;
+    }
 }
+
 
 @media (max-width:450px) {
     html {
@@ -765,6 +778,12 @@ span {
     .container {
         width: 100%;
         padding: 10px;
+    }
+
+.navbar a {
+        display: block;
+        padding: 10px;
+        font-size: 14px;
     }
 }
 
