@@ -585,7 +585,7 @@ span {
 .to-top {
     background: #484e52;
     position: fixed;
-    right: 60px;
+    right: 20px;
     bottom: -60px; /* Pehle hidden */
     width: 46px; /* Bara aur perfect gol size */
     height: 46px; /* Same width aur height se perfect gol circle banega */
