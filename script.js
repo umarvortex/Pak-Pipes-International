@@ -11,7 +11,15 @@ window.onscroll= () => {
     navbar.classList.remove('active');
 }
 
+const toTop = document.querySelector(".to-top");
 
+window.addEventListener("scroll", () => {
+   if (window.pageYOffset > 100) {
+     toTop.classList.add("active");
+  }  else {
+     toTop.classList.remove("active");
+  }
+})
 
 
 
@@ -40,37 +48,7 @@ const typed = new Typed('.multiple-text', {
 
 
 
-    document.addEventListener("DOMContentLoaded", function() {
-        const toTopButton = document.querySelector(".to-top");
-
-        // Show the button when scrolling down 60px from the top
-        window.addEventListener("scroll", () => {
-            if (window.scrollY > 100) {
-                toTopButton.classList.add("active");
-                resetHideTimer();
-            } else {
-                toTopButton.classList.remove("active");
-            }
-        });
-
-        // Scroll to the top when the button is clicked
-        toTopButton.addEventListener("click", (event) => {
-            event.preventDefault();
-            window.scrollTo({ top: 0, behavior: "smooth" });
-        });
-
-        // Hide the button after 4 seconds of inactivity
-        let hideTimeout;
-        function resetHideTimer() {
-            clearTimeout(hideTimeout);
-            hideTimeout = setTimeout(() => {
-                toTopButton.classList.remove("active");
-            }, 4000);
-        }
-
-        // Reset hide timer on scroll
-        window.addEventListener("scroll", resetHideTimer);
-    });
+    
 
 
 
