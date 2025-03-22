@@ -131,12 +131,57 @@
 
         
 
-      
+     <!-- Chatbot Icon -->
+    <div class="chatbot-icon" id="chatbotIcon">
+        <img src="https://i.postimg.cc/J0FRn1C1/IMG-20250320-155600-removebg-preview.png" alt="Chatbot Icon">
+    </div>
+
+    <!-- Chatbot Container -->
+    <div class="chatbot-container" id="chatbotContainer">
+        <div class="chatbot-header">
+          <h3>Assistant Nova</h3>
+            <div>
+                <button id="closeChatbot"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+        </div>
+        <div class="chatbot-body" id="chatbotBody">
+            <!-- Welcome Message -->
+            <div class="welcome-message" id="welcomeMessage">
+                <img src="https://i.postimg.cc/J0FRn1C1/IMG-20250320-155600-removebg-preview.png" alt="Logo" class="welcome-logo">
+                <p><strong>Hi, there I'm Nova.</strong><br>How can I assist you today?</p>
+            </div>
+        </div>
+
+ <!-- Typing Indicator -->
+        <div class="typing-indicator" id="typingIndicator">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+
+       <div class="quick-guide" id="quickGuide">                 New to this? No worries, Start with these quick questions. <i class="fa-sharp fa-solid fa-arrow-down fa-fade"></i>
+        </div>
+
+
+
+        <!-- Quick Replies -->
+        <div class="quick-replies" id="quickReplies">
+            <button onclick="sendQuickReply('What are your business timings?')">Timings</button>
+            <button onclick="sendQuickReply('How many products do you have?')">Products</button>
+            <button onclick="sendQuickReply('Do you provide delivery?')">Delivery</button>
+        </div>
+
+        <!-- Chatbot Input -->
+        <div class="chatbot-input">
+            <div class="input-wrapper">
+                <input type="text" id="userInput" placeholder="Message Vortex...">
+                <button id="sendButton"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>     
            
-        
-
-
-
+        
 
      
 <!-- chat bot codes only -->
