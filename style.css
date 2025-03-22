@@ -641,7 +641,7 @@ span {
 
     a {
   color: #1E90FF;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 
@@ -667,8 +667,8 @@ span {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 35px;
     border-radius: 50%;
     background-color: transparent;
     cursor: pointer;
