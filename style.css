@@ -123,8 +123,8 @@ span {
   background-color: #007bff;
   color: white;
   border-radius: 50%;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   text-align: center;
   line-height: 60px;
   font-size: 30px;
@@ -137,10 +137,10 @@ span {
 #chatbot-container {
   display: none;
   position: fixed;
-  bottom: 90px;
+  bottom: 40px;
   right: 20px;
-  width: 400px;
-  height: 600px;
+  width: 300px;
+  height: 480px;
   background: white;
   border: 1px solid #ccc;
   box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
@@ -153,7 +153,7 @@ span {
   top: 10px;
   right: 10px;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 18px;
   color: red;
   z-index: 1001;
 }
