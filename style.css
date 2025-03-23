@@ -111,11 +111,65 @@ span {
     box-shadow: 0 0 18px var(--main-color);
 }
 
+
+
+
+
+/* Chat Icon Style */
+#chat-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  font-size: 30px;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+  z-index: 999;
+}
+
+/* Chatbot Container Style */
+#chatbot-container {
+  display: none;
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 400px;
+  height: 600px;
+  background: white;
+  border: 1px solid #ccc;
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
+  z-index: 999;
+}
+
+/* Close Button */
+#close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  z-index: 1000;
+}
+
+
+
 iframe {
   width: 100%;
   max-width: 400px;
   height: 600px;
 }
+
+
+
+
+
+
 
 
 
