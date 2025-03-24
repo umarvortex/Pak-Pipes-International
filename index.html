@@ -129,7 +129,20 @@
 
 <!-- chat bot codes only -->      
 
- <iframe src="" width="480" height="330" style="max-width: 100%;"></iframe>
+<!-- Floating Chat Icon -->
+<div id="chat-icon" onclick="openChatbot()">
+  💬
+</div>
+
+<!-- Hidden Chatbot Container -->
+<div id="chatbot-container">
+  <div id="close-btn" onclick="closeChatbot()">✖️</div>
+  <iframe 
+    src="https://your-chatbot-link.com"
+    id="chatbot-iframe"
+    style="border:none;">
+  </iframe>
+</div>
      
 <!-- chat bot codes only -->
 
