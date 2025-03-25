@@ -131,18 +131,23 @@
 
 <style>
 
-   .chat-icon {
-            position: relative;
-            width: 100px;
-            height: 70px;
-            background: linear-gradient(135deg, #00ffcc, #0066ff);
-            border-radius: 35px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 0 15px rgba(0, 255, 204, 0.8), 
-                        0 0 30px rgba(0, 102, 255, 0.8);
-        }
+   /* Chat Icon */
+.chat-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: linear-gradient(40deg, #d200ff, #45ffca);
+  color: white;
+  border-radius: 20px 20px 3px 20px;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  font-size: 30px;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
 
         .chat-icon::after {
             content: "";
