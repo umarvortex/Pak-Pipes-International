@@ -131,8 +131,7 @@
 
 <style>
 
-   /* Chat Icon */
-.chat-icon {
+  .chat-icon {
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -141,53 +140,46 @@
   border-radius: 20px 20px 3px 20px;
   width: 60px;
   height: 60px;
-  text-align: center;
-  line-height: 60px;
-  font-size: 30px;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
   cursor: pointer;
   box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
   z-index: 1000;
 }
 
-        .chat-icon::after {
-            content: "";
-            position: absolute;
-            bottom: -10px;
-            left: 25px;
-            width: 20px;
-            height: 20px;
-            background: linear-gradient(135deg, #00ffcc, #0066ff);
-            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-            box-shadow: 0 0 10px rgba(0, 255, 204, 0.8);
-        }
+.dots {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
 
-        .dots {
-            display: flex;
-            gap: 6px;
-        }
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
+  animation: blink 1.5s infinite alternate;
+}
 
-        .dot {
-            width: 12px;
-            height: 12px;
-            background-color: white;
-            border-radius: 50%;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
-            animation: blink 1.5s infinite alternate;
-        }
+.dot:nth-child(2) {
+  animation-delay: 0.3s;
+}
 
-        .dot:nth-child(2) {
-            animation-delay: 0.3s;
-        }
+.dot:nth-child(3) {
+  animation-delay: 0.6s;
+}
 
-        .dot:nth-child(3) {
-            animation-delay: 0.6s;
-        }
+@keyframes blink {
+  0% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
 
-        @keyframes blink {
-            0% { opacity: 0.4; }
-            100% { opacity: 1; }
-        }
-    </style>
+  
+ 
+</style>
 
 </head>
 <body>
