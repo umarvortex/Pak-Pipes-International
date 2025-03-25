@@ -149,8 +149,8 @@ span {
 
 #close-btn {
   position: relative;
-  top: 450px;
-  right: 14px;
+  top: 10px;
+  right: 15px;
   cursor: pointer;
   font-size: 17px; 
   color: white;
