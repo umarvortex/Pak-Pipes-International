@@ -148,13 +148,14 @@ span {
 }
 
 #close-btn {
-  position: absolute;
-  top: 40px;
+  position: relative;
+  top: 450px;
   right: 14px;
   cursor: pointer;
-  font-size: 19px; 
+  font-size: 17px; 
   color: white;
   z-index: 1001;
+  transform: translateY(0);
 }
 
 /* iFrame Default Size */
