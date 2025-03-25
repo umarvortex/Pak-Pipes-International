@@ -115,23 +115,7 @@ span {
 
 
 
-/* Chat Icon */
-#chat-icon {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: linear-gradient(40deg, #d200ff, #45ffca);
-  color: white;
-  border-radius: 18px 18px 3px 18px;
-  width: 60px;
-  height: 60px;
-  text-align: center;
-  line-height: 60px;
-  font-size: 30px;
-  cursor: pointer;
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
-  z-index: 1000;
-}
+
 
 /* Chatbot Container Default */
 #chatbot-container {
