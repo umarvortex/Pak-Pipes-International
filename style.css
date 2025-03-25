@@ -149,11 +149,11 @@ span {
 
 #close-btn {
   position: absolute;
-  bottom: 450px;
+  top: 50px;
   right: 14px;
   transform: translateY(-50%);
   cursor: pointer;
-  font-size: 18px; 
+  font-size: 19px; 
   color: white;
   z-index: 1001;
 }
