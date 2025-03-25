@@ -151,7 +151,6 @@ span {
   position: absolute;
   top: 40px;
   right: 14px;
-  transform: translateY(-50%);
   cursor: pointer;
   font-size: 19px; 
   color: white;
