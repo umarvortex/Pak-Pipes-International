@@ -120,9 +120,9 @@ span {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #007bff;
+  background: linear-gradient(40deg, #d200ff, #45ffca);
   color: white;
-  border-radius: 15px 15px 2px 15px;
+  border-radius: 18px 18px 3px 18px;
   width: 60px;
   height: 60px;
   text-align: center;
