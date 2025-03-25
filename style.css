@@ -149,7 +149,7 @@ span {
 
 #close-btn {
   position: absolute;
-  top: 16px; 
+  top: 50%;
   right: 14px;
   transform: translateY(-50%);
   cursor: pointer;
