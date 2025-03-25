@@ -142,14 +142,14 @@ span {
   width: 400px;
   height: 600px;
   background: black;
-  border: 1px solid #ccc;
+  border: 1px solid black;
   box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
   z-index: 1000;
 }
 
 #close-btn {
   position: absolute;
-  top: 14.5px;
+  top: 14.3px;
   right: 15px;
   cursor: pointer;
   font-size: 17px; 
@@ -176,7 +176,7 @@ span {
   }
 
   #close-btn {
-    top: 14.5px;
+    top: 14.3px;
     right: 15px;
     font-size: 17px;
   }
