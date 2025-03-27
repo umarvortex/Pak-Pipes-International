@@ -39,8 +39,8 @@ const typed = new Typed('.multiple-text', {
         'Trusted by Homeowners and Builders', 
         'Eco-Friendly Pipes',],
     typeSpeed: 60,
-    backSpeed: 0.1,
-    backDelay: 1070,
+    backSpeed: 50,
+    backDelay: 1100,
     loop: true,
 });
 
