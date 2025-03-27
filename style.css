@@ -671,7 +671,7 @@ span {
 }
 
 .to-top:hover {
-    background: #1f1f1f; /* Hover effect ke liye */
+    background: #484e52; /* Hover effect ke liye */
     color: white;
     transition: .3s;
 }
