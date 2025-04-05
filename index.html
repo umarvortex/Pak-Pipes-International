@@ -223,26 +223,28 @@
 
 
 
-
-
 .alumni-container {
-  max-width: 100% !important;
-  width: 100% !important;
-  margin: 0 !important;
-  border-radius: 0 !important;
-  border-left: none !important;
-  border-right: none !important;
-}
-
-         
-  .alumni-container {
-  max-width: 800px;
-  margin: 20px 5px;
+  max-width: 100%;
+  width: 100%;
+  margin: 20px 0 !important; /* Only vertical margin */
   padding: 0;
   background: #111;
-  border: 0.4px solid #45ffca;
-  box-shadow: 0 0 5px #45ffca;
-  border-radius: 8px;
+  border-left: none;
+  border-right: none;
+  border-top: 0.4px solid #45ffca;
+  border-bottom: 0.4px solid #45ffca;
+  box-shadow: 
+    0 0 5px #45ffca,
+    0 0 5px #45ffca inset; /* Inner glow for continuity */
+  border-radius: 0;
+}
+
+/* LAST RESORT OVERRIDE */
+.alumni-container {
+  position: relative;
+  left: 5px !important;
+  right: 5px !important;
+  transform: none !important;
 }
 
 .alumni-heading {
