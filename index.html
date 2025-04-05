@@ -346,16 +346,13 @@
 .eco-badge {
   background: #45ffca22;
   color: #45ffca;
-  border-radius: 4px; /* Added subtle rounding */
-  display: inline-block; /* Changed to inline-block */
-  padding: 3px 12px; /* Better spacing */
-  margin: 0 auto 7px; /* Centering magic */
-  text-align: center; /* Ensures text stays centered */
-  width: fit-content; /* Only as wide as content */
-  font-weight: bold; /* Better visibility */
-  letter-spacing: 0.5px; /* Improved readability */
+  text-align: center; /* Keeps text centered */
+  padding: 3px 0; /* Vertical padding only */
+  width: calc(100% + 30px); /* Stretches beyond container */
+  margin-left: -15px; /* Pulls left to border */
+  margin-bottom: 7px;
+  display: block; /* Required for width to work */
 }
-
 
 
 @media (max-width: 600px) {
