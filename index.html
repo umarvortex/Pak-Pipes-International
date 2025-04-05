@@ -263,6 +263,7 @@
   text-align: center;
 }
 
+
 .slide-image-container {
   width: 100%;
   height: 450px;
@@ -272,34 +273,15 @@
   margin-bottom: 0;
   background: #111;
   border-radius: 8px 8px 0px 0px;
-  perspective: 1000px; /* 3D effect ke liye */
 }
+
 
 .slide-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 8px 8px 0px 0px;
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
-  transform-style: preserve-3d; /* 3D transform enable */
 }
-
-/* Hover Effect (Desktop) */
-.slide-image-container:hover .slide-image {
-  transform: translateZ(20px); /* Image aage aayegi */
-  box-shadow: 
-    0 0 10px rgba(0,0,0,0.3), /* Andar shadow */
-    0 15px 30px rgba(0,0,0,0.4); /* Bahar shadow */
-}
-
-/* Touch Effect (Mobile) */
-.slide-image-container:active .slide-image {
-  transform: translateZ(20px);
-  box-shadow: 
-    0 0 10px rgba(0,0,0,0.3),
-    0 15px 30px rgba(0,0,0,0.4);
-}
-
 
 
 
