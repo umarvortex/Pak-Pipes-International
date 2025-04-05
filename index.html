@@ -296,7 +296,7 @@
       border-top: 1px solid #333;
     }
 
-    .nav-btn {
+    .nav-bttn {
       background: #45ffca;
       color: #111;
       border: none;
@@ -310,13 +310,13 @@
       gap: 5px;
     }
 
-    .nav-btn:hover {
+    .nav-bttn:hover {
       background: #3ae0b5;
       transform: translateY(-2px);
       box-shadow: 0 5px 15px rgba(69, 255, 202, 0.4);
     }
 
-    .nav-btn:disabled {
+    .nav-bttn:disabled {
       background: #333;
       color: #666;
       cursor: not-allowed;
@@ -331,7 +331,7 @@
     }
 
     /* ===== DOTS INDICATOR ===== */
-    .slider-dots {
+    .slider-dotts {
       display: flex;
       justify-content: center;
       gap: 10px;
@@ -339,7 +339,7 @@
       background: #1a1a1a;
     }
 
-    .dot {
+    .dott {
       width: 12px;
       height: 12px;
       border-radius: 50%;
@@ -348,7 +348,7 @@
       transition: all 0.3s;
     }
 
-    .dot.active {
+    .dott.active {
       background: #45ffca;
       transform: scale(1.2);
     }
@@ -389,7 +389,7 @@
         font-size: 0.85rem;
       }
 
-      .nav-btn {
+      .nav-bttn {
         padding: 8px 20px;
         font-size: 0.9rem;
       }
@@ -706,13 +706,13 @@
 
     <!-- Navigation Controls -->
     <div class="slider-nav">
-      <button class="nav-btn prev" id="prevBtn">← Previous</button>
+      <button class="nav-bttn prev" id="prevBtn">← Previous</button>
       <div class="slide-counter" id="counter">1 of 20</div>
-      <button class="nav-btn next" id="nextBtn">Next →</button>
+      <button class="nav-bttn next" id="nextBtn">Next →</button>
     </div>
 
     <!-- Dots Indicator -->
-    <div class="slider-dots" id="dots"></div>
+    <div class="slider-dotts" id="dotts"></div>
   </div>
 
   <script>
@@ -721,7 +721,7 @@
       const prevBtn = document.getElementById('prevBtn');
       const nextBtn = document.getElementById('nextBtn');
       const counter = document.getElementById('counter');
-      const dotsContainer = document.getElementById('dots');
+      const dotsContainer = document.getElementById('dotts');
       const slides = document.querySelectorAll('.slide');
       
       let currentSlide = 0;
@@ -729,13 +729,13 @@
       let slideInterval;
 
       // Create dots
-      function createDots() {
+      function createDotts() {
         slides.forEach((_, index) => {
           const dot = document.createElement('div');
           dot.classList.add('dot');
           if (index === 0) dot.classList.add('active');
           dot.addEventListener('click', () => goToSlide(index));
-          dotsContainer.appendChild(dot);
+          dottsContainer.appendChild(dot);
         });
       }
 
