@@ -188,212 +188,137 @@
    
   <style>
     
+/* ===== HEADER ===== */
+.alumni-heading {
+  text-align: center;
+  font-size: 2.5rem; /* Increased from 2.2rem */
+  padding: 25px; /* Increased padding */
+  color: #45ffca;
+  text-shadow: 0 0 10px rgba(69, 255, 202, 0.7);
+  background: linear-gradient(to right, #111, #1a1a1a, #111);
+}
 
+/* ===== SLIDE CONTENT ===== */
+.slide-content {
+  padding: 25px; /* Increased padding */
+  text-align: center;
+  background: linear-gradient(to bottom, #1a1a1a, #111);
+}
 
-    /* ===== HEADER ===== */
-    .alumni-heading {
-      text-align: center;
-      font-size: 2.2rem;
-      padding: 20px;
-      color: #45ffca;
-      text-shadow: 0 0 10px rgba(69, 255, 202, 0.7);
-      background: linear-gradient(to right, #111, #1a1a1a, #111);
-    }
+.stock-badge {
+  display: inline-block;
+  background: rgba(69, 255, 202, 0.2);
+  color: #45ffca;
+  padding: 8px 25px; /* Increased padding */
+  border-radius: 20px;
+  font-weight: bold;
+  margin-bottom: 20px; /* Increased margin */
+  font-size: 16px; /* Increased from 14px */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
 
-    /* ===== SLIDER CONTAINER ===== */
-    .slider-container {
-      position: relative;
-      overflow: hidden;
-    }
+.slide-title {
+  font-size: 2rem; /* Increased from 1.5rem */
+  color: #fff;
+  margin-bottom: 15px; /* Increased margin */
+  font-weight: 600;
+}
 
-    .slider {
-      display: flex;
-      transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    }
+.rating {
+  color: gold;
+  font-size: 1.8rem; /* Increased from 1.2rem */
+  letter-spacing: 5px; /* Increased spacing */
+  margin: 15px 0; /* Increased margin */
+}
 
-    /* ===== SLIDE STYLES ===== */
-    .slide {
-      min-width: 100%;
-      position: relative;
-    }
+.slide-description {
+  color: #ccc;
+  line-height: 1.6;
+  font-size: 1.2rem; /* Increased from 0.95rem */
+  max-width: 800px;
+  margin: 0 auto 20px; /* Increased margin */
+  padding: 0 20px; /* Increased padding */
+}
 
-    .slide-image-container {
-      width: 100%;
-      height: 400px;
-      background: #000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
+/* ===== NAVIGATION ===== */
+.slider-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 25px; /* Increased padding */
+  background: #1a1a1a;
+  border-top: 1px solid #333;
+}
 
-    .slide-image {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      transition: transform 0.5s;
-    }
+.nav-bttn {
+  background: #45ffca;
+  color: #111;
+  border: none;
+  padding: 12px 30px; /* Increased padding */
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1.1rem; /* Increased font size */
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Increased gap */
+}
 
-    .slide:hover .slide-image {
-      transform: scale(1.03);
-    }
+.slide-counter {
+  color: #999;
+  font-weight: bold;
+  font-size: 1.1rem; /* Increased from 0.9rem */
+}
 
-    /* ===== SLIDE CONTENT ===== */
-    .slide-content {
-      padding: 20px;
-      text-align: center;
-      background: linear-gradient(to bottom, #1a1a1a, #111);
-    }
+/* ===== REMOVED DOTS INDICATOR ===== */
+.slider-dotts {
+  display: none; /* Completely removed dots navigation */
+}
 
-    .stock-badge {
-      display: inline-block;
-      background: rgba(69, 255, 202, 0.2);
-      color: #45ffca;
-      padding: 6px 20px;
-      border-radius: 20px;
-      font-weight: bold;
-      margin-bottom: 15px;
-      font-size: 14px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+  .alumni-heading {
+    font-size: 2.2rem; /* Slightly reduced but still larger than before */
+  }
 
-    .coming-soon {
-      background: rgba(255, 69, 69, 0.2);
-      color: #ff6b6b;
-    }
+  .slide-image-container {
+    height: 350px; /* Increased from 300px */
+  }
 
-    .slide-title {
-      font-size: 1.5rem;
-      color: #fff;
-      margin-bottom: 10px;
-      font-weight: 600;
-    }
+  .slide-title {
+    font-size: 1.8rem; /* Increased from 1.3rem */
+  }
+}
 
-    .rating {
-      color: gold;
-      font-size: 1.2rem;
-      letter-spacing: 3px;
-      margin: 10px 0;
-    }
+@media (max-width: 480px) {
+  .slide-image-container {
+    height: 300px; /* Increased from 250px */
+  }
 
-    .slide-description {
-      color: #ccc;
-      line-height: 1.6;
-      font-size: 0.95rem;
-      max-width: 800px;
-      margin: 0 auto 15px;
-      padding: 0 15px;
-    }
+  .slide-content {
+    padding: 20px; /* Increased from 15px */
+  }
 
-    /* ===== NAVIGATION ===== */
-    .slider-nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 20px;
-      background: #1a1a1a;
-      border-top: 1px solid #333;
-    }
+  .stock-badge {
+    font-size: 14px; /* Increased from 12px */
+  }
 
-    .nav-bttn {
-      background: #45ffca;
-      color: #111;
-      border: none;
-      padding: 10px 25px;
-      border-radius: 30px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: all 0.3s;
-      display: flex;
-      align-items: center;
-      gap: 5px;
-    }
+  .slide-title {
+    font-size: 1.6rem; /* Increased from 1.2rem */
+  }
 
-    .nav-bttn:hover {
-      background: #3ae0b5;
-      transform: translateY(-2px);
-      box-shadow: 0 5px 15px rgba(69, 255, 202, 0.4);
-    }
+  .slide-description {
+    font-size: 1rem; /* Increased from 0.85rem */
+  }
 
-    .nav-bttn:disabled {
-      background: #333;
-      color: #666;
-      cursor: not-allowed;
-      transform: none;
-      box-shadow: none;
-    }
+  .nav-bttn {
+    padding: 10px 25px; /* Increased from 8px 20px */
+    font-size: 1rem; /* Increased from 0.9rem */
+  }
+}
 
-    .slide-counter {
-      color: #999;
-      font-weight: bold;
-      font-size: 0.9rem;
-    }
-
-    /* ===== DOTS INDICATOR ===== */
-    .slider-dotts {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      padding: 15px;
-      background: #1a1a1a;
-    }
-
-    .dott {
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background: #333;
-      cursor: pointer;
-      transition: all 0.3s;
-    }
-
-    .dott.active {
-      background: #45ffca;
-      transform: scale(1.2);
-    }
-
-    /* ===== RESPONSIVE DESIGN ===== */
-    @media (max-width: 768px) {
-      .alumni-heading {
-        font-size: 1.8rem;
-      }
-
-      .slide-image-container {
-        height: 300px;
-      }
-
-      .slide-title {
-        font-size: 1.3rem;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .slide-image-container {
-        height: 250px;
-      }
-
-      .slide-content {
-        padding: 15px;
-      }
-
-      .stock-badge {
-        font-size: 12px;
-      }
-
-      .slide-title {
-        font-size: 1.2rem;
-      }
-
-      .slide-description {
-        font-size: 0.85rem;
-      }
-
-      .nav-bttn {
-        padding: 8px 20px;
-        font-size: 0.9rem;
-      }
-    }
   </style>
 
 
