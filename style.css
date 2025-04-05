@@ -306,49 +306,7 @@ span {
 }
 
 
-.services-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
-    align-items: center;
-    gap: 20px;
-    margin-top: 4.1rem;
-    
-}
 
-
-.row {
-    background: var(--bg-color);
-    border-radius: 5px;
-    border: 1px solid transparent;
-    box-shadow: 0 0 5px var(--main-color);
-    padding: 10px;
-    transition: all 0.5s ease;
-}
-
-
-.row img {
-    height: 100%;
-    width: 100%;
-    border-radius: px;
-    margin-bottom: 1.1rem;
-    aspect-ratio: 3/3;
-    object-fit: contain;
-}
-
-
-
-.row h4 {
-    font-size: 15px;
-    font-weight: 500;
-    margin-bottom: 5px;
-    line-height: 1.5;
-}
-
-.row:hover {
-    border: 1px solid var(--main-color);
-    transform: translatey(-5px) scale(1.04);
-    cursor: pointer;
-}
 
 .about {
     display: flex;
