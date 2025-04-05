@@ -176,9 +176,9 @@
 </div>
      
 <!-- chat bot codes only -->
-     
- 
     </section>
+
+
 
 
 
@@ -187,9 +187,324 @@
    
    
   
+  <style>
+    
 
-     
+    /* ===== MAIN CONTAINER ===== */
+    .alumni-container {
+      max-width: 100%;
+      margin: 0 auto;
+      background: #1a1a1a;
+      border: 1px solid #45ffca;
+      box-shadow: 0 0 20px rgba(69, 255, 202, 0.3);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    /* ===== HEADER ===== */
+    .alumni-heading {
+      text-align: center;
+      font-size: 2.2rem;
+      padding: 20px;
+      color: #45ffca;
+      text-shadow: 0 0 10px rgba(69, 255, 202, 0.7);
+      background: linear-gradient(to right, #111, #1a1a1a, #111);
+    }
+
+    /* ===== SLIDER CONTAINER ===== */
+    .slider-container {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .slider {
+      display: flex;
+      transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    /* ===== SLIDE STYLES ===== */
+    .slide {
+      min-width: 100%;
+      position: relative;
+    }
+
+    .slide-image-container {
+      width: 100%;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #000;
+      overflow: hidden;
+      padding: 0;
+      margin: 0;
+    }
+
+    .slide-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .slide:hover .slide-image {
+      transform: scale(1.03);
+    }
+
+    /* ===== SLIDE CONTENT ===== */
+    .slide-content {
+      padding: 20px;
+      text-align: center;
+      background: linear-gradient(to bottom, #1a1a1a, #111);
+    }
+
+    .stock-badge {
+      display: inline-block;
+      background: rgba(69, 255, 202, 0.2);
+      color: #45ffca;
+      padding: 6px 20px;
+      border-radius: 20px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .coming-soon {
+      background: rgba(255, 69, 69, 0.2);
+      color: #ff6b6b;
+    }
+
+    .slide-title {
+      font-size: 1.5rem;
+      color: #fff;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .rating {
+      color: gold;
+      font-size: 1.2rem;
+      letter-spacing: 3px;
+      margin: 10px 0;
+    }
+
+    .slide-description {
+      color: #ccc;
+      line-height: 1.6;
+      font-size: 0.95rem;
+      max-width: 800px;
+      margin: 0 auto 15px;
+      padding: 0 15px;
+    }
+
+    /* ===== NAVIGATION ===== */
+    .slider-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      background: #1a1a1a;
+      border-top: 1px solid #333;
+    }
+
+    .nav-bttn {
+      background: #45ffca;
+      color: #111;
+      border: none;
+      padding: 10px 25px;
+      border-radius: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+   
+
+    .nav-bttn:disabled {
+      background: #333;
+      color: #666;
+      cursor: not-allowed;
+      transform: none;
+      box-shadow: none;
+    }
+
+    .slide-counter {
+      color: #999;
+      font-weight: bold;
+      font-size: 0.7rem;
+    }
+
+    /* ===== RESPONSIVE DESIGN ===== */
+    @media (max-width: 768px) {
+      .alumni-heading {
+        font-size: 1.8rem;
+      }
+
+      .slide-image-container {
+        height: 300px;
+      }
+
+      .slide-title {
+        font-size: 1.3rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .slide-image-container {
+        height: 250px;
+      }
+
+      .slide-content {
+        padding: 15px;
+      }
+
+      .stock-badge {
+        font-size: 12px;
+      }
+
+      .slide-title {
+        font-size: 1.2rem;
+      }
+
+      .slide-description {
+        font-size: 0.85rem;
+      }
+
+      .nav-btn {
+        padding: 8px 20px;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+
+  <div class="alumni-container">
+    <h3 class="alumni-heading">Pak Pipes Gallery</h3>
+
+    <div class="slider-container">
+      <div class="slider" id="slider">
+        <!-- Slide 1 -->
+        <div class="slide">
+          <div class="slide-image-container">
+            <img src="https://i.postimg.cc/v8VsQgXf/Whats-App-Image-2025-02-17-at-7-37-09-PM.jpg" class="slide-image" alt="Clear Garden Pipes">
+          </div>
+          <div class="slide-content">
+            <div class="stock-badge">IN STOCK</div>
+            <h3 class="slide-title">Clear Garden Transparent Pipes</h3>
+            <div class="rating">★★★★☆</div>
+            <p class="slide-description">
+              Crystal-clear garden pipes crafted for durability and smooth water flow. Available in 1mm and 2mm thickness.
+            </p>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide">
+          <div class="slide-image-container">
+            <img src="https://i.postimg.cc/bN0ft77v/Whats-App-Image-2025-02-17-at-7-40-42-PM.jpg" class="slide-image" alt="PonaFlex Pipes">
+          </div>
+          <div class="slide-content">
+            <div class="stock-badge">IN STOCK</div>
+            <h3 class="slide-title">PonaFlex Gas Pipes</h3>
+            <div class="rating">★★★★★</div>
+            <p class="slide-description">
+              Korean technology-backed gas hose, 270ft long and weighing 6kg. Built with premium materials for safety.
+            </p>
+          </div>
+        </div>
+
+        <!-- Add more slides as needed -->
+      </div>
+    </div>
+
+    <!-- Navigation Controls -->
+    <div class="slider-nav">
+      <button class="nav-bttn prev" id="prevBtn">← Prev</button>
+      <div class="slide-counter" id="counter">1 of 2</div>
+      <button class="nav-bttn next" id="nextBtn">Next →</button>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const slider = document.getElementById('slider');
+      const prevBtn = document.getElementById('prevBtn');
+      const nextBtn = document.getElementById('nextBtn');
+      const counter = document.getElementById('counter');
+      const slides = document.querySelectorAll('.slide');
+
+      let currentSlide = 0;
+      const totalSlides = slides.length;
+      let slideInterval;
+
+      // Update slider state
+      function updateSlider() {
+        slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+        counter.textContent = `${currentSlide + 1} of ${totalSlides}`;
+
+        // Disable buttons when at ends
+        prevBtn.disabled = currentSlide === 0;
+        nextBtn.disabled = currentSlide === totalSlides - 1;
+      }
+
+      // Auto-rotate slides
+      function startAutoSlide() {
+        slideInterval = setInterval(() => {
+          if (currentSlide < totalSlides - 1) currentSlide++;
+          else currentSlide = 0;
+          updateSlider();
+        }, 5000);
+      }
+
+      // Event listeners
+      prevBtn.addEventListener('click', () => {
+        if (currentSlide > 0) {
+          currentSlide--;
+          updateSlider();
+          resetAutoSlide();
+        }
+      });
+
+      nextBtn.addEventListener('click', () => {
+        if (currentSlide < totalSlides - 1) {
+          currentSlide++;
+          updateSlider();
+          resetAutoSlide();
+        }
+      });
+
+      // Reset auto-slide timer
+      function resetAutoSlide() {
+        clearInterval(slideInterval);
+        startAutoSlide();
+      }
+
+      // Pause on hover
+      slider.addEventListener('mouseenter', () => clearInterval(slideInterval));
+      slider.addEventListener('mouseleave', startAutoSlide);
+
+      // Keyboard navigation
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') prevBtn.click();
+        if (e.key === 'ArrowRight') nextBtn.click();
+      });
+
+      // Initialize
+      updateSlider();
+      startAutoSlide();
+    });
+  </script>
+   
     </section>
+
+
+
 
 
     <section class="about" id="about">
