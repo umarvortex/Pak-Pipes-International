@@ -266,14 +266,14 @@
   justify-content: center;
   margin-bottom: 0;
   background: #111;
-  border-radius: 0;
+  border-radius: 8px;
 }
 
 .slide-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 0;
+  border-radius: 8px;
 }
 
 .slide-title {
@@ -284,12 +284,14 @@
   padding: 15px 15px 0;
 }
 
-.slide-date {
-  font-size: 14px;
-  color: #45ffca;
+
+.quality-stars {
+  color: gold;
+  letter-spacing: 2px;
   margin-bottom: 15px;
-  padding: 0 15px;
+  padding: 0 12px;
 }
+
 
 .slide-description {
   font-size: 16px;
@@ -337,6 +339,20 @@
   font-size: 14px;
   color: #45ffca;
   font-weight: bold;
+}
+
+.eco-badge {
+  background: #45ffca22;
+  color: #45ffca;
+  padding: 3px 10px 3px 30px;
+  border-radius: 4px;
+  position: relative;
+}
+
+.eco-badge::before {
+  content: "🌱";
+  position: absolute;
+  left: 8px;
 }
 
 @media (max-width: 600px) {
@@ -395,6 +411,7 @@
   </div>
   <h3 class="slide-title">Clear Garden Transparent Pipes</h3>
   <div class="quality-stars">★★★★☆</div>
+<div class="eco-badge">ECO FRIENDLY</div>
   <div class="slide-description">
     Crystal-clear garden pipes crafted for durability and smooth water flow. Available in 1mm and 2mm thickness – perfect for home gardening and decorative irrigation setups.
   </div>
