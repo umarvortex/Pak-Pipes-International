@@ -346,12 +346,18 @@
 .eco-badge {
   background: #45ffca22;
   color: #45ffca;
-  padding: 3px 10px 3px 30px;
-  border-radius: 4px;
+  padding: 3px 10px 3px 20px;
+  border-radius: 0;
   position: relative;
-  margin-bottom: 8px;
+  margin-bottom: 7px;
 }
 
+
+.eco-badge::before {
+  content: "✅";
+  position: absolute;
+  left: 8px;
+}
 
 
 @media (max-width: 600px) {
@@ -408,7 +414,7 @@
     <img src="https://i.postimg.cc/v8VsQgXf/Whats-App-Image-2025-02-17-at-7-37-09-PM.jpg" class="slide-image" alt="Pipe Image">
   </div>
 
-<div class="eco-badge"><i class="fas fa-clipboard-check"></i>ECO FRIENDLY</div>
+<div class="eco-badge">IN STOCK</div>
 
   <h3 class="slide-title">Clear Garden Transparent Pipes</h3>
   <div class="quality-stars">★★★★☆</div>
