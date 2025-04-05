@@ -227,7 +227,7 @@
   max-width: 100%;
   width: 100%;
   margin-left: 5px !important;
-  margin-right: 5px !important;
+  margin-right: 25px !important;
   padding: 0;
   background: #111;
   border: none;
@@ -272,6 +272,9 @@
   margin-bottom: 0;
   background: #111;
   border-radius: 8px 8px 0px 0px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
 }
 
 .slide-image {
@@ -279,7 +282,23 @@
   height: 100%;
   object-fit: cover;
   border-radius: 8px 8px 0px 0px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+/* Hover effect for desktop */
+.slide-image-container:hover .slide-image {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Touch effect for mobile */
+.slide-image-container:active .slide-image {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+
+
 
 .slide-title {
   font-size: 22px;
@@ -362,7 +381,7 @@
 @media (max-width: 600px) {
   .alumni-container {
     margin-left: 5px !important;
-    margin-right: 5px !important;
+    margin-right: 25px !important;
   }
   
   .slide-image-container {
