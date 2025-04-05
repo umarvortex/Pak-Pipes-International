@@ -346,12 +346,15 @@
 .eco-badge {
   background: #45ffca22;
   color: #45ffca;
-  text-align: center; /* Keeps text centered */
-  padding: 3px 0; /* Vertical padding only */
-  width: calc(100% + 30px); /* Stretches beyond container */
-  margin-left: -15px; /* Pulls left to border */
-  margin-bottom: 7px;
-  display: block; /* Required for width to work */
+  text-align: center;
+  padding: 5px 0;
+  display: block;
+  
+  /* New lines to fix dark corners */
+  border-radius: 0 !important;
+  margin-left: -20px;
+  margin-right: -20px;
+  width: auto;
 }
 
 
