@@ -272,9 +272,7 @@
   margin-bottom: 0;
   background: #111;
   border-radius: 8px 8px 0px 0px;
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.3s ease;
+  perspective: 1000px; /* 3D effect ke liye */
 }
 
 .slide-image {
@@ -282,19 +280,24 @@
   height: 100%;
   object-fit: cover;
   border-radius: 8px 8px 0px 0px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  transform-style: preserve-3d; /* 3D transform enable */
 }
 
-/* Hover effect for desktop */
+/* Hover Effect (Desktop) */
 .slide-image-container:hover .slide-image {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  transform: translateZ(20px); /* Image aage aayegi */
+  box-shadow: 
+    0 0 10px rgba(0,0,0,0.3), /* Andar shadow */
+    0 15px 30px rgba(0,0,0,0.4); /* Bahar shadow */
 }
 
-/* Touch effect for mobile */
+/* Touch Effect (Mobile) */
 .slide-image-container:active .slide-image {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  transform: translateZ(20px);
+  box-shadow: 
+    0 0 10px rgba(0,0,0,0.3),
+    0 15px 30px rgba(0,0,0,0.4);
 }
 
 
