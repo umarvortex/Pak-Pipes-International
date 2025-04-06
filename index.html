@@ -116,31 +116,31 @@ For top-notch piping solutions, think <strong>Pak Pipes International</strong> â
     
 
 
-
-
 <div class="homee-img">
     <div class="sloder-container">
-        <div class="slod first-slod active-slod">
+        <div class="slod active-slod">
             <img src="https://i.postimg.cc/pXp6PdzQ/IMG-20250306-034151.png" alt="Pak Pipes">
         </div>
-        <div class="slod second-slod">
+        <div class="slod">
             <img src="YOUR_SECOND_IMAGE_URL_HERE" alt="Pak Pipes">
         </div>
     </div>
 </div>
 
 <style>
+/* Fixed Styling */
 .homee-img {
-    width: 100vw;
-    margin-left: -50vw;
-    left: 50%;
-    position: relative;
-    height: 70vh;
+    width: 100%;
+    max-width: 100%;
+    height: 60vh; /* Reduced height */
+    margin: 0 auto;
     overflow: hidden;
+    position: relative;
 }
 
 .sloder-container {
     position: relative;
+    width: 100%;
     height: 100%;
 }
 
@@ -149,13 +149,13 @@ For top-notch piping solutions, think <strong>Pak Pipes International</strong> â
     width: 100%;
     height: 100%;
     opacity: 0;
-    transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease;
 }
 
 .slod img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain; /* Changed to contain */
     object-position: center;
 }
 
@@ -165,7 +165,7 @@ For top-notch piping solutions, think <strong>Pak Pipes International</strong> â
 </style>
 
 <script>
-// Auto transition code
+// Auto transition code (same as before)
 let currentSlod = 0;
 const allSlods = document.querySelectorAll('.slod');
 
@@ -175,7 +175,6 @@ setInterval(() => {
     allSlods[currentSlod].classList.add('active-slod');
 }, 5000);
 </script>
-
 
 
 
