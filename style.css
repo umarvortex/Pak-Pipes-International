@@ -434,7 +434,7 @@ span {
 .reviews-track {
     display: flex;
     gap: 15px;
-    animation: scroll 30s linear infinite;
+    animation: scroll 50s linear infinite;
 }
 
 /* Individual Review Card */
@@ -442,7 +442,7 @@ span {
     min-width: 300px;
     background: #2a313a;
     border-radius: 10px;
-    padding: 20px;
+    padding: 25px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     border: 1px solid #45ffca33;
     transition: all 0.3s ease;
