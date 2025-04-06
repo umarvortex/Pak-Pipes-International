@@ -324,49 +324,50 @@
 
 
 
+/* ===== NAVIGATION ARROWS ===== */
+.arrow {
+    position: absolute;
+    top: 20%; /* Changed from 18.8% to center vertically */
+    transform: translateY(-50%);
+    width: 44px; /* Slightly reduced width */
+    height: 44px; /* Kept same height for perfect circle */
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 100;
+    transition: all 0.3s ease;
+    border: none;
+    color: white;
+    font-size: 22px; /* Slightly reduced font size */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Added subtle shadow */
+}
+
+.arrow:hover {
+    background: rgba(69, 255, 202, 0.6);
+    color: #45ffca;
+    transform: translateY(-50%) scale(1.05); /* Added slight scale effect */
+}
+
+.arrow.prev {
+    left: 20px; /* Increased from 15px */
+}
+
+.arrow.next {
+    right: 20px; /* Increased from 15px */
+}
+
+.arrow:disabled {
+    opacity: 0.2;
+    cursor: not-allowed;
+    transform: translateY(-50%); /* Added to maintain position when disabled */
+}
 
 
 
 
-
-
-        /* ===== NAVIGATION ARROWS ===== */
-        .arrow {
-            position: absolute;
-            top: 18.8%;
-            transform: translateY(-50%);
-            width: 50px;
-            height: 44px;
-            background: rgba(255, 255, 255, 0.4);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            z-index: 100;
-            transition: all 0.3s ease;
-            border: none;
-            color: white;
-            font-size: 24px;
-        }
-
-        .arrow:hover {
-            background: rgba(69, 255, 202, 0.6);
-            color: #45ffca;
-        }
-
-        .arrow.prev {
-            left: 15px;
-        }
-
-        .arrow.next {
-            right: 15px;
-        }
-
-        .arrow:disabled {
-            opacity: 0.2;
-            cursor: not-allowed;
-        }
 
         /* ===== SLIDE COUNTER ===== */
         .slide-counter {
@@ -397,8 +398,8 @@
             }
 
             .arrow {
-                width: 36px;
-                height: 40px;
+                width: 38px;
+                height: 38px;
                 font-size: 18px;
             }
         }
@@ -425,7 +426,7 @@
             }
 
             .arrow {
-                width: 31px;
+                width: 35px;
                 height: 35px;
                 font-size: 16px;
             }
