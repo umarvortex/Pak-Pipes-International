@@ -112,11 +112,79 @@ For top-notch piping solutions, think <strong>Pak Pipes International</strong> â
      vertical-align: middle;
   }
 </style>
-                      
- </div>
- <div class="home-img">
-    <img src="https://i.postimg.cc/pXp6PdzQ/IMG-20250306-034151.png" alt="loading image ">
-</div>   
+</div>
+    
+
+
+
+
+<div class="homee-img">
+    <div class="sloder-container">
+        <div class="slod first-slod active-slod">
+            <img src="https://i.postimg.cc/pXp6PdzQ/IMG-20250306-034151.png" alt="Pak Pipes">
+        </div>
+        <div class="slod second-slod">
+            <img src="YOUR_SECOND_IMAGE_URL_HERE" alt="Pak Pipes">
+        </div>
+    </div>
+</div>
+
+<style>
+.homee-img {
+    width: 100vw;
+    margin-left: -50vw;
+    left: 50%;
+    position: relative;
+    height: 70vh;
+    overflow: hidden;
+}
+
+.sloder-container {
+    position: relative;
+    height: 100%;
+}
+
+.slod {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slod img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.active-slod {
+    opacity: 1;
+}
+</style>
+
+<script>
+// Auto transition code
+let currentSlod = 0;
+const allSlods = document.querySelectorAll('.slod');
+
+setInterval(() => {
+    allSlods[currentSlod].classList.remove('active-slod');
+    currentSlod = (currentSlod + 1) % allSlods.length;
+    allSlods[currentSlod].classList.add('active-slod');
+}, 5000);
+</script>
+
+
+
+
+
+
+
+
+
+
 
   
 <!-- chat bot codes only -->      
