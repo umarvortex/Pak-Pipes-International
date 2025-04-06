@@ -325,12 +325,12 @@
 
 
 /* ===== NAVIGATION ARROWS ===== */
-.arrow {
+.arroow {
     position: absolute;
     top: 22%; /* Changed from 18.8% to center vertically */
     transform: translateY(-50%);
-    width: 37px; /* Slightly reduced width */
-    height: 44px; /* Kept same height for perfect circle */
+    width: 34px; /* Slightly reduced width */
+    height: 47px; /* Kept same height for perfect circle */
     background: rgba(255, 255, 255, 0.4);
     border-radius: 50%;
     display: flex;
@@ -345,21 +345,21 @@
     box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Added subtle shadow */
 }
 
-.arrow:hover {
+.arroow:hover {
     background: rgba(69, 255, 202, 0.6);
     color: #45ffca;
     transform: translateY(-50%) scale(1.05); /* Added slight scale effect */
 }
 
-.arrow.prev {
+.arroow.prev {
     left: 20px; /* Increased from 15px */
 }
 
-.arrow.next {
+.arroow.next {
     right: 20px; /* Increased from 15px */
 }
 
-.arrow:disabled {
+.arroow:disabled {
     opacity: 0.2;
     cursor: not-allowed;
     transform: translateY(-50%); /* Added to maintain position when disabled */
@@ -397,9 +397,9 @@
                 font-size: 17px;
             }
 
-            .arrow {
-                width: 31px;
-                height: 38px;
+            .arroow {
+                width: 28px;
+                height: 40px;
                 font-size: 18px;
             }
         }
@@ -425,9 +425,9 @@
                 font-size: 14px;
             }
 
-            .arrow {
-                width: 28px;
-                height: 35px;
+            .arroow {
+                width: 25px;
+                height: 38px;
                 font-size: 16px;
             }
         }
@@ -441,8 +441,8 @@
         <h5 class="alumni-heading">Explore Our Premium Pipe Collection</h5>
 
         <div class="slider-container">
-            <button class="arrow prev" id="prevBtn">❮</button>
-            <button class="arrow next" id="nextBtn">❯</button>
+            <button class="arroow prev" id="prevBtn">❮</button>
+            <button class="arroow next" id="nextBtn">❯</button>
 
             <div class="slider" id="slider">
                 <!-- Slide 1 -->
