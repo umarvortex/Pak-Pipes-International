@@ -30,7 +30,10 @@ body {
     display: block;
     background: var(--bg-color);
     color: var(--text-color);
+    margin: 0;
+    padding: 0;
 }
+
 
 
 section {
