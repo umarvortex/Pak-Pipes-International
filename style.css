@@ -238,9 +238,9 @@ span {
     background: rgba(69, 255, 202, 0.3);
     border-radius: 1rem;
     font-size: 14px;
-    color: #ffffff;
+    color: white;
     letter-spacing: 0.1rem;
-    font-weight: 600;
+    font-weight: 500;
     transition: all 0.4s ease;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
