@@ -126,6 +126,166 @@ span {
 
 
 
+
+/* General Styles */
+.tri-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Card Styles */
+.tri-card {
+    flex: 1;
+    min-width: 250px;
+    max-width: 350px;
+    background: linear-gradient(135deg, #e6f2ff 0%, #cce0ff 100%);
+    border-radius: 12px;
+    padding: 30px 25px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #b3c6ff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.tri-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Icon Styles */
+.tri-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #4a89dc 0%, #3a70c2 100%);
+    border-radius: 50%;
+    color: white;
+    font-size: 28px;
+    box-shadow: 0 4px 10px rgba(74, 137, 220, 0.3);
+}
+
+.tri-icon i {
+    transition: transform 0.3s ease;
+}
+
+.tri-card:hover .tri-icon i {
+    transform: scale(1.1);
+}
+
+/* Text Styles */
+.tri-card h3 {
+    color: #2a4a7a;
+    margin-bottom: 15px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.tri-card p {
+    color: #4a5a7a;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .tri-container {
+        gap: 25px;
+        padding: 35px 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .tri-card {
+        min-width: 220px;
+        padding: 25px 20px;
+    }
+    
+    .tri-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+    }
+    
+    .tri-card h3 {
+        font-size: 20px;
+    }
+    
+    .tri-card p {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .tri-container {
+        gap: 20px;
+    }
+    
+    .tri-card {
+        min-width: 200px;
+        max-width: 100%;
+        padding: 20px;
+    }
+    
+    .tri-card h3 {
+        font-size: 19px;
+    }
+}
+
+@media (max-width: 576px) {
+    .tri-container {
+        flex-direction: column;
+        gap: 15px;
+        padding: 25px 15px;
+    }
+    
+    .tri-card {
+        width: 100%;
+        min-width: auto;
+        padding: 25px;
+    }
+    
+    .tri-icon {
+        width: 55px;
+        height: 55px;
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 484px) {
+    .tri-card {
+        padding: 20px 15px;
+    }
+    
+    .tri-card h3 {
+        font-size: 18px;
+    }
+    
+    .tri-card p {
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+
+
+
+
 /* Chatbot Container Default */
 #chatbot-container {
   display: none;
