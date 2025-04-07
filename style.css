@@ -698,19 +698,27 @@ span {
 }
 
 .contact-form .btn {
+  display: flex;
+  justify-content: flex-start;
   padding: 12px 20px;
   border: none;
-  background: var(--main-color);
-  color: #fff;
+  background: rgba(69, 255, 202, 0.3);
+  color: white;
+  text-decoration: none;
   cursor: pointer;
   border-radius: 8px;
-  transition: 0.3s;
+  transition: all 0.4s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);  
 }
 
 .contact-form .btn:hover {
-  background: transparent;
   border: 1px solid var(--main-color);
+   background: rgba(69, 255, 202, 0.7);
+    transform: translateY(-2px);
 }
+
+
+
 
 
 /*Footer Section Code*/
