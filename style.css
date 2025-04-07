@@ -20,9 +20,9 @@
 
 
 :root {
-    --bg-color: #f5f9fc;
-    --snd-bg-color: #fefefa;
-    --text-color: #111;
+    --bg-color: #000;
+    --snd-bg-color: #111;
+    --text-color: #fff;
     --main-color: #45ffca;
 }
 
