@@ -399,7 +399,7 @@ span {
 
 
 .box h3 {
-    font-size: 3.4rem !important;
+    font-size: 3.2rem !important;
     margin-bottom: 2rem !important;
     color: #e0e0e0 !important;
     font-weight: 700 !important;
@@ -408,22 +408,22 @@ span {
     font-family: 'Segoe UI', sans-serif !important;
     position: relative !important;
     display: inline-block !important;
-    border-left: 3px solid #d4af37 !important;
-    padding-left: 5px !important;
+    border-left: 4px solid #d4af37 !important;
+    padding-left: 12px !important;
     transition: all 0.3s ease-in-out !important;
 }
 
 /* Unique luxury-style first letter using gold gradient */
 .box h3 span {
     font-family: 'Playfair Display', serif !important;
-    font-size: 4rem !important;
+    font-size: 4.4rem !important;
     font-weight: 800 !important;
     background: linear-gradient(45deg, #d4af37, #fff1a8) !important;
     -webkit-background-clip: text !important;
     background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
-    margin-right: 2px !important;
-    padding-right: 2px !important;
+    margin-right: 1px !important;
+    padding-right: 1px !important;
 }
 
 
