@@ -499,10 +499,10 @@ span {
 .box { 
     padding: 30px 30px 50px 30px; 
     height: 40rem; 
-    background: var(--bg-color); 
-    border-radius: 20px; 
-    border: 1px solid transparent; 
-    box-shadow: 0 0 10px var(--main-color); 
+    background: #17242a;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    border: 1px solid #45ffca33; 
+    border-radius: 20px;  
     transition: all 0.5s ease; 
     cursor: pointer; 
 } 
