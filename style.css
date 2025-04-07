@@ -397,30 +397,50 @@ span {
 
 
 
+
+
 .box h3 {
-    font-size: 3rem !important;
-    margin-bottom: 2rem !important;
+    font-size: 3.2rem !important;
+    margin-bottom: 2.5rem !important;
     color: #00ffc3 !important;
     font-weight: 800 !important;
-    letter-spacing: 2px !important;
+    letter-spacing: 3px !important;
     position: relative !important;
     display: inline-block !important;
     text-transform: uppercase !important;
-    text-shadow: 0 0 8px rgba(0, 255, 195, 0.7), 0 0 14px rgba(0, 255, 195, 0.3) !important;
+    text-shadow:
+        0 0 5px rgba(0, 255, 195, 0.8),
+        0 0 10px rgba(0, 255, 195, 0.5),
+        0 0 20px rgba(0, 255, 195, 0.3) !important;
+    transition: all 0.3s ease-in-out !important;
 }
 
-/* Highlight the first letter using Orbitron font for sci-fi tech style */
+/* Enhanced first-letter futuristic style */
 .box h3 span {
     font-family: 'Orbitron', sans-serif !important;
-    font-size: 3.4rem !important;
+    font-size: 3.6rem !important;
     font-weight: 900 !important;
-    background: linear-gradient(135deg, #00ffc3, #00aaff) !important;
+    background: linear-gradient(135deg, #00ffc3, #0077ff, #00ffc3) !important;
+    background-size: 200% auto !important;
+    animation: shineText 4s linear infinite !important;
     -webkit-background-clip: text !important;
     background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
-    text-shadow: 0 0 12px rgba(0,255,255,0.8) !important;
-    margin-right: 6px !important;
-    padding-right: 3px !important;
+    text-shadow:
+        0 0 10px rgba(0,255,255,0.6),
+        0 0 20px rgba(0,255,255,0.4) !important;
+    margin-right: 8px !important;
+    padding-right: 4px !important;
+}
+
+/* Glowing animation for span text */
+@keyframes shineText {
+    0% {
+        background-position: 0% center;
+    }
+    100% {
+        background-position: 200% center;
+    }
 }
 
 
