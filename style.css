@@ -13,11 +13,13 @@
     scroll-behavior: smooth;
 }
 
+            
+
 :root {
     --bg-color: #f0f0f0; /* Slightly darker white (off-white) */
     --snd-bg-color: #e8e8e8; /* Another shade of off-white */
     --text-color: #000000; /* Pure black for text */
-    --main-color: #45ffca;
+    --main-color: #1a2a3a;
     --card-bg-1: #000000; /* Black for some cards */
     --card-bg-2: #001f3f; /* Navy Blue for some cards */
     --card-bg-3: #121212; /* Dark gray for other cards */
@@ -52,7 +54,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 0;
-    background: rgba(0, 0, 0, 0.5);
+    background-color: #1a2a3a;;
     backdrop-filter: blur(10px);
     transition: all 0.5s ease;
 }
@@ -604,7 +606,7 @@ span {
     bottom: 0;
     width: 100%;
     padding: 40px 0;
-    background: var(--snd-bg-color);
+    background-color: #1a2a3a;
 }
 
 .to-top {
