@@ -145,11 +145,11 @@ span {
     flex: 1;
     min-width: 250px;
     max-width: 350px;
-    background: linear-gradient(135deg, #e6f2ff 0%, #cce0ff 100%);
+    background: #17242a;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    border: 1px solid #45ffca33;
     border-radius: 12px;
     padding: 30px 25px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-    border: 1px solid #b3c6ff;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
     position: relative;
@@ -186,14 +186,14 @@ span {
 
 /* Text Styles */
 .tri-card h3 {
-    color: #2a4a7a;
+    color: #45ffca;
     margin-bottom: 15px;
     font-size: 22px;
     font-weight: 600;
 }
 
 .tri-card p {
-    color: #4a5a7a;
+    color: white;
     font-size: 16px;
     line-height: 1.5;
     margin: 0;
