@@ -390,6 +390,38 @@ span {
 
 
 
+
+.box h3 {
+    font-size: 1.8rem !important;
+    margin-bottom: 1.5rem !important;
+    color: #2c3e50 !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.5px !important;
+    position: relative !important;
+    display: inline-block !important;
+    text-transform: capitalize !important;
+}
+
+.box h3 span {
+    font-size: 2.2rem !important;
+    color: #4a6bff !important;
+    font-weight: 700 !important;
+    text-shadow: 1px 1px 3px rgba(74, 107, 255, 0.3) !important;
+    background: linear-gradient(135deg, #4a6bff, #6a5acd) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    margin-right: 2px !important;
+    padding-right: 1px !important;
+}
+
+
+
+
+
+
+
+
 /* Review Section Code*/
 
 .review .heading {
