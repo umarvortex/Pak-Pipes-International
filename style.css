@@ -82,6 +82,33 @@ span {
 
 
 
+
+
+
+
+
+        .hero {
+            background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('https://images.unsplash.com/photo-1605152276897-4f618f831968?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: #1a2a3a;
+            text-align: center;
+            padding: 100px 20px;
+            border-bottom: 1px solid #e1e5eb;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
 .navbar { 
     display: flex; 
 } 
