@@ -631,3 +631,275 @@ span {
 
 /* Responsive codes remain the same as your original */
 /* ... (all your existing responsive code remains unchanged) ... */
+
+
+
+/* Mobile Responsive Codes */
+@media (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+    
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .review-card {
+        width: 300px;
+        min-width: 300px;
+    }
+}
+
+@media (max-width: 991px) {
+    #menu-icon {
+        display: block;
+    }
+    
+    .navbar {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 255px;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background: var(--bg-color);
+        transition: all 0.5s ease;
+    }
+    
+    .navbar a {
+        display: block;
+        padding: 10px;
+        font-size: 14px;
+        margin-left: 0;
+        margin-bottom: 1rem;
+    }
+    
+    .navbar.active {
+        right: 0;
+    }
+    
+    header {
+        padding: 2rem 3%;
+    }
+    
+    section {
+        padding: 5rem 3%;
+    }
+    
+    .about-content h2 {
+        margin-top: 2rem;
+        text-align: center;
+        font-size: 5rem;
+    }
+    
+    .review .wrapper {
+        grid-template-columns: repeat(1,1fr);
+    }
+    
+    .footer {
+        padding: 40px 0;
+    }
+    
+    /* Review card adjustments */
+    .reviews-track {
+        gap: 15px;
+    }
+    
+    .review-card {
+        width: 280px;
+        min-width: 280px;
+        padding: 20px;
+    }
+    
+    .client-avatar {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .client-name {
+        font-size: 16px;
+    }
+    
+    .rating {
+        font-size: 18px;
+    }
+    
+    .review-text {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column;
+    }
+    
+    .home-content h3 {
+        font-size: 4.5rem;
+        margin-top: 1.5rem;
+    }
+    
+    .home-content h1 {
+        font-size: 5rem;
+        margin-top: 1.5rem;
+    }
+    
+    .home-content {
+        order: 2;
+    }
+    
+    .home-img img {
+        width: 70vw;
+        margin-top: 4rem;
+    }
+    
+    .about {
+        flex-direction: column;
+    }
+    
+    .about-img img {
+        width: 70vw;
+        margin-top: 4rem;
+    }
+    
+    .about-content {
+        text-align: center;
+    }
+    
+    .about-content h2 {
+        text-align: center;
+    }
+    
+    .services h2 {
+        margin-bottom: 3rem;
+    }
+    
+    /* Chatbot full screen */
+    #chatbot-container {
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+        box-shadow: none;
+    }
+    
+    /* Review card adjustments */
+    .review-card {
+        min-width: 260px;
+        padding: 20px;
+    }
+    
+    .client-avatar {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .client-name {
+        font-size: 16px;
+    }
+    
+    .star {
+        font-size: 16px;
+    }
+    
+    .review-text {
+        font-size: 14px;
+    }
+    
+    @keyframes scroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(calc(-275px * 10)); }
+    }
+}
+
+@media (max-width: 617px) {
+    .home-img img {
+        width: 80vw;
+        max-width: 100%;
+        margin-top: 8rem;
+    }
+    
+    .about-img img {
+        width: 70vw;
+        max-width: 100%;
+        margin-top: 4rem;
+    }
+    
+    img {
+        max-width: 100%;
+        height: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .reviews-container {
+        margin: 20px 0;
+    }
+    
+    .review-card {
+        min-width: 240px;
+        padding: 18px;
+    }
+    
+    .reviews-track {
+        gap: 20px;
+    }
+    
+    @keyframes scroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(calc(-255px * 10)); }
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 40%;
+    }
+    
+    img {
+        max-width: 100%;
+        grid-template-columns: repeat(1,1fr);
+        height: 100%;
+    }
+    
+    body {
+        font-size: 14px;
+    }
+    
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+    
+    /* Adjust navbar for smallest screens */
+    .navbar {
+        width: 200px;
+    }
+    
+    .navbar a {
+        padding: 8px;
+        font-size: 12px;
+    }
+    
+    /* Adjust buttons for small screens */
+    .btn, .nav-btn {
+        padding: 0.8rem 1.8rem;
+        font-size: 1.2rem;
+    }
+    
+    /* Adjust headings for small screens */
+    .home-content h3 {
+        font-size: 3.5rem;
+    }
+    
+    .home-content h1 {
+        font-size: 4rem !important;
+    }
+    
+    .heading {
+        font-size: 4.5rem;
+    }
+}
