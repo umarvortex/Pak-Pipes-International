@@ -390,31 +390,30 @@ span {
 
 
 
-
 .box h3 {
-    font-size: 1.8rem !important;
-    margin-bottom: 1.5rem !important;
-    color: #2c3e50 !important;
-    font-weight: 600 !important;
-    letter-spacing: 0.5px !important;
+    font-size: 2.4rem !important;
+    margin-bottom: 1.8rem !important;
+    color: #00ffc3 !important;
+    font-weight: 700 !important;
+    letter-spacing: 1px !important;
     position: relative !important;
     display: inline-block !important;
-    text-transform: capitalize !important;
+    text-transform: uppercase !important;
+    text-shadow: 0 0 6px rgba(0, 255, 195, 0.6), 0 0 12px rgba(0, 255, 195, 0.3) !important;
 }
 
+/* First-letter highlight for Vision, Values etc. */
 .box h3 span {
-    font-size: 2.2rem !important;
-    color: #4a6bff !important;
-    font-weight: 700 !important;
-    text-shadow: 1px 1px 3px rgba(74, 107, 255, 0.3) !important;
-    background: linear-gradient(135deg, #4a6bff, #6a5acd) !important;
+    font-size: 2.8rem !important;
+    font-weight: 800 !important;
+    background: linear-gradient(135deg, #00ffc3, #00aaff) !important;
     -webkit-background-clip: text !important;
     background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
-    margin-right: 2px !important;
-    padding-right: 1px !important;
+    text-shadow: 0 0 10px rgba(0,255,255,0.7) !important;
+    margin-right: 5px !important;
+    padding-right: 2px !important;
 }
-
 
 
 
