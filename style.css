@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -390,29 +395,32 @@ span {
 
 
 
+
+
 .box h3 {
-    font-size: 2.4rem !important;
-    margin-bottom: 1.8rem !important;
+    font-size: 3rem !important;
+    margin-bottom: 2rem !important;
     color: #00ffc3 !important;
-    font-weight: 700 !important;
-    letter-spacing: 1px !important;
+    font-weight: 800 !important;
+    letter-spacing: 2px !important;
     position: relative !important;
     display: inline-block !important;
     text-transform: uppercase !important;
-    text-shadow: 0 0 6px rgba(0, 255, 195, 0.6), 0 0 12px rgba(0, 255, 195, 0.3) !important;
+    text-shadow: 0 0 8px rgba(0, 255, 195, 0.7), 0 0 14px rgba(0, 255, 195, 0.3) !important;
 }
 
-/* First-letter highlight for Vision, Values etc. */
+/* Highlight the first letter using Orbitron font for sci-fi tech style */
 .box h3 span {
-    font-size: 2.8rem !important;
-    font-weight: 800 !important;
+    font-family: 'Orbitron', sans-serif !important;
+    font-size: 3.4rem !important;
+    font-weight: 900 !important;
     background: linear-gradient(135deg, #00ffc3, #00aaff) !important;
     -webkit-background-clip: text !important;
     background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
-    text-shadow: 0 0 10px rgba(0,255,255,0.7) !important;
-    margin-right: 5px !important;
-    padding-right: 2px !important;
+    text-shadow: 0 0 12px rgba(0,255,255,0.8) !important;
+    margin-right: 6px !important;
+    padding-right: 3px !important;
 }
 
 
