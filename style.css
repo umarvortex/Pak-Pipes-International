@@ -72,12 +72,12 @@ header {
 
 
 .logo { 
-    font-size: 3.2rem; 
+    font-size: 3.1rem; 
     color: var(--text-color); 
-    font-weight: 500; 
+    font-weight: 550; 
     cursor: pointer; 
+    background: transparent;
     transition: 0.5s ease-in-out; 
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 } 
 
 .logo:hover{ 
@@ -85,7 +85,7 @@ header {
 } 
 
 span { 
-    color: #45ffca99; 
+    color: #45ffca66; 
 } 
 
 
@@ -395,7 +395,7 @@ span {
   position: absolute;
   height: 3px;
   width: 100%;
-  background: #45ffca99;
+  background: #45ffcacc;
   border-radius: 2px;
   transition: all 0.3s ease;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
@@ -425,7 +425,6 @@ span {
   transform: rotate(-45deg);
   top: 8px;
 }
-
 
 
 
@@ -503,11 +502,15 @@ span {
 
 
 
+.home-content .btn {
+  background: #45FFCA99;
+}
+
+
+
 
 
 /*Sercices section code */ 
-
-
 
 .services { 
     background: var(--snd-bg-color); 
