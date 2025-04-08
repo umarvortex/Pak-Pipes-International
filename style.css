@@ -84,7 +84,7 @@ header {
 } 
 
 span { 
-    color: var(--main-color); 
+    color: #45ffcacc; 
 } 
 
 
@@ -394,7 +394,7 @@ span {
   position: absolute;
   height: 3px;
   width: 100%;
-  background: rgba(69, 255, 202, 0.3);
+  background: #45ffca99;
   border-radius: 2px;
   transition: all 0.3s ease;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
@@ -404,16 +404,16 @@ span {
   top: 0;
 }
 .menu-icon span:nth-child(2) {
-  top: 6px;
+  top: 9px;
 }
 .menu-icon span:nth-child(3) {
-  top: 12px;
+  top: 18px;
 }
 
-/* Cross animation updates too */
+/* Cross animation (centered on 9px gap) */
 .menu-icon.active span:nth-child(1) {
   transform: rotate(45deg);
-  top: 6px;
+  top: 9px;
 }
 
 .menu-icon.active span:nth-child(2) {
@@ -422,7 +422,7 @@ span {
 
 .menu-icon.active span:nth-child(3) {
   transform: rotate(-45deg);
-  top: 6px;
+  top: 9px;
 }
 
 
