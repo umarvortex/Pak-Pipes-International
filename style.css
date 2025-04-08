@@ -65,7 +65,7 @@ header {
 } 
 
 .logo { 
-    font-size: 3rem; 
+    font-size: 4rem; 
     color: var(--text-color); 
     font-weight: 800; 
     cursor: pointer; 
@@ -88,8 +88,8 @@ span {
 
 
 .home {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-                url('https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('https://i.postimg.cc/8CbkJSVC/Screenshot-20250408-083254.jpg');
     background-size: cover;
     background-position: center;
     color: #ffffff;
