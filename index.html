@@ -52,54 +52,6 @@
 
 
 
-<style>
-
-.menu-icon {
-  width: 35px;
-  height: 25px;
-  position: relative;
-  cursor: pointer;
-  display: block; /* responsive ke liye d-none ko override kare */
-  z-index: 1001;
-}
-
-.menu-icon span {
-  position: absolute;
-  height: 3px;
-  width: 100%;
-  background-color: var(--main-color);
-  border-radius: 2px;
-  transition: all 0.3s ease;
-}
-
-.menu-icon span:nth-child(1) {
-  top: 0;
-}
-.menu-icon span:nth-child(2) {
-  top: 11px;
-}
-.menu-icon span:nth-child(3) {
-  top: 22px;
-}
-
-/* Cross animation */
-.menu-icon.active span:nth-child(1) {
-  transform: rotate(45deg);
-  top: 11px;
-}
-
-.menu-icon.active span:nth-child(2) {
-  opacity: 0;
-}
-
-.menu-icon.active span:nth-child(3) {
-  transform: rotate(-45deg);
-  top: 11px;
-}
-
-</style>
-
-
         
         
         <ul class="navbar">
