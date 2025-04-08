@@ -404,16 +404,16 @@ span {
   top: 0;
 }
 .menu-icon span:nth-child(2) {
-  top: 11px;
+  top: 6px;
 }
 .menu-icon span:nth-child(3) {
-  top: 22px;
+  top: 12px;
 }
 
-/* Cross animation */
+/* Cross animation updates too */
 .menu-icon.active span:nth-child(1) {
   transform: rotate(45deg);
-  top: 11px;
+  top: 6px;
 }
 
 .menu-icon.active span:nth-child(2) {
@@ -422,7 +422,7 @@ span {
 
 .menu-icon.active span:nth-child(3) {
   transform: rotate(-45deg);
-  top: 11px;
+  top: 6px;
 }
 
 
