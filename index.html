@@ -1252,6 +1252,10 @@ setInterval(() => {
  
     
 
+
+
+
+
 <!-- ==== CONTACT FORM SECTION ==== -->
 <section class="contact-section" id="contact">
   <div class="max-width-contact">
@@ -1259,7 +1263,7 @@ setInterval(() => {
     <div class="contact-content">
       <div class="column-left">
         <div class="text-top">Let's talk</div>
-        <p>If you have any work or queries, you can send me a message from here. It’s my pleasure to help you.</p>
+        <p>If you have any work or queries, you can send me a message from here. It's my pleasure to help you.</p>
         <div class="icons-contact">
           <div class="row-contact">
             <i class="fas fa-user"></i>
@@ -1279,14 +1283,22 @@ setInterval(() => {
             <i class="fas fa-envelope"></i>
             <div class="info-contact">
               <div class="head-contact">Email</div>
-              <div class="sub-title-contact">asliyatkidunya@gmail.com</div>
+              <div class="sub-title-contact">umarvortex@gmail.com</div>
             </div>
           </div>
         </div>
       </div>
       <div class="column-right">
         <div class="text-bottom">Message Me</div>
-        <form id="contactForm" action="https://formsubmit.co/743fb6a07b1e5697f82e2feeb8beacb3" method="POST" onsubmit="return showLoading()">
+        <form id="contactForm" action="https://formsubmit.co/umarvortex@gmail.com" method="POST">
+          <!-- FormSubmit Configuration -->
+          <input type="hidden" name="_next" value="https://umarvortex.github.io/Pak-Pipes-International-Karachi/#contact">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_subject" value="New Message from Pak Pipes Website">
+          <input type="text" name="_honey" style="display:none">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_autoresponse" value="Thank you for contacting Pak Pipes International. We'll get back to you soon.">
+          
           <div class="fields-contact">
             <div class="field-contact name-contact">
               <input type="text" placeholder="Name" name="name" required />
@@ -1319,12 +1331,6 @@ setInterval(() => {
 
 <!-- ==== STYLE SECTION ==== -->
 <style>
-  body {
-    background-color: #181818;
-    color: white;
-    font-family: 'Arial', sans-serif;
-  }
-
   .contact-section {
     padding: 60px 0;
     background-color: #232323;
@@ -1357,7 +1363,7 @@ setInterval(() => {
     margin-bottom: 15px;
   }
 
-  p {
+  .contact-section p {
     color: #ccc;
     font-size: 1rem;
     margin-bottom: 20px;
@@ -1440,47 +1446,69 @@ setInterval(() => {
 
 <!-- ==== SCRIPT SECTION ==== -->
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener("DOMContentLoaded", function() {
+    const contactForm = document.getElementById("contactForm");
     const emailField = document.querySelector("input[name='email']");
     const nameField = document.querySelector("input[name='name']");
 
-    emailField.addEventListener("input", () => {
+    // Input validation
+    emailField.addEventListener("input", function() {
       const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailField.value);
       emailField.style.borderColor = isValid ? "#45ffca" : "red";
     });
 
-    nameField.addEventListener("input", () => {
+    nameField.addEventListener("input", function() {
       nameField.style.borderColor = nameField.value.trim() ? "#45ffca" : "red";
     });
+
+    // Form submission handler
+    contactForm.addEventListener("submit", function(e) {
+      e.preventDefault();
+      
+      const submitBtn = contactForm.querySelector('.btn-contact');
+      const loading = document.getElementById('loading');
+      const successMsg = document.getElementById('successMessage');
+      const errorMsg = document.getElementById('errorMessage');
+      
+      // Show loading state
+      submitBtn.disabled = true;
+      loading.style.display = 'block';
+      successMsg.style.display = 'none';
+      errorMsg.style.display = 'none';
+      
+      // Submit form data
+      fetch(contactForm.action, {
+        method: 'POST',
+        body: new FormData(contactForm),
+        headers: {
+          'Accept': 'application/json'
+        }
+      })
+      .then(response => {
+        if (response.ok) {
+          successMsg.style.display = 'block';
+          contactForm.reset();
+          // Scroll to success message
+          setTimeout(() => {
+            successMsg.scrollIntoView({ behavior: 'smooth' });
+          }, 100);
+        } else {
+          throw new Error('Form submission failed');
+        }
+      })
+      .catch(error => {
+        errorMsg.style.display = 'block';
+        // Scroll to error message
+        setTimeout(() => {
+          errorMsg.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      })
+      .finally(() => {
+        loading.style.display = 'none';
+        submitBtn.disabled = false;
+      });
+    });
   });
-
-  function showLoading() {
-    const btn = document.querySelector('.btn-contact');
-    btn.disabled = true;
-    btn.innerText = "Sending...";
-    
-    document.getElementById("loading").style.display = "block";
-
-    setTimeout(() => {
-      document.getElementById("loading").style.display = "none";
-      document.getElementById("successMessage").style.display = "block";
-      document.getElementById("successMessage").scrollIntoView({ behavior: "smooth" });
-
-      btn.disabled = false;
-      btn.innerText = "Send Message";
-    }, 3000);
-
-    setTimeout(() => {
-      document.getElementById("successMessage").style.display = "none";
-      document.getElementById("contactForm").reset();
-    }, 6000);
-
-    setTimeout(() => {
-      document.getElementById("errorMessage").style.display = "block";
-    }, 5000);
-
-    return false; // Prevent actual submission (demo)
-  }
 </script>
 
 
