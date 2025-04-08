@@ -67,7 +67,7 @@ header {
     background-color: #013220;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);  
     transition: all 0.5s ease; 
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    
 }
 
 
@@ -76,7 +76,6 @@ header {
     color: var(--text-color); 
     font-weight: 550; 
     cursor: pointer; 
-    background: transparent;
     transition: 0.5s ease-in-out; 
 } 
 
@@ -109,7 +108,7 @@ span {
     color: white;
     text-align: center;
     padding: 100px 20px;
-    border-bottom: 1px solid #45ffca33;
+    border-bottom: 1.5px solid #45ffca22;
 }
 
 
@@ -928,10 +927,10 @@ span {
   max-width: 500px; 
   margin: auto; 
   padding: 20px; 
-  background: #0c0c0c; /* Tumhari website ka colour */ 
-  border: 1px solid var(--main-color); /* Blue Border */ 
-  border-radius: 10px; 
-  box-shadow: 15px var(--main-color); 
+  background: #17242a; /* website ka colour */ 
+  border: 1px solid #45ffca66; /* Blue Border */ 
+  border-radius: 8px; 
+  box-shadow: 18px var(--main-color); 
   text-align: center; 
 } 
 
@@ -1007,14 +1006,14 @@ span {
     bottom: 0; 
     width: 100%; 
     padding: 40px 0; 
-    background: var(--snd-bg-color); 
+    background: #013220; 
 
 } 
 
 
 
 .to-top { 
-    background: #484e52; 
+    background: #17242a; 
     position: fixed; 
     left: 20px; 
     bottom: -60px; /* Pehle hidden */ 
@@ -1042,19 +1041,16 @@ span {
     justify-content: center 
 } 
 
-.to-top:hover { 
-    background: #484e52; /* Hover effect ke liye */ 
-    color: white; 
-    transition: .3s; 
-} 
+ 
 
 
 
 
 .footer .copyright { 
     margin-top: 20px; 
+    margin-bottom: 35px;
     text-align: center; 
-    font-size: 15px; 
+    font-size: 11px; 
     color:var(--text-color) ; 
 } 
 
