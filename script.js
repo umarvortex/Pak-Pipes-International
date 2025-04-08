@@ -1,15 +1,19 @@
 let menu = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
 
-menu.onclick= () => {
-    menu.classList.toggle('bx-x');
-    navbar.classList.toggle('active');
+menu.onclick = () => {
+    menu.classList.toggle('active'); // icon animation
+    navbar.classList.toggle('active'); // menu slide open/close
 }
 
-window.onscroll= () => {
-    menu.classList.remove('bx-x');
+window.onscroll = () => {
+    menu.classList.remove('active');
     navbar.classList.remove('active');
 }
+
+
+
+
 
 const toTop = document.querySelector(".to-top");
 
