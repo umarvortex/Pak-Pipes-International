@@ -57,7 +57,7 @@ header {
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
-    padding: 3rem 0; 
+    padding: 5rem 0; 
     background: rgba(0, 0, 0, 0.7); 
     backdrop-filter: blur(10px); 
     transition: all 0.5s ease; 
@@ -65,9 +65,9 @@ header {
 } 
 
 .logo { 
-    font-size: 4rem; 
+    font-size: 5rem; 
     color: var(--text-color); 
-    font-weight: 800; 
+    font-weight: 700; 
     cursor: pointer; 
     transition: 0.3s ease-in-out; 
 } 
@@ -92,7 +92,7 @@ span {
                 url('https://i.postimg.cc/wM4Q9ZBf/Screenshot-20250408-085157.jpg');
     background-size: cover;
     background-position: center;
-    color: black;
+    color: white;
     text-align: center;
     padding: 100px 20px;
     border-bottom: 1px solid #45ffca33;
@@ -386,7 +386,7 @@ span {
 } 
 
 .home-content h3 { 
-    font-size: 5rem; 
+    font-size: 5.1rem; 
     font-weight: 700; 
 } 
 
@@ -401,14 +401,15 @@ span {
 } 
 
 .home-content p { 
-    font-size: 2.3rem; 
+    font-size: 2.5rem; 
+    font-weight: 300;
     line-height: 1.3; 
     margin-top: 2.2rem; 
     margin-bottom: 2.2rem; 
 } 
 
 .home-content h1 { 
-    font-size: 4.4rem !important; 
+    font-size: 4.5rem !important; 
     font-weight: 700 !important; 
     line-height: 1.3 !important; 
 } 
