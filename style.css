@@ -72,11 +72,11 @@ header {
 
 
 .logo { 
-    font-size: 4.1rem; 
+    font-size: 3.4rem; 
     color: var(--text-color); 
-    font-weight: 650; 
+    font-weight: 600; 
     cursor: pointer; 
-    transition: 0.3s ease-in-out; 
+    transition: 0.5s ease-in-out; 
 } 
 
 .logo:hover{ 
@@ -379,8 +379,8 @@ span {
 
 
 .menu-icon {
-  width: 32px;
-  height: 22px;
+  width: 28px;
+  height: 18px;
   position: relative;
   cursor: pointer;
   display: block; /* responsive ke liye d-none ko override kare */
