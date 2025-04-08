@@ -87,17 +87,15 @@ span {
 
 
 
-
 .home {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), 
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
                 url('https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
-
     background-size: cover;
     background-position: center;
-    color: #ffffff; /* White text for contrast */
+    color: #ffffff;
     text-align: center;
     padding: 100px 20px;
-    border-bottom: 1px solid #2a5c3d; /* Greenish border to match pipes */
+    border-bottom: 1px solid #3a7d44;
 }
 
 
