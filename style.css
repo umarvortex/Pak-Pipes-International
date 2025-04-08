@@ -67,12 +67,12 @@ header {
     background-color: #013220;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);  
     transition: all 0.5s ease; 
-
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 
 .logo { 
-    font-size: 3.4rem; 
+    font-size: 3.3rem; 
     color: var(--text-color); 
     font-weight: 600; 
     cursor: pointer; 
@@ -155,7 +155,7 @@ span {
 } 
 
 .nav-btn:hover { 
-    background: #45ffca33; 
+    background: #45ffca; 
     color: var(--text-color); 
     box-shadow: 0 0 18px var(--main-color); 
 } 
@@ -382,8 +382,8 @@ span {
 
 
 .menu-icon {
-  width: 28px;
-  height: 18px;
+  width: 26px;
+  height: 15px;
   position: relative;
   cursor: pointer;
   display: block; /* responsive ke liye d-none ko override kare */
@@ -394,9 +394,10 @@ span {
   position: absolute;
   height: 3px;
   width: 100%;
-  background-color: var(--main-color);
+  background: rgba(69, 255, 202, 0.3);
   border-radius: 2px;
   transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .menu-icon span:nth-child(1) {
