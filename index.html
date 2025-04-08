@@ -1250,59 +1250,248 @@ setInterval(() => {
 <hr style="height: 1px; background: #45ffca33; border: none; margin: 0; padding: 0;">
 
  
-    <!--Contact Section Code -->
-<section>
-<div class="contact-form" id="contact form">
-  <h1>Share Reviews and Feedback.</h1>
-  <p>We Highly Appreciate your Valuable Efforts.</p>
-  <form id="contactForm" action="https://formsubmit.co/743fb6a07b1e5697f82e2feeb8beacb3" method="POST" onsubmit="return showLoading()">
-    <input type="hidden" name="_subject" value="New Message from Website">
-    <input type="hidden" name="_autoresponse" value="Thank you for contacting Pak Pipes International Karachi! We will get back to you soon.">
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_next" value="https://umarvortex.github.io/Pak-Pipes-International-Karachi/">
     
-    <input type="text" name="name" placeholder="Your Name" required />
-    <input type="email" name="email" placeholder="Your Email" required />
-    <textarea name="message" placeholder="Your Message" required></textarea>
-    <button type="submit" class="btn">Send Message</button>
-  </form>
-</div>
-<div id="loading" style="display:none; text-align:center; margin-top:20px;">Sending Message...⏳</div>
-<div id="successMessage" style="display:none; text-align:center; margin-top:20px; color:white;">Thank you! Your message has been sent successfully. ✅</div>
+
+<!-- ==== CONTACT FORM SECTION ==== -->
+<section class="contact-section" id="contact">
+  <div class="max-width-contact">
+    <h2 class="title-contact">Contact Me</h2>
+    <div class="contact-content">
+      <div class="column-left">
+        <div class="text-top">Let's talk</div>
+        <p>If you have any work or queries, you can send me a message from here. It’s my pleasure to help you.</p>
+        <div class="icons-contact">
+          <div class="row-contact">
+            <i class="fas fa-user"></i>
+            <div class="info-contact">
+              <div class="head-contact">Name</div>
+              <div class="sub-title-contact">Umar Vortex</div>
+            </div>
+          </div>
+          <div class="row-contact">
+            <i class="fas fa-map-marker-alt"></i>
+            <div class="info-contact">
+              <div class="head-contact">Address</div>
+              <div class="sub-title-contact">Digri, Sindh, Pakistan</div>
+            </div>
+          </div>
+          <div class="row-contact">
+            <i class="fas fa-envelope"></i>
+            <div class="info-contact">
+              <div class="head-contact">Email</div>
+              <div class="sub-title-contact">asliyatkidunya@gmail.com</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column-right">
+        <div class="text-bottom">Message Me</div>
+        <form id="contactForm" action="https://formsubmit.co/743fb6a07b1e5697f82e2feeb8beacb3" method="POST" onsubmit="return showLoading()">
+          <div class="fields-contact">
+            <div class="field-contact name-contact">
+              <input type="text" placeholder="Name" name="name" required />
+            </div>
+            <div class="field-contact email-contact">
+              <input type="email" placeholder="Email" name="email" required />
+            </div>
+          </div>
+          <div class="field-contact">
+            <input type="text" placeholder="Subject" name="subject" required />
+          </div>
+          <div class="field-contact textarea-contact">
+            <textarea cols="30" rows="10" placeholder="Message.." name="message" required></textarea>
+          </div>
+          <div class="button-area-contact">
+            <button type="submit" class="btn-contact">Send Message</button>
+          </div>
+          <div id="loading" style="display: none; text-align: center; color: #45ffca; margin-top: 10px;">Sending...</div>
+          <div id="successMessage" style="display: none; text-align: center; color: #45ffca; margin-top: 15px; font-size: 18px;">
+            ✅ Thank you! Your message has been sent successfully.
+          </div>
+          <div id="errorMessage" style="display: none; text-align: center; color: red; margin-top: 15px; font-size: 18px;">
+            ❌ Oops! Something went wrong, please try again.
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==== STYLE SECTION ==== -->
+<style>
+  body {
+    background-color: #181818;
+    color: white;
+    font-family: 'Arial', sans-serif;
+  }
+
+  .contact-section {
+    padding: 60px 0;
+    background-color: #232323;
+  }
+
+  .title-contact {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #45ffca;
+  }
+
+  .contact-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  .column-left, .column-right {
+    flex: 1;
+    padding: 20px;
+    background-color: #2c2c2c;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .text-top, .text-bottom {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 15px;
+  }
+
+  p {
+    color: #ccc;
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .icons-contact {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .row-contact {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+  .row-contact i {
+    color: #45ffca;
+    font-size: 1.5rem;
+    margin-right: 10px;
+  }
+
+  .info-contact {
+    color: #fff;
+  }
+
+  .head-contact {
+    font-weight: bold;
+  }
+
+  .sub-title-contact {
+    color: #ccc;
+  }
+
+  #contactForm input,
+  #contactForm textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    transition: border-color 0.3s ease;
+  }
+
+  #contactForm input:focus,
+  #contactForm textarea:focus {
+    border-color: #45ffca;
+    box-shadow: 0 0 10px rgba(69, 255, 202, 0.5);
+    outline: none;
+  }
+
+  .btn-contact {
+    background-color: #45ffca;
+    color: #000;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn-contact:hover {
+    background-color: #3cd1ad;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .contact-content {
+      flex-direction: column;
+    }
+
+    .column-left, .column-right {
+      margin-bottom: 20px;
+    }
+  }
+</style>
+
+<!-- ==== SCRIPT SECTION ==== -->
 <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const emailField = document.querySelector("input[name='email']");
+    const nameField = document.querySelector("input[name='name']");
+
+    emailField.addEventListener("input", () => {
+      const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailField.value);
+      emailField.style.borderColor = isValid ? "#45ffca" : "red";
+    });
+
+    nameField.addEventListener("input", () => {
+      nameField.style.borderColor = nameField.value.trim() ? "#45ffca" : "red";
+    });
+  });
+
   function showLoading() {
+    const btn = document.querySelector('.btn-contact');
+    btn.disabled = true;
+    btn.innerText = "Sending...";
+    
     document.getElementById("loading").style.display = "block";
+
     setTimeout(() => {
       document.getElementById("loading").style.display = "none";
       document.getElementById("successMessage").style.display = "block";
+      document.getElementById("successMessage").scrollIntoView({ behavior: "smooth" });
+
+      btn.disabled = false;
+      btn.innerText = "Send Message";
     }, 3000);
+
     setTimeout(() => {
       document.getElementById("successMessage").style.display = "none";
       document.getElementById("contactForm").reset();
     }, 6000);
-    return true;
+
+    setTimeout(() => {
+      document.getElementById("errorMessage").style.display = "block";
+    }, 5000);
+
+    return false; // Prevent actual submission (demo)
   }
 </script>
- 
-<style>
-  #contactForm input, #contactForm textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    outline: none;
-    transition: 0.3s;
-  }
-  #contactForm input:focus, #contactForm textarea:focus {
-    border-color: #45ffca;
-    box-shadow: 0 0 8px #45ffca(0, 170, 255, 0.7);
-  }
 
 
 
-</style>
-</section>
+
+
+
+
+
+
+
  
     <!--Footer Section Code -->
     <footer class="footer">
