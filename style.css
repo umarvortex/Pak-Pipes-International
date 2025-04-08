@@ -72,11 +72,12 @@ header {
 
 
 .logo { 
-    font-size: 3.3rem; 
+    font-size: 3.2rem; 
     color: var(--text-color); 
-    font-weight: 600; 
+    font-weight: 500; 
     cursor: pointer; 
     transition: 0.5s ease-in-out; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 } 
 
 .logo:hover{ 
@@ -84,7 +85,7 @@ header {
 } 
 
 span { 
-    color: #45ffcacc; 
+    color: #45ffca99; 
 } 
 
 
@@ -404,16 +405,16 @@ span {
   top: 0;
 }
 .menu-icon span:nth-child(2) {
-  top: 9px;
+  top: 8px;
 }
 .menu-icon span:nth-child(3) {
-  top: 18px;
+  top: 17px;
 }
 
 /* Cross animation (centered on 9px gap) */
 .menu-icon.active span:nth-child(1) {
   transform: rotate(45deg);
-  top: 9px;
+  top: 8px;
 }
 
 .menu-icon.active span:nth-child(2) {
@@ -422,7 +423,7 @@ span {
 
 .menu-icon.active span:nth-child(3) {
   transform: rotate(-45deg);
-  top: 9px;
+  top: 8px;
 }
 
 
@@ -484,7 +485,7 @@ span {
     padding: 1rem 2.8rem; 
     margin-bottom: 20px; 
     margin-right: 20px; 
-    background: rgba(69, 255, 202, 0.3); 
+    background: #45ffca66; 
     border-radius: 1rem; 
     font-size: 14px; 
     color: white; 
