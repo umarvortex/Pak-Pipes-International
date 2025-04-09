@@ -1257,13 +1257,29 @@ setInterval(() => {
 
 
 <!-- ==== CONTACT FORM SECTION ==== -->
+
+<!-- ==== CONTACT FORM SECTION ==== -->
 <section class="contact-section" id="contact">
   <div class="max-width-contact">
+    <div class="theme-toggle">
+      <button id="themeBtn">
+        <i class="fas fa-moon"></i> Dark Mode
+      </button>
+    </div>
+    
     <h2 class="title-contact">Contact Me</h2>
+    
     <div class="contact-content">
+      <!-- Left Column -->
       <div class="column-left">
-        <div class="text-top">Let's talk</div>
-        <p>If you have any work or queries, you can send me a message from here. It's my pleasure to help you.</p>
+        <div class="text-top">Let's Connect</div>
+        
+        <p>For business inquiries or questions, feel free to reach out through this form or my contact details below.</p>
+        
+        <div id="workingHoursStatus">
+          <i class="far fa-clock"></i> Checking availability...
+        </div>
+        
         <div class="icons-contact">
           <div class="row-contact">
             <i class="fas fa-user"></i>
@@ -1272,6 +1288,7 @@ setInterval(() => {
               <div class="sub-title-contact">Umar Vortex</div>
             </div>
           </div>
+          
           <div class="row-contact">
             <i class="fas fa-map-marker-alt"></i>
             <div class="info-contact">
@@ -1279,55 +1296,87 @@ setInterval(() => {
               <div class="sub-title-contact">Digri, Sindh, Pakistan</div>
             </div>
           </div>
+          
           <div class="row-contact">
             <i class="fas fa-envelope"></i>
             <div class="info-contact">
               <div class="head-contact">Email</div>
-              <div class="sub-title-contact">umarvortex@gmail.com</div>
+              <div class="sub-title-contact">asliyatkidunya@gmail.com</div>
             </div>
           </div>
         </div>
+        
+        <div class="map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.178509771317!2d67.0007!3d25.1234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDA3JzI0LjMiTiA2N8KwMDAnMDIuNSJF!5e0!3m2!1sen!2s!4v1620000000000!5m2!1sen!2s" 
+                  width="100%" 
+                  height="250" 
+                  allowfullscreen="" 
+                  loading="lazy">
+          </iframe>
+        </div>
       </div>
+      
+      <!-- Right Column (Form) -->
       <div class="column-right">
-        <div class="text-bottom">Message Me</div>
-        <form id="contactForm" action="https://formsubmit.co/umarvortex@gmail.com" method="POST">
+        <div class="text-bottom">Send a Message</div>
+        
+        <form id="contactForm" action="https://formsubmit.co/asliyatkidunya@gmail.com" method="POST" enctype="multipart/form-data">
           <!-- FormSubmit Configuration -->
-          <input type="hidden" name="_next" value="https://umarvortex.github.io/Pak-Pipes-International-Karachi/#contact">
+          <input type="hidden" name="_next" value="https://umarvortex.github.io/Imageslider/">
           <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_subject" value="New Message from Pak Pipes Website">
+          <input type="hidden" name="_subject" value="New Message from Contact Form">
+          <input type="hidden" name="_autoresponse" value="Thank you for your message! I'll get back to you soon.">
           <input type="text" name="_honey" style="display:none">
           <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_autoresponse" value="Thank you for contacting Pak Pipes International. We'll get back to you soon.">
           
-          <div class="fields-contact">
-            <div class="field-contact name-contact">
-              <input type="text" placeholder="Name" name="name" required />
+          <div class="form-row">
+            <div class="form-group">
+              <input type="text" placeholder="Your Name" name="name" required>
             </div>
-            <div class="field-contact email-contact">
-              <input type="email" placeholder="Email" name="email" required />
+            <div class="form-group">
+              <input type="email" placeholder="Your Email" name="email" required>
             </div>
           </div>
-          <div class="field-contact">
-            <input type="text" placeholder="Subject" name="subject" required />
+          
+          <div class="form-group">
+            <input type="text" placeholder="Subject" name="subject" required>
           </div>
-          <div class="field-contact textarea-contact">
-            <textarea cols="30" rows="10" placeholder="Message.." name="message" required></textarea>
+          
+          <div class="form-group">
+            <textarea placeholder="Type your message here..." name="message" required></textarea>
           </div>
+          
+          <div class="form-group">
+            <label>Attach File (PDF/Image, max 20MB)</label>
+            <input type="file" name="attachment" accept=".pdf,.jpg,.jpeg,.png">
+          </div>
+          
           <div class="button-area-contact">
-            <button type="submit" class="btn-contact">Send Message</button>
+            <button type="submit" class="btn-contact">
+              Send Message
+              <span class="send-icon">→</span>
+            </button>
           </div>
-          <div id="loading" style="display: none; text-align: center; color: #45ffca; margin-top: 10px;">Sending...</div>
-          <div id="successMessage" style="display: none; text-align: center; color: #45ffca; margin-top: 15px; font-size: 18px;">
+          
+          <div id="loading" class="status-message">
+            <i class="fas fa-spinner fa-spin"></i> Sending your message...
+          </div>
+          
+          <div id="successMessage" class="status-message success">
             ✅ Thank you! Your message has been sent successfully.
           </div>
-          <div id="errorMessage" style="display: none; text-align: center; color: red; margin-top: 15px; font-size: 18px;">
-            ❌ Oops! Something went wrong, please try again.
+          
+          <div id="errorMessage" class="status-message error">
+            ❌ Oops! Something went wrong. Please try again.
           </div>
         </form>
       </div>
     </div>
   </div>
 </section>
+
+
+
 
 <!-- ==== STYLE SECTION ==== -->
 <style>
@@ -1336,179 +1385,469 @@ setInterval(() => {
     background-color: #232323;
   }
 
-  .title-contact {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 30px;
-    color: #45ffca;
-  }
 
+.max-width-contact {
+  width: 100%;
+  padding: 0;
+}
+
+/* === CONTENT CONTAINER === */
+.contact-content {
+  display: flex;
+  gap: 40px;
+  background: transparent;
+}
+
+/* === LEFT COLUMN === */
+.column-left {
+  flex: 1;
+  padding: 35px;
+  background-color: #1e2b32;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.text-top {
+  font-size: 24px;
+  color: #ffffff;
+  margin-bottom: 15px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.column-left p {
+  color: #b0b0b0;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+/* Working Hours Indicator */
+#workingHoursStatus {
+  margin: 20px 0;
+  padding: 10px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  background-color: rgba(255, 107, 107, 0.15);
+  color: #ff6b6b;
+  border-left: 3px solid #ff6b6b;
+}
+
+/* Contact Info Cards */
+.icons-contact {
+  margin-bottom: 30px;
+}
+
+.row-contact {
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.row-contact i {
+  color: #45ffca;
+  font-size: 16px;
+  width: 36px;
+  height: 36px;
+  background: rgba(69, 255, 202, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-contact {
+  margin-left: 12px;
+}
+
+.head-contact {
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 14px;
+  margin-bottom: 3px;
+}
+
+.sub-title-contact {
+  color: #b0b0b0;
+  font-size: 13px;
+}
+
+/* Google Map */
+.map {
+  margin-top: 25px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+}
+
+/* === RIGHT COLUMN (FORM) === */
+.column-right {
+  flex: 1;
+  padding: 35px;
+  background-color: #1e2b32;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.text-bottom {
+  font-size: 24px;
+  color: #ffffff;
+  margin-bottom: 20px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+/* Form Elements */
+#contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+
+.form-group {
+  flex: 1;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #35424a;
+  border-radius: 6px;
+  background-color: #2d3b44;
+  color: #ffffff;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+input:focus, textarea:focus {
+  border-color: #45ffca;
+  box-shadow: 0 0 0 2px rgba(69, 255, 202, 0.3);
+  outline: none;
+}
+
+textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+label {
+  display: block;
+  color: #b0b0b0;
+  margin-bottom: 6px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+input[type="file"] {
+  padding: 10px;
+  border: 1px dashed #35424a;
+  background-color: #2d3b44;
+}
+
+/* Submit Button */
+.button-area-contact {
+  margin-top: 10px;
+}
+
+.btn-contact {
+  background-color: #45ffca;
+  color: #000000;
+  border: none;
+  padding: 14px 25px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s;
+  width: 100%;
+}
+
+.btn-contact:hover {
+  background-color: #3ce0b5;
+  transform: translateY(-1px);
+}
+
+/* Status Messages */
+.status-message {
+  display: none;
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+#loading {
+  color: #45ffca;
+}
+
+.success {
+  color: #45ffca;
+  background-color: rgba(69, 255, 202, 0.1);
+}
+
+.error {
+  color: #ff6b6b;
+  background-color: rgba(255, 107, 107, 0.1);
+}
+
+/* === LIGHT MODE === */
+.light-mode .column-left,
+.light-mode .column-right {
+  background-color: #ffffff;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.light-mode .text-top,
+.light-mode .text-bottom,
+.light-mode .head-contact {
+  color: #333333;
+}
+
+.light-mode .sub-title-contact,
+.light-mode p,
+.light-mode label {
+  color: #666666;
+}
+
+.light-mode input,
+.light-mode textarea {
+  background-color: #f5f5f5;
+  border-color: #e0e0e0;
+  color: #333333;
+}
+
+.light-mode input:focus,
+.light-mode textarea:focus {
+  border-color: #2a7a64;
+  box-shadow: 0 0 0 2px rgba(42, 122, 100, 0.2);
+}
+
+.light-mode .btn-contact {
+  background-color: #2a7a64;
+  color: white;
+}
+
+.light-mode .btn-contact:hover {
+  background-color: #23634f;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
   .contact-content {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-  }
-
-  .column-left, .column-right {
-    flex: 1;
-    padding: 20px;
-    background-color: #2c2c2c;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  }
-
-  .text-top, .text-bottom {
-    font-size: 1.8rem;
-    color: #fff;
-    margin-bottom: 15px;
-  }
-
-  .contact-section p {
-    color: #ccc;
-    font-size: 1rem;
-    margin-bottom: 20px;
-  }
-
-  .icons-contact {
-    display: flex;
     flex-direction: column;
+    gap: 25px;
   }
-
-  .row-contact {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
+  
+  .form-row {
+    flex-direction: column;
+    gap: 15px;
   }
-
-  .row-contact i {
-    color: #45ffca;
-    font-size: 1.5rem;
-    margin-right: 10px;
+  
+  .column-left,
+  .column-right {
+    padding: 25px;
   }
-
-  .info-contact {
-    color: #fff;
+  
+  .text-top,
+  .text-bottom {
+    font-size: 22px;
   }
+}
 
-  .head-contact {
-    font-weight: bold;
-  }
+/* === FOOTER TEXT === */
+.contact-footer {
+  text-align: center;
+  margin-top: 40px;
+  color: #b0b0b0;
+  font-size: 12px;
+  padding-top: 20px;
+  border-top: 1px solid #2d3b44;
+}
 
-  .sub-title-contact {
-    color: #ccc;
-  }
+.light-mode .contact-footer {
+  color: #666666;
+  border-top-color: #e0e0e0;
+}
 
-  #contactForm input,
-  #contactForm textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    background-color: #333;
-    color: #fff;
-    transition: border-color 0.3s ease;
-  }
+/* === DARK MODE TOGGLE BUTTON === */
+.theme-toggle {
+  text-align: right;
+  margin-bottom: 30px;
+}
 
-  #contactForm input:focus,
-  #contactForm textarea:focus {
-    border-color: #45ffca;
-    box-shadow: 0 0 10px rgba(69, 255, 202, 0.5);
-    outline: none;
-  }
+#themeBtn {
+  background: none;
+  border: none;
+  color: #45ffca;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  background-color: rgba(69, 255, 202, 0.1);
+  border: 1px solid rgba(69, 255, 202, 0.3);
+}
 
-  .btn-contact {
-    background-color: #45ffca;
-    color: #000;
-    padding: 10px 25px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-  }
+#themeBtn:hover {
+  background-color: rgba(69, 255, 202, 0.2);
+  transform: translateY(-1px);
+}
 
-  .btn-contact:hover {
-    background-color: #3cd1ad;
-  }
+#themeBtn i {
+  font-size: 16px;
+}
 
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .contact-content {
-      flex-direction: column;
-    }
+/* Light mode button style */
+.light-mode #themeBtn {
+  color: #2a7a64;
+  background-color: rgba(42, 122, 100, 0.1);
+  border-color: rgba(42, 122, 100, 0.3);
+}
 
-    .column-left, .column-right {
-      margin-bottom: 20px;
-    }
-  }
+.light-mode #themeBtn:hover {
+  background-color: rgba(42, 122, 100, 0.2);
+}
+
 </style>
 
 <!-- ==== SCRIPT SECTION ==== -->
 <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const contactForm = document.getElementById("contactForm");
-    const emailField = document.querySelector("input[name='email']");
-    const nameField = document.querySelector("input[name='name']");
+  
+document.addEventListener("DOMContentLoaded", function() {
+  // Theme Toggle
+  const themeBtn = document.getElementById('themeBtn');
+  themeBtn.addEventListener('click', function() {
+    document.body.classList.toggle('light-mode');
+    localStorage.setItem('theme', document.body.classList.contains('light-mode') ? 'light' : 'dark');
+    updateThemeButton();
+  });
 
-    // Input validation
-    emailField.addEventListener("input", function() {
-      const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailField.value);
-      emailField.style.borderColor = isValid ? "#45ffca" : "red";
-    });
+  function updateThemeButton() {
+    themeBtn.innerHTML = document.body.classList.contains('light-mode') 
+      ? '<i class="fas fa-sun"></i> Light Mode' 
+      : '<i class="fas fa-moon"></i> Dark Mode';
+  }
 
-    nameField.addEventListener("input", function() {
-      nameField.style.borderColor = nameField.value.trim() ? "#45ffca" : "red";
-    });
+  // Check saved theme
+  if (localStorage.getItem('theme') === 'light') {
+    document.body.classList.add('light-mode');
+  }
+  updateThemeButton();
 
-    // Form submission handler
-    contactForm.addEventListener("submit", function(e) {
-      e.preventDefault();
-      
-      const submitBtn = contactForm.querySelector('.btn-contact');
-      const loading = document.getElementById('loading');
-      const successMsg = document.getElementById('successMessage');
-      const errorMsg = document.getElementById('errorMessage');
-      
-      // Show loading state
-      submitBtn.disabled = true;
-      loading.style.display = 'block';
-      successMsg.style.display = 'none';
-      errorMsg.style.display = 'none';
-      
-      // Submit form data
-      fetch(contactForm.action, {
-        method: 'POST',
-        body: new FormData(contactForm),
-        headers: {
-          'Accept': 'application/json'
-        }
-      })
-      .then(response => {
-        if (response.ok) {
-          successMsg.style.display = 'block';
-          contactForm.reset();
-          // Scroll to success message
-          setTimeout(() => {
-            successMsg.scrollIntoView({ behavior: 'smooth' });
-          }, 100);
-        } else {
-          throw new Error('Form submission failed');
-        }
-      })
-      .catch(error => {
-        errorMsg.style.display = 'block';
-        // Scroll to error message
+  // Working Hours Indicator
+  function updateWorkingHours() {
+    const now = new Date();
+    const hours = now.getHours();
+    const day = now.getDay(); // 0 = Sunday, 6 = Saturday
+    const statusElement = document.getElementById('workingHoursStatus');
+    
+    // Business hours: Mon-Fri 9AM-5PM
+    const isWorkingHours = (day >= 1 && day <= 5) && (hours >= 9 && hours < 17);
+    
+    if (isWorkingHours) {
+      statusElement.innerHTML = '<i class="far fa-clock"></i> <strong>Available Now:</strong> Open (9AM-5PM, Mon-Fri)';
+      statusElement.style.backgroundColor = 'rgba(69, 255, 202, 0.1)';
+      statusElement.style.color = '#45ffca';
+    } else {
+      statusElement.innerHTML = '<i class="far fa-clock"></i> <strong>Currently Closed:</strong> Open Monday-Friday, 9AM-5PM';
+      statusElement.style.backgroundColor = 'rgba(255, 107, 107, 0.1)';
+      statusElement.style.color = '#ff6b6b';
+    }
+  }
+  
+  // Initialize working hours check
+  updateWorkingHours();
+  setInterval(updateWorkingHours, 60000); // Update every minute
+
+  // Form Submission
+  const contactForm = document.getElementById('contactForm');
+  contactForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const submitBtn = contactForm.querySelector('.btn-contact');
+    const loading = document.getElementById('loading');
+    const successMsg = document.getElementById('successMessage');
+    const errorMsg = document.getElementById('errorMessage');
+    
+    // Show loading state
+    submitBtn.disabled = true;
+    loading.style.display = 'block';
+    successMsg.style.display = 'none';
+    errorMsg.style.display = 'none';
+    
+    // Submit form data
+    fetch(contactForm.action, {
+      method: 'POST',
+      body: new FormData(contactForm),
+      headers: {
+        'Accept': 'application/json'
+      }
+    })
+    .then(response => {
+      if (response.ok) {
+        successMsg.style.display = 'block';
+        contactForm.reset();
+        // Scroll to success message
         setTimeout(() => {
-          errorMsg.scrollIntoView({ behavior: 'smooth' });
+          successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }, 100);
-      })
-      .finally(() => {
-        loading.style.display = 'none';
-        submitBtn.disabled = false;
-      });
+      } else {
+        throw new Error('Form submission failed');
+      }
+    })
+    .catch(error => {
+      errorMsg.style.display = 'block';
+      // Scroll to error message
+      setTimeout(() => {
+        errorMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }, 100);
+    })
+    .finally(() => {
+      loading.style.display = 'none';
+      submitBtn.disabled = false;
     });
   });
+
+  // Input Validation
+  const emailField = contactForm.querySelector("input[name='email']");
+  const nameField = contactForm.querySelector("input[name='name']");
+
+  emailField.addEventListener("input", function() {
+    const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailField.value);
+    emailField.style.borderColor = isValid ? "#45ffca" : "#ff6b6b";
+  });
+
+  nameField.addEventListener("input", function() {
+    nameField.style.borderColor = nameField.value.trim() ? "#45ffca" : "#ff6b6b";
+  });
+
+  // Button hover effect
+  const sendBtn = document.querySelector('.btn-contact');
+  sendBtn.addEventListener('mouseenter', function() {
+    const icon = this.querySelector('.send-icon');
+    icon.style.opacity = '1';
+    icon.style.right = '25px';
+    this.style.transform = 'translateY(-2px)';
+  });
+  
+  sendBtn.addEventListener('mouseleave', function() {
+    const icon = this.querySelector('.send-icon');
+    icon.style.opacity = '0';
+    icon.style.right = '20px';
+    this.style.transform = 'translateY(0)';
+  });
+});
+
 </script>
 
 
