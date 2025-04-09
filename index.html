@@ -105,12 +105,12 @@ For top-notch piping solutions, think <strong>Pak Pipes International</strong> â
 <style>
   .center-button-wrapper {
     position: fixed;
-    bottom: 90px; 
+    bottom: 100px; 
     right: 23px;  
     display: flex;
     flex-direction: column-reverse; 
-    gap: 25px; 
-    z-index: 9998;
+    gap: 17px; 
+    z-index: 888;
   }
 
   .center-button-wrapper .btn {
@@ -251,7 +251,7 @@ setInterval(() => {
   align-items: center; /* Center vertically */
   cursor: pointer;
   box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
-  z-index: 9999;
+  z-index: 999;
 }
 .dots {
   display: flex;
@@ -1421,7 +1421,7 @@ Grey Noor Tower, Gulzar-e-Hijri,<br> Sector 29, Scheme 33, Karachi,<br> Pakistan
 }
 
 .max-width-contact .heading {
-   margin-bottom: 25px;
+   margin-bottom: 27px;
 }
 
 
@@ -1847,43 +1847,30 @@ document.getElementById('fileInput').addEventListener('change', function(e) {
 });
 
   
-document.addEventListener("DOMContentLoaded", function() {
-  // Theme Toggle
-  const themeBtn = document.getElementById('themeBtn');
-  themeBtn.addEventListener('click', function() {
-    document.body.classList.toggle('light-mode');
-    localStorage.setItem('theme', document.body.classList.contains('light-mode') ? 'light' : 'dark');
-    updateThemeButton();
-  });
-
-  function updateThemeButton() {
-    themeBtn.innerHTML = document.body.classList.contains('light-mode') 
-      ? '<i class="fas fa-sun"></i> Light Mode' 
-      : '<i class="fas fa-moon"></i> Dark Mode';
-  }
-
-  // Check saved theme
-  if (localStorage.getItem('theme') === 'light') {
-    document.body.classList.add('light-mode');
-  }
-  updateThemeButton();
-
-  // Working Hours Indicator
+// Working Hours Indicator
 function updateWorkingHours() {
   const now = new Date();
   const hours = now.getHours();
   const day = now.getDay(); // 0 = Sunday, 6 = Saturday
   const statusElement = document.getElementById('workingHoursStatus');
   
-  // Business hours: Saturday-Thursday 11AM-6PM (Friday closed)
-  const isWorkingHours = (day === 6 || day <= 4) && (hours >= 11 && hours < 18);
+  // Business hours:
+  // Saturday-Thursday: 11AM-6PM
+  // Friday: 3PM-6PM
+  const isWorkingHours = 
+    (day === 5 && hours >= 15 && hours < 18) || // Friday 3PM-6PM
+    (day !== 5 && hours >= 11 && hours < 18);   // Other days 11AM-6PM
   
   if (isWorkingHours) {
-    statusElement.innerHTML = '<i class="far fa-clock"></i> <strong>Available Now:</strong> Open (11AM-6PM, Saturday-Thursday)';
+    statusElement.innerHTML = day === 5 
+      ? '<i class="far fa-clock"></i> <strong>Available Now:</strong> Open (Friday 3PM-6PM)'
+      : '<i class="far fa-clock"></i> <strong>Available Now:</strong> Open (11AM-6PM)';
     statusElement.style.backgroundColor = 'rgba(69, 255, 202, 0.1)';
     statusElement.style.color = '#45ffca';
   } else {
-    statusElement.innerHTML = '<i class="far fa-clock"></i> <strong>Currently Closed:</strong> Open Saturday-Thursday, 11AM-6PM';
+    statusElement.innerHTML = day === 5 
+      ? '<i class="far fa-clock"></i> <strong>Currently Closed:</strong> Opens Friday at 3PM'
+      : '<i class="far fa-clock"></i> <strong>Currently Closed:</strong> Opens at 11AM';
     statusElement.style.backgroundColor = 'rgba(255, 107, 107, 0.1)';
     statusElement.style.color = '#ff6b6b';
   }
@@ -1892,6 +1879,7 @@ function updateWorkingHours() {
 // Initialize working hours check
 updateWorkingHours();
 setInterval(updateWorkingHours, 60000); // Update every minute
+
 
   // Form Submission
   const contactForm = document.getElementById('contactForm');
@@ -2170,7 +2158,7 @@ document.getElementById('current-year').textContent = new Date().getFullYear();
 <style>
 
 .to-top {
-  z-index: 9995 !important;
+  z-index: 777 !important;
 }
 
 </style>
