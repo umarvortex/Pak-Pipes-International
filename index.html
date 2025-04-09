@@ -1755,147 +1755,8 @@ textarea {
   background-color: #23634f;
 }
 
-/* === RESPONSIVE === */
-@media (max-width: 768px) {
-  .contact-content {
-    flex-direction: column;
-    gap: 25px;
-  }
-  
-  .form-row {
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  .column-left,
-  .column-right {
-    padding: 25px;
-  }
-  
-  .text-top,
-  .text-bottom {
-    font-size: 22px;
-  }
-}
 
 
-/* === RESPONSIVE MEDIA QUERIES === */
-@media (max-width: 1200px) {
-  .contact-content {
-    gap: 30px;
-  }
-  
-  .column-left,
-  .column-right {
-    padding: 30px;
-  }
-}
-
-@media (max-width: 992px) {
-  .contact-content {
-    gap: 25px;
-  }
-  
-  .column-left,
-  .column-right {
-    padding: 25px;
-  }
-  
-  .text-top {
-    font-size: 22px;
-  }
-  
-  .text-bottom {
-    font-size: 16px;
-  }
-}
-
-@media (max-width: 768px) {
-  .contact-content {
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  .form-row {
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  .column-left,
-  .column-right {
-    padding: 20px;
-  }
-  
-  .text-top,
-  .text-bottom {
-    font-size: 20px;
-    margin-bottom: 20px;
-  }
-  
-  .map {
-    margin-top: 20px;
-  }
-  
-  .button-area-contact {
-    margin-top: 5px;
-  }
-}
-
-@media (max-width: 576px) {
-  .contact-section {
-    padding: 15px 5px;
-  }
-  
-  .column-left,
-  .column-right {
-    padding: 15px;
-  }
-  
-  .text-top,
-  .text-bottom {
-    font-size: 18px;
-    margin-bottom: 15px;
-  }
-  
-  .row-contact {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-  }
-  
-  .info-contact {
-    margin-left: 0;
-  }
-  
-  .btn-contact {
-    padding: 12px 20px;
-  }
-}
-
-@media (max-width: 400px) {
-  .contact-section {
-    padding: 10px 3px;
-  }
-  
-  .column-left,
-  .column-right {
-    padding: 12px;
-  }
-  
-  .text-top,
-  .text-bottom {
-    font-size: 16px;
-  }
-  
-  input, textarea {
-    padding: 10px 12px;
-  }
-  
-  .file-input::before {
-    padding: 6px 10px;
-    font-size: 12px;
-  }
-}
 
 
 
@@ -1956,6 +1817,167 @@ textarea {
 .light-mode #themeBtn:hover {
   background-color: rgba(42, 122, 100, 0.2);
 }
+
+
+
+
+/* ========== MASTER RESPONSIVE SOLUTION ========== */
+
+/* LARGE DESKTOP (1200px+) */
+@media (min-width: 1200px) {
+  .contact-content {
+    display: flex !important;
+    gap: 30px !important;
+  }
+  .column-left,
+  .column-right {
+    flex: 1 0 45% !important;
+    min-width: 0 !important;
+    max-width: 50% !important;
+    box-sizing: border-box !important;
+    padding: 30px !important;
+  }
+  .text-top {
+    font-size: 22px !important;
+  }
+  .text-bottom {
+    font-size: 16px !important;
+  }
+}
+
+/* STANDARD DESKTOP (992px-1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .contact-content {
+    display: flex !important;
+    gap: 25px !important;
+  }
+  .column-left,
+  .column-right {
+    flex: 1 !important;
+    min-width: 0 !important;
+    width: 48% !important;
+    padding: 30px !important;
+  }
+}
+
+/* TABLET (768px-991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .contact-content {
+    flex-wrap: wrap !important;
+    gap: 25px !important;
+  }
+  .column-left,
+  .column-right {
+    flex: 1 0 calc(50% - 15px) !important;
+    margin-bottom: 20px !important;
+    padding: 25px !important;
+  }
+  .text-top,
+  .text-bottom {
+    font-size: 22px !important;
+  }
+}
+
+/* MOBILE (767px and below) */
+@media (max-width: 767px) {
+  .contact-content {
+    flex-direction: column !important;
+    gap: 20px !important;
+  }
+  .form-row {
+    flex-direction: column !important;
+    gap: 15px !important;
+  }
+  .column-left, 
+  .column-right {
+    width: 100% !important;
+    flex: none !important;
+    padding: 20px !important;
+    min-width: 0 !important;
+  }
+  #contactForm {
+    width: 100% !important;
+  }
+  table {
+    width: 100% !important;
+  }
+  input, textarea, .file-input {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  input[type="checkbox"] {
+    margin-right: 8px !important;
+  }
+  .text-top,
+  .text-bottom {
+    font-size: 20px !important;
+    margin-bottom: 20px !important;
+  }
+  .map {
+    margin-top: 20px !important;
+  }
+  .button-area-contact {
+    margin-top: 5px !important;
+  }
+}
+
+/* SMALL MOBILE (576px and below) */
+@media (max-width: 576px) {
+  .contact-section {
+    padding: 15px 5px !important;
+  }
+  .column-left,
+  .column-right {
+    padding: 15px !important;
+  }
+  .text-top,
+  .text-bottom {
+    font-size: 18px !important;
+    margin-bottom: 15px !important;
+  }
+  .row-contact {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+  }
+  .info-contact {
+    margin-left: 0 !important;
+  }
+  .btn-contact {
+    padding: 12px 20px !important;
+  }
+}
+
+/* EXTRA SMALL MOBILE (400px and below) */
+@media (max-width: 400px) {
+  .contact-section {
+    padding: 10px 3px !important;
+  }
+  .column-left,
+  .column-right {
+    padding: 12px !important;
+  }
+  .text-top,
+  .text-bottom {
+    font-size: 16px !important;
+  }
+  input, textarea {
+    padding: 10px 12px !important;
+  }
+  .file-input::before {
+    padding: 6px 10px !important;
+    font-size: 12px !important;
+  }
+  body {
+    overflow-x: hidden !important;
+  }
+  .sub-title-contact {
+    white-space: normal !important;
+    word-break: break-word !important;
+  }
+}
+
+
 
 </style>
 
