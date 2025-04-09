@@ -1261,13 +1261,17 @@ setInterval(() => {
 <!-- ==== CONTACT FORM SECTION ==== -->
 <section class="contact-section" id="contact">
   <div class="max-width-contact">
+
+        <h2 class="heading"> Our <span>Contact</span></h2>
+
+
     <div class="theme-toggle">
       <button id="themeBtn">
         <i class="fas fa-moon"></i> Dark Mode
       </button>
     </div>
     
-    <h2 class="title-contact">Contact Me</h2>
+    
     
     <div class="contact-content">
       <!-- Left Column -->
@@ -1285,7 +1289,7 @@ setInterval(() => {
             <i class="fas fa-user"></i>
             <div class="info-contact">
               <div class="head-contact">Name</div>
-              <div class="sub-title-contact">Umar Vortex</div>
+              <div class="sub-title-contact">Pak Pipes INTL Karachi</div>
             </div>
           </div>
           
@@ -1293,7 +1297,7 @@ setInterval(() => {
             <i class="fas fa-map-marker-alt"></i>
             <div class="info-contact">
               <div class="head-contact">Address</div>
-              <div class="sub-title-contact">Digri, Sindh, Pakistan</div>
+              <div class="sub-title-contact">Grey Noor Tower, Gulzar-e-Hijri Sector 29 KDA Scheme 33, Karachi, Pakistan</div>
             </div>
           </div>
           
@@ -1301,28 +1305,32 @@ setInterval(() => {
             <i class="fas fa-envelope"></i>
             <div class="info-contact">
               <div class="head-contact">Email</div>
-              <div class="sub-title-contact">asliyatkidunya@gmail.com</div>
+              <div class="sub-title-contact">pakpipesinternational@gmail.com</div>
             </div>
           </div>
         </div>
         
         <div class="map">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.178509771317!2d67.0007!3d25.1234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDA3JzI0LjMiTiA2N8KwMDAnMDIuNSJF!5e0!3m2!1sen!2s!4v1620000000000!5m2!1sen!2s" 
-                  width="100%" 
-                  height="250" 
-                  allowfullscreen="" 
-                  loading="lazy">
-          </iframe>
+          <iframe 
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.897357579902!2d67.0981287758209!3d25.0255879778146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb3409e8a1cef4d%3A0x92b604e6f7a5e3a3!2sGrey%20Noor%20Tower!5e0!3m2!1sen!2s!4v1717939200000!5m2!1sen!2s"
+  width="100%"
+  height="250"
+  style="border:0;"
+  allowfullscreen=""
+  loading="lazy"
+  referrerpolicy="no-referrer-when-downgrade">
+
+</iframe>
         </div>
       </div>
       
       <!-- Right Column (Form) -->
       <div class="column-right">
-        <div class="text-bottom">Send a Message</div>
+        <div class="text-bottom">Send Reviews and Feedback</div>
         
-        <form id="contactForm" action="https://formsubmit.co/asliyatkidunya@gmail.com" method="POST" enctype="multipart/form-data">
+        <form id="contactForm" action="https://formsubmit.co/pakpipesinternational@gmail.com" method="POST" enctype="multipart/form-data">
           <!-- FormSubmit Configuration -->
-          <input type="hidden" name="_next" value="https://umarvortex.github.io/Imageslider/">
+          <input type="hidden" name="_next" value="https://umarvortex.github.io/Pak-Pipes-International-Karachi/#contact%20form">
           <input type="hidden" name="_template" value="table">
           <input type="hidden" name="_subject" value="New Message from Contact Form">
           <input type="hidden" name="_autoresponse" value="Thank you for your message! I'll get back to you soon.">
@@ -1381,7 +1389,7 @@ setInterval(() => {
 <!-- ==== STYLE SECTION ==== -->
 <style>
   .contact-section {
-    padding: 60px 0;
+    padding: 60px 5px;
     background-color: #232323;
   }
 
@@ -1490,7 +1498,7 @@ setInterval(() => {
 }
 
 .text-bottom {
-  font-size: 24px;
+  font-size: 20px;
   color: #ffffff;
   margin-bottom: 20px;
   font-weight: 500;
@@ -1745,29 +1753,29 @@ document.addEventListener("DOMContentLoaded", function() {
   updateThemeButton();
 
   // Working Hours Indicator
-  function updateWorkingHours() {
-    const now = new Date();
-    const hours = now.getHours();
-    const day = now.getDay(); // 0 = Sunday, 6 = Saturday
-    const statusElement = document.getElementById('workingHoursStatus');
-    
-    // Business hours: Mon-Fri 9AM-5PM
-    const isWorkingHours = (day >= 1 && day <= 5) && (hours >= 9 && hours < 17);
-    
-    if (isWorkingHours) {
-      statusElement.innerHTML = '<i class="far fa-clock"></i> <strong>Available Now:</strong> Open (9AM-5PM, Mon-Fri)';
-      statusElement.style.backgroundColor = 'rgba(69, 255, 202, 0.1)';
-      statusElement.style.color = '#45ffca';
-    } else {
-      statusElement.innerHTML = '<i class="far fa-clock"></i> <strong>Currently Closed:</strong> Open Monday-Friday, 9AM-5PM';
-      statusElement.style.backgroundColor = 'rgba(255, 107, 107, 0.1)';
-      statusElement.style.color = '#ff6b6b';
-    }
-  }
+function updateWorkingHours() {
+  const now = new Date();
+  const hours = now.getHours();
+  const day = now.getDay(); // 0 = Sunday, 6 = Saturday
+  const statusElement = document.getElementById('workingHoursStatus');
   
-  // Initialize working hours check
-  updateWorkingHours();
-  setInterval(updateWorkingHours, 60000); // Update every minute
+  // Business hours: Saturday-Thursday 11AM-6PM (Friday closed)
+  const isWorkingHours = (day === 6 || day <= 4) && (hours >= 11 && hours < 18);
+  
+  if (isWorkingHours) {
+    statusElement.innerHTML = '<i class="far fa-clock"></i> <strong>Available Now:</strong> Open (11AM-6PM, Saturday-Thursday)';
+    statusElement.style.backgroundColor = 'rgba(69, 255, 202, 0.1)';
+    statusElement.style.color = '#45ffca';
+  } else {
+    statusElement.innerHTML = '<i class="far fa-clock"></i> <strong>Currently Closed:</strong> Open Saturday-Thursday, 11AM-6PM';
+    statusElement.style.backgroundColor = 'rgba(255, 107, 107, 0.1)';
+    statusElement.style.color = '#ff6b6b';
+  }
+}
+
+// Initialize working hours check
+updateWorkingHours();
+setInterval(updateWorkingHours, 60000); // Update every minute
 
   // Form Submission
   const contactForm = document.getElementById('contactForm');
