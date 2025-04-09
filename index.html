@@ -35,6 +35,7 @@
      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
      <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
      <title>Pak Pipes</title>
 </head>   
 <body>
@@ -1957,7 +1958,213 @@ setInterval(updateWorkingHours, 60000); // Update every minute
 
 
 
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-logo">
+      <img src="logo.png" alt="Pak Pipes International" width="120">
+    </div>
+    
+    <div class="footer-links">
+      <div class="link-column">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="/about">About Us</a></li>
+          <li><a href="/products">Products</a></li>
+          <li><a href="/services">Services</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+      
+      <div class="link-column">
+        <h3>Resources</h3>
+        <ul>
+          <li><a href="/catalog">Product Catalog</a></li>
+          <li><a href="/technical-specs">Technical Specs</a></li>
+          <li><a href="/installation-guides">Installation Guides</a></li>
+        </ul>
+      </div>
+      
+      <div class="contact-info">
+        <h3>Contact Us</h3>
+        <p><i class="fas fa-map-marker-alt"></i> KDA Scheme 33, Karachi</p>
+        <p><i class="fas fa-phone"></i> 042-1234567</p>
+        <p><i class="fas fa-envelope"></i> info@pakpipes.com</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer-bottom">
+    <div class="developer-credit">
+      <span>Developed by</span>
+      <a href="mailto:umarvortex@gmail.com">Umar Vortex ✉️</a>
+    </div>
+    
+    <div class="social-links">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    
+    <p class="copyright">
+      &copy; Pak Pipes International 2015-<span id="current-year">2025</span> - All Rights Reserved
+    </p>
+  </div>
+</footer>
 
+<style>
+.footer {
+  background: #013220;
+  color: white;
+  padding: 40px 0 20px;
+  font-family: 'Arial', sans-serif;
+  position: relative;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.footer-logo img {
+  filter: brightness(0) invert(1);
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  flex-grow: 1;
+}
+
+.link-column {
+  min-width: 150px;
+}
+
+.link-column h3 {
+  color: #45ffca;
+  font-size: 18px;
+  margin-bottom: 15px;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.link-column h3::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40px;
+  height: 2px;
+  background: #45ffca;
+}
+
+.link-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.link-column li {
+  margin-bottom: 8px;
+}
+
+.link-column a {
+  color: #d1d1d1;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.link-column a:hover {
+  color: #45ffca;
+}
+
+.contact-info p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  color: #d1d1d1;
+}
+
+.contact-info i {
+  color: #45ffca;
+  width: 20px;
+  text-align: center;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 20px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.developer-credit {
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.developer-credit a {
+  color: #00aaff;
+  text-decoration: none;
+  margin-left: 5px;
+  font-weight: 600;
+}
+
+.developer-credit a:hover {
+  text-decoration: underline;
+}
+
+.social-links {
+  margin: 15px 0;
+}
+
+.social-links a {
+  color: white;
+  background: rgba(255,255,255,0.1);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 5px;
+  transition: all 0.3s;
+}
+
+.social-links a:hover {
+  background: #45ffca;
+  color: #013220;
+  transform: translateY(-3px);
+}
+
+.copyright {
+  font-size: 12px;
+  color: rgba(255,255,255,0.6);
+  margin-top: 20px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .footer-links {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+</style>
+
+<script>
+// Auto-update copyright year
+document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
 
 
 
@@ -1965,38 +2172,6 @@ setInterval(updateWorkingHours, 60000); // Update every minute
 
 
  
-    <!--Footer Section Code -->
-    <footer class="footer">
-        
-<style>
-   .vortex {
-    align-items: center;
-    padding: 10px;
-    color: white;
-    font-size: 15px;
-    margin-top: 20px;
-    text-align: center;
-  }
- .vortex a {
-    color: #00aaff;
-    text-decoration: none;
-    margin-left: 5px;
-  }
-  .vortex a:hover {
-    text-decoration: underline;
-  }
-</style>
-<div class="vortex">
-  <div>
-    Developed by <a href="mailto:umarvortex@gmail.com"> Umar Vortex ✉️</a>
-  </div>
-</div>
-     
-        <p class="copyright">
-            &copy; Pak Pipes International 2025 - All Right Reserved
-        </p>
-     
-    </footer>
     <a href="#" class="to-top">
         <i class="fas fa-chevron-up"></i>
     </a>
