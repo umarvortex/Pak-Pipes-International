@@ -60,8 +60,8 @@
          </ul>
  
         <div class="top-btn">
-            <a href="mailto:asliyatkidunya@gmail.com" class="nav-btn">
-                <i class="bx bxs-envelope"></i> Email Us
+            <a href="mailto:pakpipesinternational@gmail.com" class="nav-btn">
+                <i class="bx bxs-envelope"></i> Email 
             </a>
          <style>
           .nav-btn i {
@@ -91,7 +91,7 @@ For top-notch piping solutions, think <strong>Pak Pipes International</strong> â
              
         <a href="https://wa.me/+923192017909" class="btn">
    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
-   alt="WhatsApp Logo" class="whatsapp-icon"> ORDER </a>
+   alt="WhatsApp Logo" class="whatsapp-icon"> WhatsApp </a>
          
 <style>
   .whatsapp-icon {
@@ -105,7 +105,7 @@ For top-notch piping solutions, think <strong>Pak Pipes International</strong> â
   }
 </style>
          <a href="tel:+923192017909" class="btn">
-          <i class="fa fa-phone phone"></i> ORDER </a>
+          <i class="fa fa-phone phone"></i> Phone </a>
          
 <style>
   .phone {
@@ -1298,7 +1298,7 @@ setInterval(() => {
             <div class="info-contact">
               <div class="head-contact">Address</div>
               <div class="sub-title-contact">
-Grey Noor Tower, Gulzar-e-Hijri,<br> Sector 29 KDA Scheme 33, Karachi<br> Pakistan</div>
+Grey Noor Tower, Gulzar-e-Hijri,<br> Sector 29, Scheme 33, Karachi,<br> Pakistan</div>
             </div>
           </div>
           
@@ -1392,7 +1392,7 @@ Grey Noor Tower, Gulzar-e-Hijri,<br> Sector 29 KDA Scheme 33, Karachi<br> Pakist
 <!-- ==== STYLE SECTION ==== -->
 <style>
   .contact-section {
-    padding: 60px 10px;
+    padding: 60px 8px;
     background-color: #232323;
   }
 
@@ -1501,9 +1501,9 @@ Grey Noor Tower, Gulzar-e-Hijri,<br> Sector 29 KDA Scheme 33, Karachi<br> Pakist
 }
 
 .text-bottom {
-  font-size: 20px;
+  font-size: 17px;
   color: #ffffff;
-  margin-bottom: 20px;
+  margin-bottom: 23px;
   font-weight: 500;
   letter-spacing: 0.5px;
 }
@@ -1549,8 +1549,7 @@ textarea {
 
 
 
-
-/* ===== FILE INPUT STYLING ===== */
+/* ===== IMPROVED FILE INPUT STYLING ===== */
 .file-input-container {
   margin-bottom: 20px;
 }
@@ -1567,6 +1566,7 @@ textarea {
   position: relative;
   display: flex;
   align-items: center;
+  min-height: 44px; /* Ensures consistent height */
 }
 
 .file-input {
@@ -1579,6 +1579,13 @@ textarea {
   font-size: 14px;
   cursor: pointer;
   transition: all 0.2s;
+  /* Fix for text overflow */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* Pseudo-element positioning */
+  position: relative;
+  padding-left: 110px; /* Space for Choose File button */
 }
 
 .file-input:hover {
@@ -1599,12 +1606,23 @@ textarea {
   font-weight: 600;
   font-size: 13px;
   margin-right: 15px;
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .file-input::after {
   content: attr(data-file-name);
   color: #b0b0b0;
   font-size: 13px;
+  /* Improved text display */
+  display: inline-block;
+  max-width: calc(100% - 130px);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: middle;
 }
 
 /* For light mode */
