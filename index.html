@@ -1297,7 +1297,8 @@ setInterval(() => {
             <i class="fas fa-map-marker-alt"></i>
             <div class="info-contact">
               <div class="head-contact">Address</div>
-              <div class="sub-title-contact">Grey Noor Tower, Gulzar-e-Hijri Sector 29 KDA Scheme 33, Karachi, Pakistan</div>
+              <div class="sub-title-contact">
+Grey Noor Tower, Gulzar-e-Hijri,<br> Sector 29 KDA Scheme 33, Karachi<br> Pakistan</div>
             </div>
           </div>
           
@@ -1354,10 +1355,12 @@ setInterval(() => {
             <textarea placeholder="Type your message here..." name="message" required></textarea>
           </div>
           
-          <div class="form-group">
-            <label>Attach File (PDF/Image, max 20MB)</label>
-            <input type="file" name="attachment" accept=".pdf,.jpg,.jpeg,.png">
-          </div>
+          <div class="file-input-container">
+  <label class="file-input-label">Attach File (PDF/Image, max 20MB)</label>
+  <div class="file-input-wrapper">
+    <input type="file" id="fileInput" class="file-input" accept=".pdf,.jpg,.jpeg,.png">
+  </div>
+</div>
           
           <div class="button-area-contact">
             <button type="submit" class="btn-contact">
@@ -1389,7 +1392,7 @@ setInterval(() => {
 <!-- ==== STYLE SECTION ==== -->
 <style>
   .contact-section {
-    padding: 60px 5px;
+    padding: 60px 10px;
     background-color: #232323;
   }
 
@@ -1543,19 +1546,85 @@ textarea {
   resize: vertical;
 }
 
-label {
+
+
+
+
+/* ===== FILE INPUT STYLING ===== */
+.file-input-container {
+  margin-bottom: 20px;
+}
+
+.file-input-label {
   display: block;
   color: #b0b0b0;
-  margin-bottom: 6px;
-  font-size: 13px;
+  font-size: 14px;
+  margin-bottom: 8px;
   font-weight: 500;
 }
 
-input[type="file"] {
-  padding: 10px;
-  border: 1px dashed #35424a;
-  background-color: #2d3b44;
+.file-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
 }
+
+.file-input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #35424a;
+  border-radius: 6px;
+  background-color: #2d3b44;
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.file-input:hover {
+  border-color: #45ffca;
+}
+
+.file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+.file-input::before {
+  content: 'Choose File';
+  display: inline-block;
+  background: #45ffca;
+  color: #000;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 13px;
+  margin-right: 15px;
+}
+
+.file-input::after {
+  content: attr(data-file-name);
+  color: #b0b0b0;
+  font-size: 13px;
+}
+
+/* For light mode */
+.light-mode .file-input {
+  background-color: #f5f5f5;
+  border-color: #e0e0e0;
+  color: #333;
+}
+
+.light-mode .file-input::after {
+  color: #666;
+}
+
+.light-mode .file-input:hover {
+  border-color: #2a7a64;
+}
+
+
+
+
 
 /* Submit Button */
 .button-area-contact {
@@ -1730,6 +1799,12 @@ input[type="file"] {
 
 <!-- ==== SCRIPT SECTION ==== -->
 <script>
+
+document.getElementById('fileInput').addEventListener('change', function(e) {
+  const fileName = e.target.files[0] ? e.target.files[0].name : 'No file chosen';
+  this.setAttribute('data-file-name', fileName);
+});
+
   
 document.addEventListener("DOMContentLoaded", function() {
   // Theme Toggle
@@ -1855,6 +1930,10 @@ setInterval(updateWorkingHours, 60000); // Update every minute
     this.style.transform = 'translateY(0)';
   });
 });
+
+
+
+
 
 </script>
 
