@@ -1778,6 +1778,127 @@ textarea {
   }
 }
 
+
+/* === RESPONSIVE MEDIA QUERIES === */
+@media (max-width: 1200px) {
+  .contact-content {
+    gap: 30px;
+  }
+  
+  .column-left,
+  .column-right {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 992px) {
+  .contact-content {
+    gap: 25px;
+  }
+  
+  .column-left,
+  .column-right {
+    padding: 25px;
+  }
+  
+  .text-top {
+    font-size: 22px;
+  }
+  
+  .text-bottom {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .form-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .column-left,
+  .column-right {
+    padding: 20px;
+  }
+  
+  .text-top,
+  .text-bottom {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .map {
+    margin-top: 20px;
+  }
+  
+  .button-area-contact {
+    margin-top: 5px;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-section {
+    padding: 15px 5px;
+  }
+  
+  .column-left,
+  .column-right {
+    padding: 15px;
+  }
+  
+  .text-top,
+  .text-bottom {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  
+  .row-contact {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .info-contact {
+    margin-left: 0;
+  }
+  
+  .btn-contact {
+    padding: 12px 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  .contact-section {
+    padding: 10px 3px;
+  }
+  
+  .column-left,
+  .column-right {
+    padding: 12px;
+  }
+  
+  .text-top,
+  .text-bottom {
+    font-size: 16px;
+  }
+  
+  input, textarea {
+    padding: 10px 12px;
+  }
+  
+  .file-input::before {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+}
+
+
+
 /* === FOOTER TEXT === */
 .contact-footer {
   text-align: center;
