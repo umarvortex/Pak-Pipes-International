@@ -57,7 +57,7 @@
              <li><a href="#about">About</a></li>
              <li><a href="#promise">Promise</a></li>
              <li><a href="#review">Review</a></li>
-             <li><a href="#contact form">Contact</a></li>
+             <li><a href="#contact">Contact</a></li>
          </ul>
  
         <div class="top-btn">
@@ -89,37 +89,51 @@ With a portfolio of <strong>20+ high-quality products</strong>, we offer excepti
 
 For top-notch piping solutions, think <strong>Pak Pipes International</strong> – where <strong>quality meets trust</strong>.</p>
             
-             
-        <a href="https://wa.me/+923192017909" class="btn">
-   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
-   alt="WhatsApp Logo" class="whatsapp-icon">  </a>
-     
         
+<div class="center-button-wrapper">
+  <a href="https://wa.me/+923192017909" class="btn">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+         alt="WhatsApp Logo" class="whatsapp-icon">
+  </a>
 
-         <a href="tel:+923192017909" class="btn">
-          <i class="fa fa-phone phone"></i> </a>
+  <a href="tel:+923192017909" class="btn">
+    <i class="fa fa-phone phone"></i>
+  </a>
+</div>
+    
          
 <style>
-  .home-content .btn {
-    border-radius: 50% !important;
-    width: 50px !important;
-    height: 50px !important;
-    border: 1px solid #45ffca !important;
+  .center-button-wrapper {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* center exactly */
     display: flex;
-    align-items: center;
-    justify-content: center;
+    gap: 40px; /* space between buttons */
+    z-index: 9999;
+  }
+
+  .center-button-wrapper .btn {
+    border-radius: 50% !important;
+    width: 60px !important;
+    height: 60px !important;
+    border: 1px solid #45ffca !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background-color: #1ebea5;
     padding: 0 !important;
   }
 
-  .whatsapp-icon,
-  .phone {
-    font-size: 22px;
+  .btn img.whatsapp-icon {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+  }
+
+  .btn i.phone {
+    font-size: 26px;
     color: white;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: auto;
-    height: auto;
   }
 </style>
 
