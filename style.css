@@ -1112,8 +1112,9 @@ span {
     .navbar a { 
         display: block; 
         padding: 10px; 
-        font-size: 22px; 
+        font-size: 27px; 
         color: black;
+        gap: 10px;
     } 
     .navbar.active { 
         right: 0; 
@@ -1178,8 +1179,9 @@ span {
 .navbar a { 
         display: block; 
         padding: 10px; 
-        font-size: 18px; 
+        font-size: 24px; 
         color: black;
+        gap: 10px; 
     } 
 } 
 
@@ -1202,8 +1204,9 @@ span {
 .navbar a { 
         display: block; 
         padding: 10px; 
-        font-size: 16px; 
+        font-size: 20px; 
         color: black;
+        gap: 10px;
     } 
 }
 
@@ -1228,8 +1231,9 @@ span {
 .navbar a { 
         display: block; 
         padding: 10px; 
-        font-size: 14px; 
+        font-size: 18px; 
         color: black;
+        gap: 10px;
     } 
 }
 
