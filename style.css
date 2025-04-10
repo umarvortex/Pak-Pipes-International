@@ -532,7 +532,17 @@ span {
     gap: 3rem;
     padding: 4rem 2rem;
     background: black;
-    color: white !important;
+} 
+
+.about-background { 
+    padding: 30px 30px 50px 30px; 
+    height: 40rem; 
+    background: #17242a;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    border: 1px solid #45ffca33; 
+    border-radius: 20px;  
+    transition: all 0.5s ease; 
+    cursor: pointer; 
 } 
 
 .about-img img { 
@@ -585,7 +595,7 @@ span {
 .benefit-item p {
     font-size: 1.6rem;
     line-height: 1.6;
-    color: #444;
+    color: white;
     margin: 0;
 }
 
@@ -604,7 +614,7 @@ span {
 }
 
 .location-icon {
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   color: white;
   text-shadow: 0 0 10px #45ffca;
   filter: drop-shadow(0px 0px 10px white);
