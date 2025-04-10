@@ -394,7 +394,7 @@ span {
   position: absolute;
   height: 3px;
   width: 100%;
-  background: #45ffcacc;
+  background: #45ffca;
   border-radius: 2px;
   transition: all 0.3s ease;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
@@ -1105,13 +1105,14 @@ span {
         min-height: 100vh; 
         display: flex; 
         flex-direction: column; 
-        background: var(--bg-color); 
+        background: white; 
         transition: all 0.5s ease; 
+        color: black;
     } 
     .navbar a { 
         display: block; 
         padding: 10px; 
-        font-size: 14px; 
+        font-size: 20px; 
     } 
     .navbar.active { 
         right: 0; 
