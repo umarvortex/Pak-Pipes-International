@@ -1107,12 +1107,13 @@ span {
         flex-direction: column; 
         background: white; 
         transition: all 0.5s ease; 
-        color: black;
+        
     } 
     .navbar a { 
         display: block; 
         padding: 10px; 
-        font-size: 20px; 
+        font-size: 22px; 
+        color: black;
     } 
     .navbar.active { 
         right: 0; 
@@ -1177,7 +1178,8 @@ span {
 .navbar a { 
         display: block; 
         padding: 10px; 
-        font-size: 14px; 
+        font-size: 18px; 
+        color: black;
     } 
 } 
 
@@ -1200,7 +1202,8 @@ span {
 .navbar a { 
         display: block; 
         padding: 10px; 
-        font-size: 14px; 
+        font-size: 16px; 
+        color: black;
     } 
 }
 
@@ -1226,6 +1229,7 @@ span {
         display: block; 
         padding: 10px; 
         font-size: 14px; 
+        color: black;
     } 
 }
 
