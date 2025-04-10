@@ -1304,8 +1304,8 @@ setInterval(() => {
         <p>For business inquiries or questions, feel free to reach out through this form or my contact details below.</p>
         
         <div id="workingHoursStatus">
-          <i class="far fa-clock"></i> Checking availability...
-        </div>
+  <i class="far fa-clock"></i> Checking availability...
+</div>
         
         <div class="icons-contact">
           <div class="row-contact">
@@ -1940,38 +1940,45 @@ document.getElementById('fileInput').addEventListener('change', function(e) {
 });
 
   
-// Working Hours Indicator
+// Working Hours Indicator - Improved Version
 function updateWorkingHours() {
   const now = new Date();
   const hours = now.getHours();
   const day = now.getDay(); // 0 = Sunday, 6 = Saturday
   const statusElement = document.getElementById('workingHoursStatus');
-  
+
+  if (!statusElement) return; // Safety check
+
   // Business hours:
   // Saturday-Thursday: 11AM-6PM
   // Friday: 3PM-6PM
   const isWorkingHours = 
     (day === 5 && hours >= 15 && hours < 18) || // Friday 3PM-6PM
     (day !== 5 && hours >= 11 && hours < 18);   // Other days 11AM-6PM
-  
+
   if (isWorkingHours) {
     statusElement.innerHTML = day === 5 
       ? '<i class="far fa-clock"></i> <strong>Available Now:</strong> Open (Friday 3PM-6PM)'
       : '<i class="far fa-clock"></i> <strong>Available Now:</strong> Open (11AM-6PM)';
     statusElement.style.backgroundColor = 'rgba(69, 255, 202, 0.1)';
     statusElement.style.color = '#45ffca';
+    statusElement.style.borderLeft = '3px solid #45ffca';
   } else {
     statusElement.innerHTML = day === 5 
       ? '<i class="far fa-clock"></i> <strong>Currently Closed:</strong> Opens Friday at 3PM'
       : '<i class="far fa-clock"></i> <strong>Currently Closed:</strong> Opens at 11AM';
     statusElement.style.backgroundColor = 'rgba(255, 107, 107, 0.1)';
     statusElement.style.color = '#ff6b6b';
+    statusElement.style.borderLeft = '3px solid #ff6b6b';
   }
 }
 
-// Initialize working hours check
-updateWorkingHours();
-setInterval(updateWorkingHours, 60000); // Update every minute
+// Initialize working hours check when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+  updateWorkingHours();
+  setInterval(updateWorkingHours, 60000); // Update every minute
+});
+
 
 
   // Form Submission
