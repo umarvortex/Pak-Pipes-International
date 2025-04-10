@@ -1109,13 +1109,15 @@ span {
         transition: all 0.5s ease; 
         
     } 
-    .navbar a { 
-        display: block; 
-        padding: 10px; 
-        font-size: 27px; 
-        color: black;
-        gap: 10px;
-    } 
+ .navbar a { 
+    display: flex;
+    align-items: left;
+    gap: 15px;
+    font-size: 35px; 
+    color: black;
+    padding: 5px 7px;
+    text-decoration: none;
+ } 
     .navbar.active { 
         right: 0; 
     } 
@@ -1177,11 +1179,13 @@ span {
     }
 
 .navbar a { 
-        display: block; 
-        padding: 10px; 
-        font-size: 24px; 
-        color: black;
-        gap: 10px; 
+    display: flex;
+    align-items: left;
+    gap: 15px;
+    font-size: 30px; 
+    color: black;
+    padding: 5px 7px;
+    text-decoration: none;
     } 
 } 
 
@@ -1202,11 +1206,13 @@ span {
     }
 
 .navbar a { 
-        display: block; 
-        padding: 10px; 
-        font-size: 20px; 
-        color: black;
-        gap: 10px;
+    display: flex;
+    align-items: left;
+    gap: 15px;
+    font-size: 25px; 
+    color: black;
+    padding: 5px 7px;
+    text-decoration: none;
     } 
 }
 
@@ -1228,12 +1234,15 @@ span {
         padding: 10px; 
     }
 
-.navbar a { 
-        display: block; 
-        padding: 10px; 
-        font-size: 18px; 
-        color: black;
-        gap: 10px;
+.navbar a {                                 
+    display: flex;
+    align-items: left;
+    gap: 15px;
+    font-size: 22px; 
+    color: black;
+    padding: 5px 7px;
+    text-decoration: none;
+       
     } 
 }
 
