@@ -522,49 +522,96 @@ span {
 
 
 
+  
+
 
 .about { 
     display: flex; 
     justify-content: center; 
     align-items: center; 
-    gap: 1rem; 
+    gap: 3rem;
+    padding: 4rem 2rem;
+    background: black;
+    color: white !important;
 } 
-
 
 .about-img img { 
     width: 45vw; 
+    max-width: 600px;
     border: 2px solid var(--text-color); 
-    border-radius: 1rem; 
+    border-radius: 1.5rem; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     transition: 0.5s ease; 
 } 
 
 .about-img img:hover { 
-    transform: scale(1.01); 
+    transform: translateY(-5px); 
     border: 2px solid var(--main-color); 
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
 } 
 
 .about-content .heading { 
     text-align: center; 
-    font-size:  4.5rem; 
+    font-size: 3.5rem; 
+    margin-bottom: 2rem;
 } 
 
-
+.about-content .heading span {
+    color: var(--main-color);
+}
 
 .about-content { 
-    padding: 0 3rem; 
+    padding: 0 2rem; 
+    max-width: 600px;
 } 
 
-.about-content h2 { 
-    text-align: left; 
-    line-height: 1.2; 
-} 
+.benefits-list {
+    margin: 2rem 0;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.benefit-item i {
+    color: var(--main-color);
+    font-size: 1.8rem;
+    margin-top: 0.3rem;
+}
+
+.benefit-item p {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: #444;
+    margin: 0;
+}
+
+.location-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+}
+
+.location-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(69, 255, 202, 0.4);
+}
+
+.location-icon {
+  font-size: 1.3rem;
+  color: white;
+  text-shadow: 0 0 10px #45ffca;
+  filter: drop-shadow(0px 0px 10px white);
+}
 
 
 
-.about-content p { 
-    font-size: 2.0rem; 
-    margin: 2rem 0 2rem; 
-}  
 
 
 /* Promise section code*/ 
