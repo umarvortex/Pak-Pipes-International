@@ -2038,18 +2038,19 @@ document.getElementById('fileInput').addEventListener('change', function(e) {
     </div>
     
     <div class="footer-links">
-      
-<div class="link-column">
+
+<div class="quick-links">
   <h3>Quick Links</h3>
-  <ul class="icon-links">
-    <li><a href="#home"><i class="icon-home"></i> Home</a></li>
-    <li><a href="#services"><i class="icon-services"></i> Services</a></li>
-    <li><a href="#about"><i class="icon-about"></i> About</a></li>
-    <li><a href="#promise"><i class="icon-promise"></i> Promise</a></li>
-    <li><a href="#review"><i class="icon-review"></i> Review</a></li>
-    <li><a href="#contact"><i class="icon-contact"></i> Contact</a></li>
+  <ul class="link-list">
+    <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+    <li><a href="services.html"><i class="fa-solid fa-gears"></i> Services</a></li>
+    <li><a href="about.html"><i class="fa-solid fa-circle-info"></i> About</a></li>
+    <li><a href="promise.html"><i class="fa-solid fa-handshake"></i> Promise</a></li>
+    <li><a href="reviews.html"><i class="fa-solid fa-star"></i> Reviews</a></li>
+    <li><a href="contact.html"><i class="fa-solid fa-phone"></i> Contact</a></li>
   </ul>
 </div>
+
 
     </div>
   </div>
@@ -2189,31 +2190,64 @@ document.getElementById('fileInput').addEventListener('change', function(e) {
 
 
 
-  .icon-links {
+
+.quick-links {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 280px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  }
+  
+  .quick-links h3 {
+    color: #45ffca;
+    margin-bottom: 20px;
+    text-align: left;
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+  
+  .link-list {
     list-style: none;
     padding: 0;
+    margin: 0;
   }
   
-  .icon-links li a {
+  .link-list li {
+    margin-bottom: 10px;
+  }
+  
+  .link-list a {
     display: flex;
-    align-items: center;
-    gap: 10px;
+    align-items: left;
+    gap: 15px;
+    padding: 10px 15px;
     text-decoration: none;
-    color: inherit;
-    padding: 5px 0;
+    color: #34495e;
+    background: #ffffff;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    border: 1px solid #eee;
   }
   
-  .icon-links i {
+  .link-list a:hover {
+    background: #f0f7ff;
+    transform: translateX(5px);
+    border-color: #d6e4f0;
+  }
+  
+  .link-list .fa-solid {
     font-size: 18px;
+    color: #3498db;
+    width: 25px;
+    text-align: center;
   }
-  
-  /* Agar aap FontAwesome ya kisi aur icon library use kar rahe hain */
-  .icon-home::before { content: "\f015"; } /* Home icon */
-  .icon-services::before { content: "\f0ad"; } /* Services icon */
-  .icon-about::before { content: "\f129"; } /* About icon */
-  .icon-promise::before { content: "\f091"; } /* Promise icon */
-  .icon-review::before { content: "\f075"; } /* Review icon */
-  .icon-contact::before { content: "\f1d8"; } /* Contact icon */
+
+
+
+
+
 
 
 .social-links a:hover {
