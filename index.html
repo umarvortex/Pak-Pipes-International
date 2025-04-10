@@ -2042,12 +2042,12 @@ document.getElementById('fileInput').addEventListener('change', function(e) {
 <div class="quick-links">
   <h3>Quick Links</h3>
   <ul class="link-list">
-    <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
-    <li><a href="services.html"><i class="fa-solid fa-gears"></i> Services</a></li>
-    <li><a href="about.html"><i class="fa-solid fa-circle-info"></i> About</a></li>
-    <li><a href="promise.html"><i class="fa-solid fa-handshake"></i> Promise</a></li>
-    <li><a href="reviews.html"><i class="fa-solid fa-star"></i> Reviews</a></li>
-    <li><a href="contact.html"><i class="fa-solid fa-phone"></i> Contact</a></li>
+    <li><a href="home"><i class="fa-solid fa-house"></i> Home</a></li>
+    <li><a href="services"><i class="fa-solid fa-gears"></i> Services</a></li>
+    <li><a href="about"><i class="fa-solid fa-circle-info"></i> About</a></li>
+    <li><a href="promise"><i class="fa-solid fa-handshake"></i> Promise</a></li>
+    <li><a href="reviews"><i class="fa-solid fa-star"></i> Reviews</a></li>
+    <li><a href="contact"><i class="fa-solid fa-phone"></i> Contact</a></li>
   </ul>
 </div>
 
@@ -2195,8 +2195,8 @@ document.getElementById('fileInput').addEventListener('change', function(e) {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     width: 280px;
     padding: 20px;
-    background: #f9f9f9;
-    border-radius: 10px;
+    background: transparent;
+    
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
   }
   
@@ -2204,7 +2204,7 @@ document.getElementById('fileInput').addEventListener('change', function(e) {
     color: #45ffca;
     margin-bottom: 20px;
     text-align: left;
-    font-size: 1.4rem;
+    font-size: 2.5rem;
     font-weight: 600;
   }
   
@@ -2222,26 +2222,21 @@ document.getElementById('fileInput').addEventListener('change', function(e) {
     display: flex;
     align-items: left;
     gap: 15px;
-    padding: 10px 15px;
+    padding: 8px 10px;
     text-decoration: none;
     color: #34495e;
-    background: #ffffff;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    border: 1px solid #eee;
+    
   }
   
   .link-list a:hover {
-    background: #f0f7ff;
     transform: translateX(5px);
-    border-color: #d6e4f0;
   }
   
   .link-list .fa-solid {
     font-size: 18px;
     color: #3498db;
     width: 25px;
-    text-align: center;
+    text-align: left;
   }
 
 
