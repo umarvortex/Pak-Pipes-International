@@ -1939,53 +1939,35 @@ document.getElementById('fileInput').addEventListener('change', function(e) {
   this.setAttribute('data-file-name', fileName);
 });
 
+
+
+
+// Working Hours Indicator
+function updateWorkingHours() {
+  const now = new Date();
+  const hours = now.getHours();
+  const day = now.getDay(); // 0 = Sunday, 6 = Saturday
+  const statusElement = document.getElementById('workingHoursStatus');
   
-document.addEventListener('DOMContentLoaded', function() {
-  console.log("DOM loaded - initializing availability check");
+  // Business hours: Saturday-Thursday 11AM-6PM (Friday closed)
+  const isWorkingHours = (day === 6 || day <= 4) && (hours >= 11 && hours < 18);
   
-  function updateWorkingHours() {
-    const statusElement = document.getElementById('workingHoursStatus');
-    if (!statusElement) {
-      console.error("Error: workingHoursStatus element not found");
-      return;
-    }
-
-    try {
-      const now = new Date();
-      const hours = now.getHours();
-      const day = now.getDay();
-      console.log(`Current time: Day ${day}, Hour ${hours}`);
-
-      const isWorkingHours = 
-        (day === 5 && hours >= 15 && hours < 18) || // Friday 3PM-6PM
-        (day !== 5 && hours >= 11 && hours < 18);   // Other days 11AM-6PM
-
-      if (isWorkingHours) {
-        statusElement.innerHTML = day === 5 
-          ? '<i class="far fa-clock"></i> <strong>Available Now:</strong> Open (Friday 3PM-6PM)'
-          : '<i class="far fa-clock"></i> <strong>Available Now:</strong> Open (11AM-6PM)';
-        statusElement.style.backgroundColor = 'rgba(69, 255, 202, 0.1)';
-        statusElement.style.color = '#45ffca';
-      } else {
-        statusElement.innerHTML = day === 5 
-          ? '<i class="far fa-clock"></i> <strong>Currently Closed:</strong> Opens Friday at 3PM'
-          : '<i class="far fa-clock"></i> <strong>Currently Closed:</strong> Opens at 11AM';
-        statusElement.style.backgroundColor = 'rgba(255, 107, 107, 0.1)';
-        statusElement.style.color = '#ff6b6b';
-      }
-    } catch (e) {
-      console.error("Error in updateWorkingHours:", e);
-      statusElement.innerHTML = '<i class="far fa-clock"></i> Status unavailable';
-    }
+  if (isWorkingHours) {
+    statusElement.innerHTML = '<i class="far fa-clock"></i> <strong>Available Now:</strong> Open (11AM-6PM, Saturday-Thursday)';
+    statusElement.style.backgroundColor = 'rgba(69, 255, 202, 0.1)';
+    statusElement.style.color = '#45ffca';
+  } else {
+    statusElement.innerHTML = '<i class="far fa-clock"></i> <strong>Currently Closed:</strong> Open Saturday-Thursday, 11AM-6PM';
+    statusElement.style.backgroundColor = 'rgba(255, 107, 107, 0.1)';
+    statusElement.style.color = '#ff6b6b';
   }
+}
 
-  // Initial check
-  updateWorkingHours();
-  
-  // Set up periodic checks (every minute)
-  setInterval(updateWorkingHours, 60000);
-  console.log("Availability checker initialized");
-});
+// Initialize working hours check
+updateWorkingHours();
+setInterval(updateWorkingHours, 60000); // Update every minute
+
+
 
 
 
