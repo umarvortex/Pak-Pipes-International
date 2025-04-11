@@ -120,9 +120,12 @@ For top-notch piping solutions, think <strong>Pak Pipes International</strong> â
     flex-direction: column-reverse; 
     gap: 16px; 
     z-index: 888;
-  }
+    opacity: 0; /* Start hidden */
+    transform: translateY(100px); /* Start position */
+    transition: all 0.5s ease; /* Smooth transition */
+}
 
-  .center-button-wrapper .btn {
+.center-button-wrapper .btn {
     border-radius: 50% !important;
     width: 58px !important;
     height: 58px !important;
@@ -133,27 +136,62 @@ For top-notch piping solutions, think <strong>Pak Pipes International</strong> â
     background-color: #1ebea5;
     padding: 0 !important;
     margin: 0 !important;
-  }
+    transition: transform 0.3s ease !important;
+}
 
-  .btn img.whatsapp-icon {
+.center-button-wrapper .btn:hover {
+    transform: scale(1.1) !important;
+}
+
+.btn img.whatsapp-icon {
     width: 26px;
     height: 26px;
     object-fit: contain;
-  }
+}
 
 .btn img.tahir-icon {
-    width: 57px;
-    height: 57px;
-    border-radius: 50%;
-    object-fit: contain;
-  }
+    /* Update only the Tahir icon styles */
+.btn img.tahir-icon {
+    width: 100%; 
+    height: 100%; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    padding: 2px; 
+    box-sizing: border-box; 
+}
+}
 
-  .btn i.phone {
+.btn i.phone {
     font-size: 25px;
     color: white;
-  }
+}
 </style>
 
+
+<script>
+
+document.addEventListener('DOMContentLoaded', function() {
+    const buttonWrapper = document.querySelector('.center-button-wrapper');
+    let hasScrolled = false;
+    
+    // Initially hide the buttons
+    buttonWrapper.style.opacity = '0';
+    buttonWrapper.style.transform = 'translateY(100px)';
+    buttonWrapper.style.transition = 'all 0.5s ease';
+    
+    window.addEventListener('scroll', function() {
+        const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+        
+        if (!hasScrolled && scrollPosition > 100) {
+            // First time scrolling down - show buttons permanently
+            hasScrolled = true;
+            buttonWrapper.style.opacity = '1';
+            buttonWrapper.style.transform = 'translateY(0)';
+        }
+    });
+});
+
+</script>
 
 
 </div>
