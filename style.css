@@ -61,7 +61,7 @@ header {
     width: 100%; 
     top: 0; 
     right: 0; 
-    z-index: 1000; 
+    z-index: 9998; 
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
@@ -1110,7 +1110,7 @@ span {
         position: absolute; 
         top: 100%; 
         right: -100%; 
-        width: 255px; 
+        width: 265px; 
         min-height: 100vh; 
         display: flex; 
         flex-direction: column; 
@@ -1149,11 +1149,11 @@ span {
   }
 
   .navbar .fa-solid {
-    font-size: 18px;
+    font-size: 20px;
     color: #3498db;
     width: 25px;
     text-align: left;
-    margin-top: 4px;
+    margin-top: 1px;
   }
 
 
@@ -1167,7 +1167,7 @@ span {
     } 
 
     section.home {
-    padding-top: 0;
+    padding-top: 0 !important;
     padding-bottom: 0;
 }
 
@@ -1253,11 +1253,11 @@ span {
   }
 
   .navbar .fa-solid {
-    font-size: 18px;
+    font-size: 19px;
     color: #3498db;
     width: 25px;
     text-align: left;
-    margin-top: 4px;
+    margin-top: 1px;
   }
 
 } 
@@ -1315,7 +1315,7 @@ span {
     color: #3498db;
     width: 25px;
     text-align: left;
-    margin-top: 4px;
+    margin-top: 1px;
   }
 }
 
@@ -1364,11 +1364,11 @@ span {
   }
 
   .navbar .fa-solid {
-    font-size: 18px;
+    font-size: 16px;
     color: #3498db;
     width: 25px;
     text-align: left;
-    margin-top: 4px;
+    margin-top: 1px;
   }
 }
 
