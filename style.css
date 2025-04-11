@@ -107,7 +107,7 @@ span {
     background-position: center;
     color: white;
     text-align: center;
-    padding: 100px 20px;
+    padding: 70px 20px;
     border-bottom: 1.5px solid #45ffca22;
 }
 
@@ -1143,6 +1143,7 @@ span {
     color: #3498db;
     width: 25px;
     text-align: left;
+    margin-top: 5px;
   }
 
 
@@ -1236,6 +1237,7 @@ span {
     color: #3498db;
     width: 25px;
     text-align: left;
+    margin-top: 5px;
   }
 
 } 
@@ -1265,8 +1267,36 @@ span {
     padding: 5px 7px;
     text-decoration: none;
     } 
-}
 
+  
+    .navbar.active { 
+        right: 0; 
+    } 
+
+  .navbar {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .navbar li {
+    margin-bottom: 10px;
+  }
+
+  
+
+  .navbar a:hover {
+    transform: translateX(5px);
+  }
+
+  .navbar .fa-solid {
+    font-size: 15px;
+    color: #3498db;
+    width: 25px;
+    text-align: left;
+    margin-top: 5px;
+  }
+}
 
 @media (max-width:450px) { 
     html { 
@@ -1316,9 +1346,8 @@ span {
     color: #3498db;
     width: 25px;
     text-align: left;
+    margin-top: 5px;
   }
-
-
 }
 
 
