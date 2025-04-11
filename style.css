@@ -388,6 +388,7 @@ span {
 .menu-icon {
   width: 26px;
   height: 15px;
+ 
   position: relative;
   cursor: pointer;
   display: block; /* responsive ke liye d-none ko override kare */
