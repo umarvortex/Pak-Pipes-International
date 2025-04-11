@@ -98,9 +98,7 @@ For top-notch piping solutions, think <strong>Pak Pipes International</strong> â
 
 </div>
     
-         
-<style>
-
+  <style>
   .center-button-wrapper {
     position: fixed;
     bottom: 100px;
@@ -110,14 +108,12 @@ For top-notch piping solutions, think <strong>Pak Pipes International</strong> â
     gap: 16px;
     z-index: 888;
     opacity: 0;
-    transform: translateY(100px);
     visibility: hidden;
+    transform: translateY(100px); /* Start 100px below */
     transition: all 0.4s ease;
-}
+  }
 
-/* Rest of your existing button styles remain the same */
-
-.center-button-wrapper .btn {
+  .center-button-wrapper .btn {
     border-radius: 50% !important;
     width: 58px !important;
     height: 58px !important;
@@ -129,53 +125,48 @@ For top-notch piping solutions, think <strong>Pak Pipes International</strong> â
     padding: 0 !important;
     margin: 0 !important;
     transition: transform 0.3s ease !important;
-}
+  }
 
-.center-button-wrapper .btn:hover {
+  .center-button-wrapper .btn:hover {
     transform: scale(1.1) !important;
-}
+  }
 
-.btn img.whatsapp-icon {
+  .btn img.whatsapp-icon {
     width: 26px;
     height: 26px;
     object-fit: contain;
-}
+  }
 
-/* Target specifically the mail button containing Tahir icon */
-a[href="mailto:pakpipesinternational@gmail.com"] {
-    overflow: hidden; /* This is crucial to contain the image */
-    padding: 0 !important; /* Remove any padding */
-}
+  a[href="mailto:pakpipesinternational@gmail.com"] {
+    overflow: hidden !important;
+    padding: 0 !important;
+  }
 
-/* Tahir icon specific styles */
-.btn img.tahir-icon {
+  .btn img.tahir-icon {
     width: 100% !important;
     height: 100% !important;
     border-radius: 50% !important;
     object-fit: cover !important;
     border: 1px solid #45ffca !important;
-    display: block !important; /* Change from default inline */
+    display: block !important;
     margin: 0 !important;
-}
+  }
 
-
-.btn i.phone {
+  .btn i.phone {
     font-size: 25px;
     color: white;
-}
+  }
 </style>
 
-
 <script>
-
 document.addEventListener('DOMContentLoaded', function() {
     const buttonWrapper = document.querySelector('.center-button-wrapper');
     let lastScrollPosition = 0;
     
-    // Initially hide the buttons
+    // Initially hide the buttons below
     buttonWrapper.style.opacity = '0';
     buttonWrapper.style.visibility = 'hidden';
-    buttonWrapper.style.transition = 'all 0.4s ease';
+    buttonWrapper.style.transform = 'translateY(100px)';
     
     window.addEventListener('scroll', function() {
         const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
@@ -186,6 +177,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (currentScrollPosition > 100) {
                 buttonWrapper.style.opacity = '1';
                 buttonWrapper.style.visibility = 'visible';
+                buttonWrapper.style.transform = 'translateY(0)'; /* Slide up to normal position */
             }
         } 
         // Scrolling up
@@ -194,13 +186,13 @@ document.addEventListener('DOMContentLoaded', function() {
             if (currentScrollPosition <= 100) {
                 buttonWrapper.style.opacity = '0';
                 buttonWrapper.style.visibility = 'hidden';
+                buttonWrapper.style.transform = 'translateY(100px)'; /* Slide back down */
             }
         }
         
         lastScrollPosition = currentScrollPosition;
     });
 });
-
 </script>
 
 
