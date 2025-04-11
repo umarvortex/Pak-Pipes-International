@@ -61,7 +61,7 @@ header {
     width: 100%; 
     top: 0; 
     right: 0; 
-    z-index: 9998; 
+    z-index: 5000; 
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
@@ -1110,7 +1110,7 @@ span {
         position: absolute; 
         top: 100%; 
         right: -100%; 
-        width: 265px; 
+        width: 275px; 
         min-height: 100vh; 
         display: flex; 
         flex-direction: column; 
@@ -1153,7 +1153,7 @@ span {
     color: #3498db;
     width: 25px;
     text-align: left;
-    margin-top: 1px;
+    margin-top: 2px;
   }
 
 
