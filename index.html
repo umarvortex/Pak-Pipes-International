@@ -112,18 +112,21 @@ For top-notch piping solutions, think <strong>Pak Pipes International</strong> â
     
          
 <style>
+
   .center-button-wrapper {
     position: fixed;
-    bottom: 100px; 
-    right: 23px;  
+    bottom: 100px;
+    right: 23px;
     display: flex;
-    flex-direction: column-reverse; 
-    gap: 16px; 
+    flex-direction: column-reverse;
+    gap: 16px;
     z-index: 888;
-    opacity: 0; /* Start hidden */
-    transform: translateY(100px); /* Start position */
-    transition: all 0.5s ease; /* Smooth transition */
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
 }
+
+/* Rest of your existing button styles remain the same */
 
 .center-button-wrapper .btn {
     border-radius: 50% !important;
@@ -149,17 +152,23 @@ For top-notch piping solutions, think <strong>Pak Pipes International</strong> â
     object-fit: contain;
 }
 
-.btn img.tahir-icon {
-    /* Update only the Tahir icon styles */
-.btn img.tahir-icon {
-    width: 100%; 
-    height: 100%; 
-    border-radius: 50%; 
-    object-fit: cover; 
-    padding: 2px; 
-    box-sizing: border-box; 
+/* Target specifically the mail button containing Tahir icon */
+a[href="mailto:pakpipesinternational@gmail.com"] {
+    overflow: hidden; /* This is crucial to contain the image */
+    padding: 0 !important; /* Remove any padding */
 }
+
+/* Tahir icon specific styles */
+.btn img.tahir-icon {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    border: 1px solid #45ffca !important;
+    display: block !important; /* Change from default inline */
+    margin: 0 !important;
 }
+
 
 .btn i.phone {
     font-size: 25px;
@@ -172,22 +181,34 @@ For top-notch piping solutions, think <strong>Pak Pipes International</strong> â
 
 document.addEventListener('DOMContentLoaded', function() {
     const buttonWrapper = document.querySelector('.center-button-wrapper');
-    let hasScrolled = false;
+    let lastScrollPosition = 0;
     
     // Initially hide the buttons
     buttonWrapper.style.opacity = '0';
-    buttonWrapper.style.transform = 'translateY(100px)';
-    buttonWrapper.style.transition = 'all 0.5s ease';
+    buttonWrapper.style.visibility = 'hidden';
+    buttonWrapper.style.transition = 'all 0.4s ease';
     
     window.addEventListener('scroll', function() {
-        const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+        const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
         
-        if (!hasScrolled && scrollPosition > 100) {
-            // First time scrolling down - show buttons permanently
-            hasScrolled = true;
-            buttonWrapper.style.opacity = '1';
-            buttonWrapper.style.transform = 'translateY(0)';
+        // Scrolling down
+        if (currentScrollPosition > lastScrollPosition) {
+            // Show buttons after 100px scroll
+            if (currentScrollPosition > 100) {
+                buttonWrapper.style.opacity = '1';
+                buttonWrapper.style.visibility = 'visible';
+            }
+        } 
+        // Scrolling up
+        else {
+            // Hide buttons when near top
+            if (currentScrollPosition <= 100) {
+                buttonWrapper.style.opacity = '0';
+                buttonWrapper.style.visibility = 'hidden';
+            }
         }
+        
+        lastScrollPosition = currentScrollPosition;
     });
 });
 
