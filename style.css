@@ -49,11 +49,10 @@ section {
 
  
 
-section.home {
-    padding-top: 0 !important;
-    
+section .home {
+    padding-top: 0;
+    padding-bottom: 0;
 }
-
 
 
 
@@ -111,7 +110,8 @@ span {
     background-position: center;
     color: white;
     text-align: center;
-    padding: 0.1px 0.1px;
+    padding: 0;
+    padding-top: 0;
     border-bottom: 1.5px solid #45ffca22;
 }
 
@@ -1126,7 +1126,7 @@ span {
     color: black;
     padding: 7px 7px;
     text-decoration: none;
-    margin-top: 7px;
+    margin-top: 10px;
  } 
     .navbar.active { 
         right: 0; 
@@ -1165,6 +1165,12 @@ span {
     section { 
         padding: 5rem 3%; 
     } 
+
+    section.home {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
 
     .about-content h2 { 
         margin-top: 2rem; 
@@ -1224,7 +1230,7 @@ span {
     color: black;
     padding: 7px 7px;
     text-decoration: none;
-    margin-top: 7px;
+    margin-top: 10px;
     } 
 
 .navbar {
@@ -1237,7 +1243,10 @@ span {
     margin-bottom: 10px;
   }
 
-  
+  section.home {
+    padding-top: 0;
+    padding-bottom: 0;
+}
 
   .navbar a:hover {
     transform: translateX(5px);
@@ -1277,7 +1286,7 @@ span {
     color: black;
     padding: 7px 7px;
     text-decoration: none;
-    margin-top: 7px;
+    margin-top: 10px;
   } 
 
   
@@ -1334,7 +1343,7 @@ span {
     font-size: 19px; 
     color: black;
     padding: 7px 7px;
-    margin-top: 7px;
+    margin-top: 10px;
     text-decoration: none;
        
     } 
