@@ -999,7 +999,7 @@ span {
 
 
 
-.center-button-wrapper, .to-top {
+.to-top {
     transition: opacity 0.2s ease !important;
 }
 
@@ -1009,7 +1009,7 @@ span {
 
 
 .to-top { 
-    background: #17242a; 
+    background: #232323; 
     position: fixed; 
     left: 20px; 
     bottom: -60px; /* Pehle hidden */ 
