@@ -42,9 +42,6 @@ body {
     padding: 0;
 } 
 
-main {
- background: f0f8ff;
-}
 
 section { 
     min-height: 100vh; 
@@ -414,6 +411,7 @@ span {
 }
 .menu-icon span:nth-child(2) {
   top: 8px;
+  width: 80%;
 }
 .menu-icon span:nth-child(3) {
   top: 16px;
