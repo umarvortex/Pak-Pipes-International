@@ -71,8 +71,8 @@ document.addEventListener('DOMContentLoaded', function() {
     let scrollTimeout;
     
     // Set initial transition
-    buttonWrapper.style.transition = 'opacity 0.5s ease';
-    toTopButton.style.transition = 'opacity 0.5s ease';
+    buttonWrapper.style.transition = 'opacity 0.2s ease';
+    toTopButton.style.transition = 'opacity 0.2s ease';
     
     // Function to hide buttons
     function hideButtons() {
