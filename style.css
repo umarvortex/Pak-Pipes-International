@@ -22,8 +22,8 @@
 
 
 :root { 
-    --bg-color: #f0f8ff; 
-    --snd-bg-color: #f0f8ff; 
+    --bg-color:  linear-gradient(135deg, #e0f7fa, #f1f8e9);
+    --snd-bg-color: linear-gradient(135deg, #e0f7fa, #f1f8e9); 
     --text-color: #fff; 
     --main-color: #45ffca; 
 } 
@@ -534,7 +534,7 @@ span {
     align-items: center; 
     gap: 3rem;
     padding: 4rem 2rem;
-    background: black;
+    background: linear-gradient(135deg, #e0f7fa, #f1f8e9);
 } 
 
 .about-background { 
