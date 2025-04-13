@@ -22,8 +22,8 @@
 
 
 :root { 
-    --bg-color: #000; 
-    --snd-bg-color: #111; 
+    --bg-color: #f0f8ff; 
+    --snd-bg-color: #f0f8ff; 
     --text-color: #fff; 
     --main-color: #45ffca; 
 } 
@@ -45,7 +45,7 @@ body {
 
 section { 
     min-height: 100vh; 
-    padding: 3rem 8% 2rem; 
+    padding: 2rem 8% 2rem; 
 } 
 
  
@@ -70,17 +70,17 @@ header {
     background-color: #013220;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);  
     transition: all 0.5s ease; 
-    margin-bottom: 0 !important;
+   
     
 }
 
 
 .logo { 
-    font-size: 3.1rem; 
+    font-size: 3rem; 
     color: var(--text-color); 
     font-weight: 550; 
     cursor: pointer; 
-    transition: 0.5s ease-in-out; 
+    transition: 0.4s ease-in-out; 
 } 
 
 .logo:hover{ 
@@ -88,7 +88,7 @@ header {
 } 
 
 span { 
-    color: #45ffca66; 
+    color: #45ffca; 
 } 
 
 
@@ -134,7 +134,8 @@ span {
     font-size: 1.8rem; 
     font-weight: 500; 
     color: var(--text-color); 
-    margin-left: 4rem; 
+    margin-left: 3.5rem; 
+    gap: 13px;
     transition: all 0.5s ease; 
     border-bottom: 3px solid transparent; 
 } 
@@ -146,24 +147,7 @@ span {
      border-bottom: 3px solid var(--main-color); 
 } 
 
-.nav-btn { 
-    display: inline-block; 
-    padding: 1rem 2.8rem; 
-    background: rgba(69, 255, 202, 0.3); 
-    color: #ffffff; 
-    border: 1px solid #45ffca33; 
-    border-radius: 1rem; 
-    font-size: 1.6rem; 
-    font-weight: 500; 
-    transition: all 0.5s ease; 
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-} 
-
-.nav-btn:hover { 
-    background: #45ffca; 
-    color: var(--text-color); 
-    box-shadow: 0 0 18px var(--main-color); 
-} 
+ 
 
 
 
@@ -339,11 +323,10 @@ span {
   position: fixed;
   bottom: 90px;
   right: 20px;
-  width: 400px;
-  height: 600px;
+  width: 300px;
+  height: 500px;
   background: black;
-  border: 1px solid black;
-  box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
+  border: none;
   z-index: 1000;
 }
 
@@ -441,13 +424,7 @@ span {
 }
 
 
-@media screen and (max-width: 991px) {
 
-.menu-icon {
-    display: block; 
-    cursor: pointer;    
-  }    
-}
 
 
 
@@ -1220,7 +1197,7 @@ span {
     } 
     .home-img img { 
         width: 70vw; 
-        margin-top: 4rem; 
+        margin-top: 2rem; 
     } 
     .about { 
         flex-direction: column; 
@@ -1283,7 +1260,7 @@ span {
     .home-img img { 
         width: 80vw; 
         max-width: 100%; 
-        margin-top: 8rem; 
+        margin-top: 2rem; 
     } 
     .about-img img { 
         width: 70vw; 
