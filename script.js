@@ -66,42 +66,36 @@ function closeChatbot() {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    const buttonWrapper = document.querySelector('.center-button-wrapper');
     const toTopButton = document.querySelector('.to-top');
     let scrollTimeout;
     
     // Set initial transition
-    buttonWrapper.style.transition = 'opacity 0.2s ease';
-    toTopButton.style.transition = 'opacity 0.2s ease';
+    toTopButton.style.transition = 'opacity 0.5s ease';
     
-    // Function to hide buttons
-    function hideButtons() {
-        buttonWrapper.style.opacity = '0';
-        buttonWrapper.style.pointerEvents = 'none';
+    // Function to hide button
+    function hideButton() {
         toTopButton.style.opacity = '0';
         toTopButton.style.pointerEvents = 'none';
     }
     
-    // Function to show buttons
-    function showButtons() {
-        buttonWrapper.style.opacity = '1';
-        buttonWrapper.style.pointerEvents = 'auto';
+    // Function to show button
+    function showButton() {
         toTopButton.style.opacity = '1';
         toTopButton.style.pointerEvents = 'auto';
     }
     
     // Handle scroll events
     window.addEventListener('scroll', function() {
-        // Hide buttons when scrolling starts
-        hideButtons();
+        // Hide button when scrolling starts
+        hideButton();
         
         // Clear any existing timeout
         clearTimeout(scrollTimeout);
         
-        // Show buttons after scrolling stops
+        // Show button after scrolling stops
         scrollTimeout = setTimeout(function() {
-            showButtons();
-        }, 500); // Adjust this value to change how long after scrolling stops the buttons reappear
+            showButton();
+        }, 500);
     });
     
     // Handle touch events for mobile
@@ -114,14 +108,14 @@ document.addEventListener('DOMContentLoaded', function() {
         const touchY = e.touches[0].clientY;
         const diff = touchY - touchStartY;
         
-        // Only hide if actual scrolling is happening (not just touching)
+        // Only hide if actual scrolling is happening
         if (Math.abs(diff) > 5) {
-            hideButtons();
+            hideButton();
             clearTimeout(scrollTimeout);
         }
     }, { passive: true });
     
     window.addEventListener('touchend', function() {
-        showButtons();
+        showButton();
     }, { passive: true });
 });
