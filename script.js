@@ -63,3 +63,65 @@ function closeChatbot() {
 
 
 
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const buttonWrapper = document.querySelector('.center-button-wrapper');
+    const toTopButton = document.querySelector('.to-top');
+    let scrollTimeout;
+    
+    // Set initial transition
+    buttonWrapper.style.transition = 'opacity 0.5s ease';
+    toTopButton.style.transition = 'opacity 0.5s ease';
+    
+    // Function to hide buttons
+    function hideButtons() {
+        buttonWrapper.style.opacity = '0';
+        buttonWrapper.style.pointerEvents = 'none';
+        toTopButton.style.opacity = '0';
+        toTopButton.style.pointerEvents = 'none';
+    }
+    
+    // Function to show buttons
+    function showButtons() {
+        buttonWrapper.style.opacity = '1';
+        buttonWrapper.style.pointerEvents = 'auto';
+        toTopButton.style.opacity = '1';
+        toTopButton.style.pointerEvents = 'auto';
+    }
+    
+    // Handle scroll events
+    window.addEventListener('scroll', function() {
+        // Hide buttons when scrolling starts
+        hideButtons();
+        
+        // Clear any existing timeout
+        clearTimeout(scrollTimeout);
+        
+        // Show buttons after scrolling stops
+        scrollTimeout = setTimeout(function() {
+            showButtons();
+        }, 500); // Adjust this value to change how long after scrolling stops the buttons reappear
+    });
+    
+    // Handle touch events for mobile
+    let touchStartY;
+    window.addEventListener('touchstart', function(e) {
+        touchStartY = e.touches[0].clientY;
+    }, { passive: true });
+    
+    window.addEventListener('touchmove', function(e) {
+        const touchY = e.touches[0].clientY;
+        const diff = touchY - touchStartY;
+        
+        // Only hide if actual scrolling is happening (not just touching)
+        if (Math.abs(diff) > 5) {
+            hideButtons();
+            clearTimeout(scrollTimeout);
+        }
+    }, { passive: true });
+    
+    window.addEventListener('touchend', function() {
+        showButtons();
+    }, { passive: true });
+});
