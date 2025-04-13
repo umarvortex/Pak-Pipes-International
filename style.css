@@ -998,6 +998,16 @@ span {
 
 
 
+
+.center-button-wrapper, .to-top {
+    transition: opacity 0.5s ease !important;
+}
+
+
+
+
+
+
 .to-top { 
     background: #17242a; 
     position: fixed; 
@@ -1197,7 +1207,7 @@ span {
     } 
     .home-img img { 
         width: 70vw; 
-        margin-top: 2rem; 
+        margin-top: 1rem; 
     } 
     .about { 
         flex-direction: column; 
@@ -1260,7 +1270,7 @@ span {
     .home-img img { 
         width: 80vw; 
         max-width: 100%; 
-        margin-top: 2rem; 
+        margin-top: 1rem; 
     } 
     .about-img img { 
         width: 70vw; 
