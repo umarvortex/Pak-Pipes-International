@@ -143,38 +143,7 @@ function closeChatbot() {
     document.getElementById('chatbot-container').style.display = 'none';
 }
 
-// ================== SCROLL REVEAL ==================
-document.addEventListener('DOMContentLoaded', function () {
-    if (typeof ScrollReveal !== 'undefined') {
-        const sr = ScrollReveal({
-            origin: 'top',
-            distance: '60px',
-            duration: 2000,
-            delay: 200,
-            reset: false,
-        });
 
-        sr.reveal('.home-content h3', { delay: 300 });
-        sr.reveal('.home-content h1', { delay: 500 });
-        sr.reveal('.home-content p', { delay: 700 });
-        sr.reveal('.center-button-wrapper', { delay: 900, origin: 'bottom' });
-        sr.reveal('.home-img', { delay: 800, origin: 'right' });
-        sr.reveal('.heading', { delay: 100 });
-        sr.reveal('.about-img', { origin: 'left', delay: 300 });
-        sr.reveal('.about-content h2', { delay: 400 });
-        sr.reveal('.benefit-item', { origin: 'left', interval: 200, delay: 500 });
-        sr.reveal('.location-btn', { delay: 800, origin: 'bottom' });
-        sr.reveal('.alumni-container', { delay: 300 });
-        sr.reveal('.arroow.prev', { origin: 'left', delay: 600 });
-        sr.reveal('.arroow.next', { origin: 'right', delay: 600 });
-        sr.reveal('.box', { interval: 200, delay: 300 });
-        sr.reveal('.reviews-master-container', { delay: 300 });
-        sr.reveal('.tri-container', { delay: 400 });
-        sr.reveal('.column-left', { origin: 'left', delay: 300 });
-        sr.reveal('.column-right', { origin: 'right', delay: 300 });
-        sr.reveal('.footer-content', { delay: 300 });
-    }
-});
 
 // ================== UPDATE YEAR AUTOMATICALLY ==================
 // Get the current year and update the year span in the footer
