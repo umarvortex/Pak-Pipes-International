@@ -37,6 +37,10 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
      <title>Pak Pipes</title>
+
+<!-- After the existing script and CSS links in the head section -->
+<script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
+
 </head>   
 <body>
      <header>
@@ -54,7 +58,7 @@
         <ul class="navbar">
               <li><a href="#home"><i class="fa-solid fa-house"></i> Home</a></li>
     <li><a href="#services"><i class="fa-solid fa-gears"></i> Services</a></li>
-    <li><a href="#about"><i class="fa-solid fa-circle-info"></i> About</a></li>
+    <li><a href="#about"><i class="fa-solid fa-circle-info"></i> About Us</a></li>
     <li><a href="#promise"><i class="fa-solid fa-handshake"></i> Promise</a></li>
     <li><a href="#review"><i class="fa-solid fa-star"></i>Reviews</a></li>
     <li><a href="#contact"><i class="fa-solid fa-phone"></i> Contact</a></li>
@@ -90,76 +94,11 @@ For top-notch piping solutions, think <strong>Pak Pipes International</strong> �
     <i class="fa fa-phone phone"></i>
   </a>
 
-
-<a href="mailto:pakpipesinternational@gmail.com" class="btn">
+  <a href="mailto:pakpipesinternational@gmail.com" class="btn">
     <img src="https://i.postimg.cc/HkHcRDzX/IMG-20250410-WA0026.jpg" 
          alt="Tahir Logo" class="tahir-icon">
   </a>
-
-
 </div>
-    
-  <style>
-  .center-button-wrapper {
-    position: fixed;
-    bottom: 30px;
-    right: 20px;
-    display: flex;
-    flex-direction: column-reverse;
-    gap: 16px;
-    z-index: 888;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(100px); /* Start 100px below */
-    transition: all 0.4s ease;
-  }
-
-  .center-button-wrapper .btn {
-    border-radius: 50% !important;
-    width: 50px !important;
-    height: 50px !important;
-    border: 1px solid #45ffca22 !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    background-color: #07d3b815;
-    padding: 0 !important;
-    margin: 0 !important;
-    transition: transform 0.3s ease !important;
-  }
-
-  .center-button-wrapper .btn:hover {
-    transform: scale(1.1) !important;
-  }
-
-  .btn img.whatsapp-icon {
-    width: 52px;
-    height: 52px;
-    object-fit: contain;
-  }
-
-  a[href="mailto:pakpipesinternational@gmail.com"] {
-    overflow: hidden !important;
-    padding: 0 !important;
-  }
-
-  .btn img.tahir-icon {
-    width: 100% !important;
-    height: 100% !important;
-    border-radius: 50% !important;
-    object-fit: cover !important;
-    border: 1px solid #056449e5 !important;
-    display: block !important;
-    margin: 0 !important;
-  }
-
-  .btn i.phone {
-    font-size: 20px;
-    color: white;
-  }
-
-
-</style>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
@@ -203,7 +142,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
 
 
-
 <div class="home-img">
     <div class="sloder-container">
         <div class="slod active-slod">
@@ -233,44 +171,6 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
 </div>
 
-<style>
-/* Fixed Styling */
-.home-img {
-    width: 100%;
-    max-width: 100%;
-    height: 60vh; /* Reduced height */
-    margin: 0 auto;
-    padding: 0 !important;
-    overflow: hidden;
-    position: relative;
-}
-
-.sloder-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
-.slod {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 7s ease;
-}
-
-.slod img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; /* Changed to contain */
-    object-position: center;
-}
-
-.active-slod {
-    opacity: 1;
-}
-</style>
-
 <script>
 // Auto transition code (same as before)
 let currentSlod = 0;
@@ -283,12 +183,6 @@ setInterval(() => {
 }, 5000);
 </script>
 
-
-
-  
-<!-- chat bot codes only -->   
-  
-<!-- chat bot codes only -->
 
 
     </section>
@@ -875,78 +769,6 @@ setInterval(() => {
             <div class="slide-counter" id="counter">1 of 20</div>
         </div>
     </div>  
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const slider = document.getElementById('slider');
-            const prevBtn = document.getElementById('prevBtn');
-            const nextBtn = document.getElementById('nextBtn');
-            const counter = document.getElementById('counter');
-            const slides = document.querySelectorAll('.slide');
-
-            let currentSlide = 0;
-            const totalSlides = slides.length;
-            let slideInterval;
-
-            // Update slider state
-            function updateSlider() {
-                slider.style.transform = `translateX(-${currentSlide * 100}%)`;
-                counter.textContent = `${currentSlide + 1} of ${totalSlides}`;
-
-                // Disable buttons when at ends
-                prevBtn.disabled = currentSlide === 0;
-                nextBtn.disabled = currentSlide === totalSlides - 1;
-            }
-
-            // Auto-rotate slides
-            function startAutoSlide() {
-                slideInterval = setInterval(() => {
-                    if (currentSlide < totalSlides - 1) currentSlide++;
-                    else currentSlide = 0;
-                    updateSlider();
-                }, 5000);
-            }
-
-            // Event listeners
-            prevBtn.addEventListener('click', () => {
-                if (currentSlide > 0) {
-                    currentSlide--;
-                    updateSlider();
-                    resetAutoSlide();
-                }
-            });
-
-            nextBtn.addEventListener('click', () => {
-                if (currentSlide < totalSlides - 1) {
-                    currentSlide++;
-                    updateSlider();
-                    resetAutoSlide();
-                }
-            });
-
-            // Reset auto-slide timer
-            function resetAutoSlide() {
-                clearInterval(slideInterval);
-                startAutoSlide();
-            }
-
-            // Pause on hover
-            slider.addEventListener('mouseenter', () => clearInterval(slideInterval));
-            slider.addEventListener('mouseleave', startAutoSlide);
-
-            // Keyboard navigation
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'ArrowLeft') prevBtn.click();
-                if (e.key === 'ArrowRight') nextBtn.click();
-            });
-
-            // Initialize
-            updateSlider();
-            startAutoSlide();
-        });
-    </script>
-
-    
 </section>
 
 
@@ -994,7 +816,6 @@ setInterval(() => {
  
          
      
-    
 
 
 
@@ -1017,7 +838,7 @@ setInterval(() => {
                 <h3></h3>
        <h3><span>V</span>ision</h3>
                 <ul>
-                    <li><strong>Innovation:</strong>We embrace cutting-edge technology and sustainable practices to provide forward-thinking solutions that not only address today’s challenges but also pave the way for a better, more sustainable future.</li>
+                    <li><strong>Innovation:</strong>We embrace cutting-edge technology and sustainable practices to provide forward-thinking solutions that not only address today's challenges but also pave the way for a better, more sustainable future.</li>
                </ul>      
             </div>
             <div class="box">
@@ -1286,19 +1107,18 @@ setInterval(() => {
 <!-- ==== CONTACT FORM SECTION ==== -->
 <section class="contact-section" id="contact">
   <div class="max-width-contact">
-
-        <h2 class="heading"> Our <span>Contact</span></h2>   
+    <h2 class="heading">Our <span>Contact</span></h2>   
     
     <div class="contact-content">
       <!-- Left Column -->
       <div class="column-left">
         <div class="text-top">Let's Connect</div>
         
-        <p>For business inquiries or questions, feel free to reach out through this form or my contact details below.</p>
+        <p>For business inquiries or questions, feel free to reach out through this form or use our contact details below.</p>
         
         <div id="workingHoursStatus">
-    <i class="far fa-clock"></i> Checking availability...
-  </div>
+          <i class="far fa-clock"></i> Checking availability...
+        </div>
         
         <div class="icons-contact">
           <div class="row-contact">
@@ -1313,8 +1133,7 @@ setInterval(() => {
             <i class="fas fa-map-marker-alt"></i>
             <div class="info-contact">
               <div class="head-contact">Address</div>
-              <div class="sub-title-contact">
-Grey Noor Tower, Gulzar-e-Hijri<br> Sector 29 Scheme 33, Karachi<br> Pakistan</div>
+              <div class="sub-title-contact">Grey Noor Tower, Gulzar-e-Hijri Sector 29 KDA <br> Scheme 33, Karachi Pakistan</div>
             </div>
           </div>
           
@@ -1329,14 +1148,14 @@ Grey Noor Tower, Gulzar-e-Hijri<br> Sector 29 Scheme 33, Karachi<br> Pakistan</d
         
         <div class="map">
           <iframe 
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.897357579902!2d67.0981287758209!3d25.0255879778146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb3409e8a1cef4d%3A0x92b604e6f7a5e3a3!2sGrey%20Noor%20Tower!5e0!3m2!1sen!2s!4v1717939200000!5m2!1sen!2s"
-  width="100%"
-  height="300"
-  style="border:0;"
-  allowfullscreen=""
-  loading="lazy"
-  referrerpolicy="no-referrer-when-downgrade">
-</iframe>
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.897357579902!2d67.0981287758209!3d25.0255879778146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb3409e8a1cef4d%3A0x92b604e6f7a5e3a3!2sGrey%20Noor%20Tower!5e0!3m2!1sen!2s!4v1717939200000!5m2!1sen!2s"
+            width="100%"
+            height="300"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
         </div>
       </div>
       
@@ -1371,11 +1190,11 @@ Grey Noor Tower, Gulzar-e-Hijri<br> Sector 29 Scheme 33, Karachi<br> Pakistan</d
           </div>
           
           <div class="file-input-container">
-  <label class="file-input-label">Attach File (PDF/Image, max 20MB)</label>
-  <div class="file-input-wrapper">
-    <input type="file" id="fileInput" class="file-input" accept=".pdf,.jpg,.jpeg,.png">
-  </div>
-</div>
+            <label class="file-input-label">Attach File (PDF/Image, max 20MB)</label>
+            <div class="file-input-wrapper">
+              <input type="file" id="fileInput" class="file-input" accept=".pdf,.jpg,.jpeg,.png">
+            </div>
+          </div>
           
           <div class="button-area-contact">
             <button type="submit" class="btn-contact">
@@ -1404,658 +1223,138 @@ Grey Noor Tower, Gulzar-e-Hijri<br> Sector 29 Scheme 33, Karachi<br> Pakistan</d
 
 
 
-<!-- ==== STYLE SECTION ==== -->
-<style>
-  .contact-section {
-    padding: 25px 8px;
-    background-color: linear-gradient(135deg, #1c1c1c, #2c3e50);
-  }
-
-
-.max-width-contact {
-  width: 100%;
-  padding: 0;
-}
-
-.max-width-contact .heading {
-   margin-bottom: 27px;
-}
-
-
-/* === CONTENT CONTAINER === */
-.contact-content {
-  display: flex;
-  gap: 40px;
-  background: transparent;
-}
-
-/* === LEFT COLUMN === */
-.column-left {
-  flex: 1;
-  padding: 35px;
-  background-color: #1e2b32;
-  border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-}
-
-.text-top {
-  font-size: 24px;
-  color: #ffffff;
-  margin-bottom: 15px;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-}
-
-.column-left p {
-  color: #b0b0b0;
-  font-size: 14px;
-  line-height: 1.6;
-  margin-bottom: 25px;
-}
-
-/* Working Hours Indicator */
-#workingHoursStatus {
-  margin: 20px 0;
-  padding: 10px 12px;
-  border-radius: 6px;
-  font-size: 12px;
-  background-color: rgba(255, 107, 107, 0.15);
-  color: #ff6b6b;
-  border-left: 3px solid #ff6b6b;
-}
-
-/* Contact Info Cards */
-.icons-contact {
-  margin-bottom: 30px;
-}
-
-.row-contact {
-  display: flex;
-  align-items: center;
-  margin-bottom: 18px;
-}
-
-.row-contact i {
-  color: #45ffca;
-  font-size: 16px;
-  width: 36px;
-  height: 36px;
-  background: rgba(69, 255, 202, 0.1);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.info-contact {
-  margin-left: 12px;
-}
-
-.head-contact {
-  font-weight: 500;
-  color: #ffffff;
-  font-size: 14px;
-  margin-bottom: 3px;
-}
-
-.sub-title-contact {
-  color: #b0b0b0;
-  font-size: 13px;
-}
-
-/* Google Map */
-.map {
-  margin-top: 25px;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 3px 12px rgba(0,0,0,0.1);
-}
-
-/* === RIGHT COLUMN (FORM) === */
-.column-right {
-  flex: 1;
-  padding: 35px;
-  background-color: #1e2b32;
-  border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-}
-
-.text-bottom {
-  font-size: 17px;
-  color: #ffffff;
-  margin-bottom: 23px;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-}
-
-/* Form Elements */
-#contactForm {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.form-row {
-  display: flex;
-  gap: 15px;
-}
-
-.form-group {
-  flex: 1;
-}
-
-input, textarea {
-  width: 100%;
-  padding: 12px 15px;
-  border: 1px solid #35424a;
-  border-radius: 6px;
-  background-color: #2d3b44;
-  color: #ffffff;
-  font-size: 14px;
-  transition: all 0.2s;
-}
-
-input:focus, textarea:focus {
-  border-color: #45ffca;
-  box-shadow: 0 0 0 2px rgba(69, 255, 202, 0.3);
-  outline: none;
-}
-
-textarea {
-  min-height: 150px;
-  resize: vertical;
-}
-
-
-
-
-/* ===== IMPROVED FILE INPUT STYLING ===== */
-.file-input-container {
-  margin-bottom: 20px;
-}
-
-.file-input-label {
-  display: block;
-  color: #b0b0b0;
-  font-size: 14px;
-  margin-bottom: 8px;
-  font-weight: 500;
-}
-
-.file-input-wrapper {
-  position: relative;
-  display: flex;
-  align-items: center;
-  min-height: 44px; /* Ensures consistent height */
-}
-
-.file-input {
-  width: 100%;
-  padding: 12px 15px;
-  border: 1px solid #35424a;
-  border-radius: 6px;
-  background-color: #2d3b44;
-  color: #ffffff;
-  font-size: 14px;
-  cursor: pointer;
-  transition: all 0.2s;
-  /* Fix for text overflow */
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  /* Pseudo-element positioning */
-  position: relative;
-  padding-left: 110px; /* Space for Choose File button */
-}
-
-.file-input:hover {
-  border-color: #45ffca;
-}
-
-.file-input::-webkit-file-upload-button {
-  visibility: hidden;
-}
-
-.file-input::before {
-  content: 'Choose File';
-  display: inline-block;
-  background: #45ffca;
-  color: #000;
-  padding: 8px 12px;
-  border-radius: 4px;
-  font-weight: 600;
-  font-size: 13px;
-  margin-right: 15px;
-  position: absolute;
-  left: 15px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.file-input::after {
-  content: attr(data-file-name);
-  color: #b0b0b0;
-  font-size: 13px;
-  /* Improved text display */
-  display: inline-block;
-  max-width: calc(100% - 130px);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  vertical-align: middle;
-}
-
-/* For light mode */
-.light-mode .file-input {
-  background-color: #f5f5f5;
-  border-color: #e0e0e0;
-  color: #333;
-}
-
-.light-mode .file-input::after {
-  color: #666;
-}
-
-.light-mode .file-input:hover {
-  border-color: #2a7a64;
-}
-
-
-
-
-
-/* Submit Button */
-.button-area-contact {
-  margin-top: 10px;
-}
-
-.btn-contact {
-  background-color: #45ffca;
-  color: #000000;
-  border: none;
-  padding: 14px 25px;
-  font-size: 14px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: all 0.2s;
-  width: 100%;
-}
-
-.btn-contact:hover {
-  background-color: #3ce0b5;
-  transform: translateY(-1px);
-}
-
-/* Status Messages */
-.status-message {
-  display: none;
-  text-align: center;
-  margin-top: 15px;
-  font-size: 14px;
-  padding: 10px;
-  border-radius: 6px;
-}
-
-#loading {
-  color: #45ffca;
-}
-
-.success {
-  color: #45ffca;
-  background-color: rgba(69, 255, 202, 0.1);
-}
-
-.error {
-  color: #ff6b6b;
-  background-color: rgba(255, 107, 107, 0.1);
-}
-
-/* === LIGHT MODE === */
-.light-mode .column-left,
-.light-mode .column-right {
-  background-color: #ffffff;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-}
-
-.light-mode .text-top,
-.light-mode .text-bottom,
-.light-mode .head-contact {
-  color: #333333;
-}
-
-.light-mode .sub-title-contact,
-.light-mode p,
-.light-mode label {
-  color: #666666;
-}
-
-.light-mode input,
-.light-mode textarea {
-  background-color: #f5f5f5;
-  border-color: #e0e0e0;
-  color: #333333;
-}
-
-.light-mode input:focus,
-.light-mode textarea:focus {
-  border-color: #2a7a64;
-  box-shadow: 0 0 0 2px rgba(42, 122, 100, 0.2);
-}
-
-.light-mode .btn-contact {
-  background-color: #2a7a64;
-  color: white;
-}
-
-.light-mode .btn-contact:hover {
-  background-color: #23634f;
-}
-
-
-
-
-
-
-/* === FOOTER TEXT === */
-.contact-footer {
-  text-align: center;
-  margin-top: 40px;
-  color: #b0b0b0;
-  font-size: 12px;
-  padding-top: 20px;
-  border-top: 1px solid #2d3b44;
-}
-
-.light-mode .contact-footer {
-  color: #666666;
-  border-top-color: #e0e0e0;
-}
-
-/* === DARK MODE TOGGLE BUTTON === */
-.theme-toggle {
-  text-align: right;
-  margin-bottom: 30px;
-}
-
-#themeBtn {
-  background: none;
-  border: none;
-  color: #45ffca;
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: 500;
-  padding: 8px 15px;
-  border-radius: 20px;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  transition: all 0.3s ease;
-  background-color: rgba(69, 255, 202, 0.1);
-  border: 1px solid rgba(69, 255, 202, 0.3);
-}
-
-#themeBtn:hover {
-  background-color: rgba(69, 255, 202, 0.2);
-  transform: translateY(-1px);
-}
-
-#themeBtn i {
-  font-size: 16px;
-}
-
-/* Light mode button style */
-.light-mode #themeBtn {
-  color: #2a7a64;
-  background-color: rgba(42, 122, 100, 0.1);
-  border-color: rgba(42, 122, 100, 0.3);
-}
-
-.light-mode #themeBtn:hover {
-  background-color: rgba(42, 122, 100, 0.2);
-}
-
-
-
-/* ========== MASTER RESPONSIVE SOLUTION ========== */
-
-/* BASE STYLES (applies to all screens) */
-.contact-content {
-  display: flex !important;
-  gap: 3px !important;
-  background: transparent !important;
-  width: 100% !important;
-}
-
-.column-left, 
-.column-right {
-  flex: 1 !important;
-  padding: 35px !important;
-  background-color: #1e2b32 !important;
-  border-radius: 8px !important;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.15) !important;
-  min-width: 0 !important;
-  box-sizing: border-box !important;
-  border: 1px solid #45ffca22 !important;
-}
-
-/* DESKTOP FIRST APPROACH (768px and above - side by side) */
-@media (min-width: 768px) {
-  .contact-content {
-    flex-direction: row !important;
-  }
-  .column-left,
-  .column-right {
-    flex: 1 0 calc(50% - 20px) !important;
-  }
-  
-  /* Large Desktop Enhancements */
-  @media (min-width: 1200px) {
-    .contact-content {
-      gap: 50px !important;
-    }
-    .column-left,
-    .column-right {
-      padding: 40px !important;
-    }
-    .text-top {
-      font-size: 26px !important;
-    }
-    .text-bottom {
-      font-size: 18px !important;
-    }
-  }
-  
-  /* Standard Desktop Adjustments */
-  @media (min-width: 992px) and (max-width: 1199px) {
-    .contact-content {
-      gap: 30px !important;
-    }
-  }
-}
-
-/* MOBILE VIEW (767px and below - stacked) */
-@media (max-width: 767px) {
-  .contact-content {
-    flex-direction: column !important;
-    gap: 20px !important;
-  }
-  .column-left,
-  .column-right {
-    width: 100% !important;
-    flex: none !important;
-  }
-  
-  /* Form adjustments for mobile */
-  .form-row {
-    flex-direction: column !important;
-    gap: 15px !important;
-  }
-  
-  /* Text sizing for mobile */
-  .text-top {
-    font-size: 20px !important;
-  }
-  .text-bottom {
-    font-size: 16px !important;
-  }
-  
-  /* Smaller mobile devices */
-  @media (max-width: 576px) {
-    .column-left,
-    .column-right {
-      padding: 25px !important;
-    }
-    .text-top {
-      font-size: 18px !important;
-    }
-  }
-  
-  /* Extra small devices */
-  @media (max-width: 400px) {
-    .column-left,
-    .column-right {
-      padding: 20px !important;
-    }
-  }
-}
-
-
-
-</style>
-
 <!-- ==== SCRIPT SECTION ==== -->
 <script>
-
-document.getElementById('fileInput').addEventListener('change', function(e) {
-  const fileName = e.target.files[0] ? e.target.files[0].name : 'No file chosen';
-  this.setAttribute('data-file-name', fileName);
-});
-
-
-
-
-
-
-
-
-  // Form Submission
-  const contactForm = document.getElementById('contactForm');
-  contactForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    const submitBtn = contactForm.querySelector('.btn-contact');
-    const loading = document.getElementById('loading');
-    const successMsg = document.getElementById('successMessage');
-    const errorMsg = document.getElementById('errorMessage');
-    
-    // Show loading state
-    submitBtn.disabled = true;
-    loading.style.display = 'block';
-    successMsg.style.display = 'none';
-    errorMsg.style.display = 'none';
-    
-    // Submit form data
-    fetch(contactForm.action, {
-      method: 'POST',
-      body: new FormData(contactForm),
-      headers: {
-        'Accept': 'application/json'
-      }
-    })
-    .then(response => {
-      if (response.ok) {
-        successMsg.style.display = 'block';
-        contactForm.reset();
-        // Scroll to success message
-        setTimeout(() => {
-          successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }, 100);
-      } else {
-        throw new Error('Form submission failed');
-      }
-    })
-    .catch(error => {
-      errorMsg.style.display = 'block';
-      // Scroll to error message
-      setTimeout(() => {
-        errorMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }, 100);
-    })
-    .finally(() => {
-      loading.style.display = 'none';
-      submitBtn.disabled = false;
-    });
-  });
-
-  // Input Validation
-  const emailField = contactForm.querySelector("input[name='email']");
-  const nameField = contactForm.querySelector("input[name='name']");
-
-  emailField.addEventListener("input", function() {
-    const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailField.value);
-    emailField.style.borderColor = isValid ? "#45ffca" : "#ff6b6b";
-  });
-
-  nameField.addEventListener("input", function() {
-    nameField.style.borderColor = nameField.value.trim() ? "#45ffca" : "#ff6b6b";
-  });
-
-  // Button hover effect
-  const sendBtn = document.querySelector('.btn-contact');
-  sendBtn.addEventListener('mouseenter', function() {
-    const icon = this.querySelector('.send-icon');
-    icon.style.opacity = '1';
-    icon.style.right = '25px';
-    this.style.transform = 'translateY(-2px)';
-  });
+  // JavaScript for contact form date check
+  document.addEventListener('DOMContentLoaded', function() {
+    function updateWorkingHours() {
+      const statusElement = document.getElementById('workingHoursStatus');
+      if (!statusElement) return;
   
-  sendBtn.addEventListener('mouseleave', function() {
-    const icon = this.querySelector('.send-icon');
-    icon.style.opacity = '0';
-    icon.style.right = '20px';
-    this.style.transform = 'translateY(0)';
+      const now = new Date();
+      const hours = now.getHours();
+      const day = now.getDay();
+      
+      // Friday special hours (3PM-6PM)
+      if (day === 5) { // Friday
+        if (hours >= 15 && hours < 18) {
+          statusElement.innerHTML = '<i class="far fa-clock"></i> <strong>Available Now:</strong> Open (Friday 3PM-6PM)';
+          statusElement.style.backgroundColor = 'rgba(69, 255, 202, 0.1)';
+          statusElement.style.color = 'var(--accent-color)';
+          statusElement.style.borderLeftColor = 'var(--accent-color)';
+        } else {
+          statusElement.innerHTML = '<i class="far fa-clock"></i> <strong>Currently Closed:</strong> Opens Friday at 3PM';
+          statusElement.style.backgroundColor = 'rgba(255, 107, 107, 0.1)';
+          statusElement.style.color = '#ff6b6b';
+          statusElement.style.borderLeftColor = '#ff6b6b';
+        }
+        return;
+      }
+      
+      // Normal hours (11AM-6PM)
+      if (hours >= 11 && hours < 18) {
+        statusElement.innerHTML = '<i class="far fa-clock"></i> <strong>Available Now:</strong> Open (11AM-6PM)';
+        statusElement.style.backgroundColor = 'rgba(69, 255, 202, 0.1)';
+        statusElement.style.color = 'var(--accent-color)';
+        statusElement.style.borderLeftColor = 'var(--accent-color)';
+      } else {
+        statusElement.innerHTML = '<i class="far fa-clock"></i> <strong>Currently Closed:</strong> Opens at 11AM';
+        statusElement.style.backgroundColor = 'rgba(255, 107, 107, 0.1)';
+        statusElement.style.color = '#ff6b6b';
+        statusElement.style.borderLeftColor = '#ff6b6b';
+      }
+    }
+  
+    // Update immediately and then every minute
+    updateWorkingHours();
+    setInterval(updateWorkingHours, 60000);
+    
+    // File input enhancement
+    document.getElementById('fileInput').addEventListener('change', function(e) {
+      const fileName = e.target.files[0] ? e.target.files[0].name : 'No file chosen';
+      this.setAttribute('data-file-name', fileName);
+    });
+    
+    // Form submission handlers
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+      contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const submitBtn = contactForm.querySelector('.btn-contact');
+        const loading = document.getElementById('loading');
+        const successMsg = document.getElementById('successMessage');
+        const errorMsg = document.getElementById('errorMessage');
+        
+        // Show loading state
+        submitBtn.disabled = true;
+        loading.style.display = 'block';
+        successMsg.style.display = 'none';
+        errorMsg.style.display = 'none';
+        
+        // Submit form data
+        fetch(contactForm.action, {
+          method: 'POST',
+          body: new FormData(contactForm),
+          headers: {
+            'Accept': 'application/json'
+          }
+        })
+        .then(response => {
+          if (response.ok) {
+            successMsg.style.display = 'block';
+            contactForm.reset();
+            setTimeout(() => {
+              successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 100);
+          } else {
+            throw new Error('Form submission failed');
+          }
+        })
+        .catch(error => {
+          errorMsg.style.display = 'block';
+          setTimeout(() => {
+            errorMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }, 100);
+        })
+        .finally(() => {
+          loading.style.display = 'none';
+          submitBtn.disabled = false;
+        });
+      });
+    }
   });
-
-</script>
+  </script>
 
 </main>
 
 
 <footer class="footer">
   <div class="footer-content">
-
-
-<div class="footer-logo">
+    <div class="footer-logo">
       <img src="https://i.postimg.cc/HkHcRDzX/IMG-20250410-WA0026.jpg" alt="Tahir Naqaash" width="120">
     </div>
-
 
     <div class="footer-logo">
       <img src="https://i.postimg.cc/ZYdM12ss/Instagram-Post-20250410-213236-0000.jpg" alt="Pak Pipes International" width="120">
     </div>
     
     <div class="footer-links">
-
-<div class="quick-links">
-  <h3>Quick Links</h3>
-  <ul class="link-list">
-     <li><a href="#home"><i class="fa-solid fa-house"></i> Home</a></li>
-    <li><a href="#services"><i class="fa-solid fa-gears"></i> Services</a></li>
-    <li><a href="#about"><i class="fa-solid fa-circle-info"></i> About</a></li>
-    <li><a href="#promise"><i class="fa-solid fa-handshake"></i> Promise</a></li>
-    <li><a href="#review"><i class="fa-solid fa-star"></i>Reviews</a></li>
-    <li><a href="#contact"><i class="fa-solid fa-phone"></i> Contact</a></li>
-  </ul>
-</div>
-
-
+      <div class="quick-links">
+        <h3>Quick Links</h3>
+        <ul class="link-list">
+          <li><a href="#home"><i class="fa-solid fa-house"></i> Home</a></li>
+          <li><a href="#services"><i class="fa-solid fa-gears"></i> Services</a></li>
+          <li><a href="#about"><i class="fa-solid fa-circle-info"></i> About</a></li>
+          <li><a href="#promise"><i class="fa-solid fa-handshake"></i> Promise</a></li>
+          <li><a href="#review"><i class="fa-solid fa-star"></i>Reviews</a></li>
+          <li><a href="#contact"><i class="fa-solid fa-phone"></i> Contact</a></li>
+        </ul>
+      </div>
     </div>
   </div>
   
   <div class="footer-bottom">
-    
-    
     <div class="social-links">
       <a href="#"><i class="fab fa-facebook"></i></a>
       <a href="#"><i class="fab fa-instagram"></i></a>
@@ -2066,221 +1365,11 @@ document.getElementById('fileInput').addEventListener('change', function(e) {
     </p>
   </div>
 
-<div class="developer-credit">
-      <span>Designed and Developed by</span>
-      <a href="mailto:umarvortex@gmail.com">Umar Vortex ✉️</a>
-    </div>
-
+  <div class="developer-credit">
+    <span>Designed and Developed by</span>
+    <a href="mailto:umarvortex@gmail.com">Umar Vortex ✉️</a>
+  </div>
 </footer>
-
-<style>
-.footer {
-  background: #013220;
-  color: white;
-  padding: 40px 0 20px;
-  font-family: 'Arial', sans-serif;
-  position: relative;
-}
-
-.footer-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-}
-
-
-
-.footer-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  flex-grow: 1;
-}
-
-.link-column {
-  min-width: 150px;
-}
-
-.link-column h3 {
-  color: #45ffca;
-  font-size: 18px;
-  margin-bottom: 15px;
-  position: relative;
-  padding-bottom: 5px;
-}
-
-.link-column h3::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 40px;
-  height: 2px;
-  background: #45ffca;
-}
-
-.link-column ul {
-  list-style: none;
-  padding: 0;
-}
-
-.link-column li {
-  margin-bottom: 8px;
-}
-
-.link-column a {
-  color: #d1d1d1;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.link-column a:hover {
-  color: #45ffca;
-}
-
-
-
-.footer-bottom {
-  border-top: 1px solid rgba(255,255,255,0.1);
-  padding-top: 20px;
-  margin-top: 40px;
-  text-align: center;
-}
-
-.developer-credit {
-  margin-bottom: 15px;
-  font-size: 10px;
-  text-align: center !important;
-}
-
-.developer-credit a {
-  color: #00aaff;
-  text-decoration: none;
-  margin-left: 5px;
-  font-weight: 600;
-}
-
-.developer-credit a:hover {
-  text-decoration: underline;
-}
-
-.social-links {
-  margin: 15px 0;
-}
-
-.social-links a {
-  color: white;
-  background: rgba(255,255,255,0.1);
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 5px;
-  transition: all 0.3s;
-}
-
-
-
-
-.quick-links {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    width: 300px;
-    padding: 7px;
-    background: transparent;
-  }
-  
-  .quick-links h3 {
-    color: #45ffca;
-    margin-bottom: 20px;
-    text-align: left;
-    font-size: 2.6rem;
-    font-weight: 600;
-  }
-
-
-  
-  .link-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .link-list li {
-    margin-bottom: 10px;
-  }
-  
-  .link-list a {
-    display: flex;
-    align-items: left;
-    gap: 15px;
-    padding: 5px 7px;
-    text-decoration: none;
-    color: white;   
-  }
-  
-  .link-list a:hover {
-    transform: translateX(5px);
-  }
-  
-  .link-list .fa-solid {
-    font-size: 15px;
-    color: #ffffff;
-    width: 25px;
-    text-align: left;
-  }
-
-
-
-
-
-
-
-.social-links a:hover {
-  background: #45ffca;
-  color: #013220;
-  transform: translateY(-3px);
-}
-
-.copyright {
-  font-size: 12px;
-  color: rgba(255,255,255,0.6);
-  margin-top: 20px;
-}
-
-/* Responsive styles */
-@media (max-width: 768px) {
-  .footer-content {
-    flex-direction: column;
-    gap: 30px;
-  }
-  
-  .footer-links {
-    flex-direction: column;
-    gap: 30px;
-  }
-}
-</style>
-
-<script>
-// Auto-update copyright year
-document.getElementById('current-year').textContent = new Date().getFullYear();
-</script>
-
-
-
-<style>
-
-.to-top {
-  z-index: 777 !important;
-}
-
-</style>
-
 
  
     <a href="#" class="to-top">
@@ -2296,65 +1385,8 @@ document.getElementById('current-year').textContent = new Date().getFullYear();
 
 
 
-<script>
-
-document.addEventListener('DOMContentLoaded', function() {
-  function updateWorkingHours() {
-    const statusElement = document.getElementById('workingHoursStatus');
-    if (!statusElement) return;
-
-    const now = new Date();
-    const hours = now.getHours();
-    const day = now.getDay();
-    const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-    
-    // Friday special hours (3PM-6PM)
-    if (day === 5) { // Friday
-      if (hours >= 15 && hours < 18) {
-        statusElement.innerHTML = '<i class="far fa-clock"></i> <strong>Available Now:</strong> Open (Friday 3PM-6PM)';
-        statusElement.style.backgroundColor = 'rgba(69, 255, 202, 0.1)';
-        statusElement.style.color = '#45ffca';
-      } else {
-        statusElement.innerHTML = '<i class="far fa-clock"></i> <strong>Currently Closed:</strong> Opens Friday at 3PM';
-        statusElement.style.backgroundColor = 'rgba(255, 107, 107, 0.1)';
-        statusElement.style.color = '#ff6b6b';
-      }
-      return;
-    }
-    
-    // Normal hours (11AM-6PM)
-    if (hours >= 11 && hours < 18) {
-      statusElement.innerHTML = '<i class="far fa-clock"></i> <strong>Available Now:</strong> Open (11AM-6PM)';
-      statusElement.style.backgroundColor = 'rgba(69, 255, 202, 0.1)';
-      statusElement.style.color = '#45ffca';
-    } else {
-      statusElement.innerHTML = '<i class="far fa-clock"></i> <strong>Currently Closed:</strong> Opens at 11AM';
-      statusElement.style.backgroundColor = 'rgba(255, 107, 107, 0.1)';
-      statusElement.style.color = '#ff6b6b';
-    }
-  }
-
-  // Update immediately and then every minute
-  updateWorkingHours();
-  setInterval(updateWorkingHours, 60000);
-});
-
-
-</script>
-
-
-
-
-
-
-
-
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script src="script.js"></script>
-
-
-
-
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>
